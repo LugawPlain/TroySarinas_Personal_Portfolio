@@ -13,27 +13,8 @@ const HeaderNav = () => {
     <>
       <div className="flex w-full bg-card py-2 px-4 text-sm  flex-center  border-2 border-amber-100">
         <span className="mr-auto">
-          <Image
-            src="/Icons/TS.svg"
-            alt="Troy_Sarinas_Logo"
-            width={40}
-            height={40}
-          ></Image>
+          <ProfilePic />
         </span>
-        {/* <div className="flex gap-2 text-foreground">
-          <HoverUpAnimationText
-            text="About"
-            className="text-muted-foreground"
-          ></HoverUpAnimationText>
-          <HoverUpAnimationText
-            className="text-muted-foreground"
-            text="Projects"
-          ></HoverUpAnimationText>
-          <HoverUpAnimationText
-            className="text-muted-foreground"
-            text="Contacts"
-          ></HoverUpAnimationText>
-        </div> */}
 
         <span className="ml-auto">{/* <ContactMe /> */}</span>
       </div>
