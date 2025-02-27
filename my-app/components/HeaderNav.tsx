@@ -1,31 +1,43 @@
 "use client";
-import { useEffect } from "react";
-import { clashDisplay } from "../public/fonts/Clash_Display";
-
 import React from "react";
 import ProfilePic from "./ProfilePic";
 import ContactMe from "./ContactMe";
-const HeaderNav = () => {
-  useEffect(() => {
-    console.log("Font Object:", clashDisplay);
-    console.log("Hello from the browser!");
-    console.log("Font loaded:", document.fonts.check("16px Clash Display"));
-  }, []);
+import HoverUpAnimationText from "./HoverUpAnimationText";
+import StarBorder from "../reactbits/animations/StarBorder/StarBorder";
+import Image from "next/image";
+import ButtonStyled from "./ButtonStyled";
+import Dock from "../reactbits/components/Dock/Dock";
 
+const HeaderNav = () => {
   return (
-    <div className="flex w-full items-center px-8 py-2 border-b-2 border-red-500">
-      <ProfilePic />
-      <div className="flex gap-4 text-red-500 mx-auto ">
-        <p>Home</p>
-        <p>Timeline</p>
-        <p>Experience</p>
-        <p>Education</p>
+    <>
+      <div className="flex w-full bg-card py-2 px-4 text-sm  flex-center  border-2 border-amber-100">
+        <span className="mr-auto">
+          <Image
+            src="/Icons/TS.svg"
+            alt="Troy_Sarinas_Logo"
+            width={40}
+            height={40}
+          ></Image>
+        </span>
+        {/* <div className="flex gap-2 text-foreground">
+          <HoverUpAnimationText
+            text="About"
+            className="text-muted-foreground"
+          ></HoverUpAnimationText>
+          <HoverUpAnimationText
+            className="text-muted-foreground"
+            text="Projects"
+          ></HoverUpAnimationText>
+          <HoverUpAnimationText
+            className="text-muted-foreground"
+            text="Contacts"
+          ></HoverUpAnimationText>
+        </div> */}
+
+        <span className="ml-auto">{/* <ContactMe /> */}</span>
       </div>
-      <div>
-        <ContactMe />
-      </div>
-    </div>
+    </>
   );
 };
-
 export default HeaderNav;

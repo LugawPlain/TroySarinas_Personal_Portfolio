@@ -12,6 +12,7 @@
     "@tailwindcss/postcss": "^4.0.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.18.2",
     "lucide-react": "^0.476.0",
     "next": "15.1.7",
     "ogl": "^1.0.11",
@@ -26,10 +27,13 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@unocss/preset-attributify": "^66.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.9",
+    "tailwindcss-intersect": "^2.1.0",
+    "tailwindcss-motion": "^1.1.0",
     "typescript": "^5"
   }
 }
