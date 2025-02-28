@@ -3,6 +3,7 @@ import HeaderNav from "../../components/HeaderNav";
 import Orb from "../../reactbits/backgrounds/Orb/Orb";
 import DecryptedText from "../../reactbits/textanimations/DecryptedText/DecryptedText";
 import TrueFocus from "../../reactbits/textanimations/TrueFocus/TrueFocus";
+import MenuBar from "../../components/MenuBar";
 export default function Home() {
   return (
     <div>
@@ -10,7 +11,7 @@ export default function Home() {
       <main className="h-svh w-full">
         <div className="top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 relative w-full text-center">
           <div className="top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute ">
-            <h1 className="text-nowrap text-5xl NameTitle font-clashDisplayBold text-accent ">
+            <h1 className="text-nowrap text-5xl NameTitle font-clashDisplayBold ">
               Troy sarinas
             </h1>
             {/* <TrueFocus sentence="Troy Sarinas" borderColor="red"></TrueFocus> */}
@@ -28,6 +29,7 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <MenuBar></MenuBar>
     </div>
   );
 }

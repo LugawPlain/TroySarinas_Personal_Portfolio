@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={cn(
           clashDisplayBold.variable,
-          "antialiased dark ",
+          "antialiased",
           geistSans.variable,
           geistMono.variable
         )}

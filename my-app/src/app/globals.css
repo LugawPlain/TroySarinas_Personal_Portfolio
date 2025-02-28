@@ -110,6 +110,16 @@
 }
 
 @theme inline {
+  --color-kkjaguar: var(--kkjaguar);
+  --color-kkdarkburgundy: var(--kkdarkburgundy);
+  --color-kkgrey: var(--kkgrey);
+  --color-kkrudybrown: var(--kkrudybrown);
+  --color-kkiridium: var(--kkiridium);
+  --color-kkpinkishgrey: var(--kkpinkishgrey);
+  --color-kkbone: var(--kkbone);
+  --color-kkanemo: var(--kkanemo);
+  --color-kkwindy: var(--kkwindy);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
