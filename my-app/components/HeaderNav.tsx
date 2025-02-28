@@ -14,8 +14,8 @@ import { Button } from "@/components/ui/button";
 const HeaderNav = () => {
   return (
     <>
-      <div className="flex w-full bg-card py-2 px-4 text-sm items-center justify justify-between border-b-2 ">
-        <span className="p-0.5 rounded-lg bg-green-700">
+      <div className="flex w-full py-2 px-6 text-sm items-center bg-transparent justify justify-between border-b-2 border-kkjaguar">
+        <span className="p-0.5 rounded-lg bg-kkanemo">
           <Avatar className="w-[40px] h-[40px] rounded-md">
             <AvatarImage src="/Icons/Troy_Sarinas_Pfp.jpg" />
             <AvatarFallback>TS</AvatarFallback>
@@ -23,7 +23,7 @@ const HeaderNav = () => {
         </span>
 
         <span className="">
-          <Button variant="outline" className="bg-kkrudybrown text-white">
+          <Button variant="outline" className="bg-kkdarkburgundy text-kkhair">
             Contact Me
           </Button>
         </span>

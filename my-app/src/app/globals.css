@@ -17,16 +17,31 @@
   --warning: #f57c00; /* Warning state 
   --info: #1976d2; /* Informational messages 
   */
+  /* 
+  --kkjaguar: rgb(0, 0, 0);
+--kkdarkburgundy: rgb(89, 0, 0);
+--kkgrey: rgb(166, 166, 166);
+--kkrudybrown: rgb(140, 0, 0);
+--kkyellow: #fab172
+--kkorange: #DC835A
+--kkiridium: rgb(64, 64, 64);
+--kkpinkishgrey: rgb(191, 191, 191);
+--kkbone: rgb(217, 217, 217);
+--kkanemo: rgb(191, 191, 191);
+--kkwindy: rgb(179, 179, 179); */
 
   --kkjaguar: oklch(0.01 0.02 282.5);
   --kkdarkburgundy: oklch(0.25 0.15 20);
   --kkgrey: oklch(0.65 0.02 150);
   --kkrudybrown: oklch(0.55 0.12 30);
+  --kkyellow: oklch(0.83 0.14 70);
+  --kkorange: oklch(0.74 0.14 70);
+  --kkhair: #f3e4d3;
   --kkiridium: oklch(0.25 0.03 150);
   --kkpinkishgrey: oklch(0.75 0.05 20);
   --kkbone: oklch(0.85 0.1 30);
   --kkanemo: oklch(0.75 0.15 180);
-  --kkwindy: oklch(0.7 0.14 180);
+  --kkwindy: #447d6a;
 
   --background: oklch(0.98 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -119,6 +134,9 @@
   --color-kkbone: var(--kkbone);
   --color-kkanemo: var(--kkanemo);
   --color-kkwindy: var(--kkwindy);
+  --color-kkorange: var(--kkorange);
+  --color-kkyellow: var(--kkyellow);
+  --color-kkhair: var(--kkhair);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -156,6 +174,34 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  --animate-shine: shine 5s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes shine {
+    from {
+      background-position: 100%;
+    }
+    to {
+      background-position: -100%;
+    }
+  }
 }
 
 @layer base {
@@ -163,7 +209,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-kkjaguar;
   }
 }
 @utility flex-center {
@@ -172,5 +218,5 @@
   align-items: center;
 }
 .NameTitle {
-  @apply motion-scale-in-[0.5] motion-translate-x-in-[0%] motion-translate-y-in-[100%] motion-opacity-in-[50%] motion-blur-in-[10px] motion-duration-[1.02s]/translate motion-duration-[1.01s]/opacity motion-duration-[0.58s]/blur motion-delay-[0.66s]/blur;
+  @apply motion-scale-in-[0.5] motion-translate-x-in-[0%] motion-translate-y-in-[154%] motion-blur-in-[10px] motion-delay-[0.53s]/scale motion-duration-[1.13s]/translate motion-duration-[0.89s]/blur motion-delay-[0.45s]/blur;
 }

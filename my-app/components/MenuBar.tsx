@@ -1,23 +1,24 @@
 import Link from "next/link";
 import React from "react";
-import HomeIcon from "../Assets/Icons/HomeIcon";
+import { RiHome3Line } from "react-icons/ri";
 import { PiPaperPlaneTilt } from "react-icons/pi";
 import { GoProject } from "react-icons/go";
 import { GiMapleLeaf } from "react-icons/gi";
 const MenuBar = () => {
   return (
-    <div className="fixed w-full  bottom-0 py-2 bg-white shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl">
-      <ul className="flex justify-evenly">
+    <div className="fixed w-full  bottom-0 bg-kkdarkburgundy/80 py-2  shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl backdrop-blur-xs ">
+      <ul className="flex justify-evenly text-kkhair">
         <li>
-          <Link href="" className="flex-center flex-col">
-            <HomeIcon></HomeIcon>
+          <Link href="" className="flex-center flex-col text-kkorange">
+            <RiHome3Line size={24} />
+
             <p>Home</p>
           </Link>
         </li>
         <li>
           <Link href="" className="flex-center flex-col">
-            <GiMapleLeaf size={24} />
-            <p>Maple Leaf</p>
+            <GiMapleLeaf className="rotate-20" size={24} />
+            <p>About Me </p>
           </Link>
         </li>
         <li>
@@ -29,7 +30,7 @@ const MenuBar = () => {
         <li>
           <Link href="" className="flex-center flex-col">
             <PiPaperPlaneTilt size={24} />
-            <p>Home</p>
+            <p>Contact</p>
           </Link>
         </li>
       </ul>
