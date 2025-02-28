@@ -29,7 +29,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
       } ${className}`}
       style={{
         backgroundImage:
-          "linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.99) 50%, rgba(255, 255, 255, 0) 60%)",
+          "linear-gradient(120deg, rgba(216, 89, 250, 0) 35%, rgba(216, 89, 250, 0.99) 50%, rgba(216, 89, 250, 0) 65%)",
         backgroundSize: "200% 100%",
         WebkitBackgroundClip: "text",
         animationDuration: animationDuration,

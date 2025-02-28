@@ -39,9 +39,13 @@
   --kkhair: #f3e4d3;
   --kkiridium: oklch(0.25 0.03 150);
   --kkpinkishgrey: oklch(0.75 0.05 20);
-  --kkbone: oklch(0.85 0.1 30);
+  --kkbone: oklch(74.04% 0.0325 54.55);
   --kkanemo: oklch(0.75 0.15 180);
+  --kkelectro: #d859fa;
+  --kkelectric: f1c3f2;
   --kkwindy: #447d6a;
+  --kkbackground: oklch(39.2% 0.115 32.23);
+  --kkborder: oklch(36.54% 0.027 55.4);
 
   --background: oklch(0.98 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -133,11 +137,15 @@
   --color-kkpinkishgrey: var(--kkpinkishgrey);
   --color-kkbone: var(--kkbone);
   --color-kkanemo: var(--kkanemo);
+
   --color-kkwindy: var(--kkwindy);
   --color-kkorange: var(--kkorange);
   --color-kkyellow: var(--kkyellow);
   --color-kkhair: var(--kkhair);
-
+  --color-kkbackground: var(--kkbackground);
+  --color-kkborder: var(--kkborder);
+  --color-kkelectro: var(--kkelectro);
+  --color-kkelectric: var(--kkelectric);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -209,7 +217,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-kkjaguar;
+    @apply bg-white text-kkjaguar;
   }
 }
 @utility flex-center {

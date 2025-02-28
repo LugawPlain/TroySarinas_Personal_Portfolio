@@ -14,8 +14,8 @@ import { Button } from "@/components/ui/button";
 const HeaderNav = () => {
   return (
     <>
-      <div className="flex w-full py-2 px-6 text-sm items-center bg-transparent justify justify-between border-b-2 border-kkjaguar">
-        <span className="p-0.5 rounded-lg bg-kkanemo">
+      <div className="flex w-full py-2 px-6 text-sm items-center bg-transparent justify justify-between border-b-2 border-kkbone">
+        <span className="p-0.5 rounded-lg bg-kkrudybrown ">
           <Avatar className="w-[40px] h-[40px] rounded-md">
             <AvatarImage src="/Icons/Troy_Sarinas_Pfp.jpg" />
             <AvatarFallback>TS</AvatarFallback>
