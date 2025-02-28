@@ -4,9 +4,15 @@ import { RiHome3Line } from "react-icons/ri";
 import { PiPaperPlaneTilt } from "react-icons/pi";
 import { GoProject } from "react-icons/go";
 import { GiMapleLeaf } from "react-icons/gi";
-const MenuBar = () => {
+
+interface MenuBarProps {
+  className?: string;
+}
+const MenuBar: React.FC<MenuBarProps> = (className) => {
   return (
-    <div className="fixed w-full  bottom-0 bg-kkdarkburgundy/80 py-2  shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl backdrop-blur-xs ">
+    <div
+      className={` ${className} fixed w-full  bottom-0 bg-kkdarkburgundy/80 py-2  shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl backdrop-blur-xs `}
+    >
       <ul className="flex justify-evenly text-kkhair">
         <li>
           <Link href="" className="flex-center flex-col text-kkorange">
