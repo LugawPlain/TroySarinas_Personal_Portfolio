@@ -53,8 +53,8 @@ export function Marquee({
         className
       )}
     >
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--kkrudybrown)] to-transparent z-20"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--kkrudybrown)] to-transparent z-20"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--kkwindy)] to-transparent z-20"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[var(--kkwindy)] to-transparent z-20"></div>
       {Array(repeat)
         .fill(0)
         .map((_, i) => (
