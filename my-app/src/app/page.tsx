@@ -8,6 +8,13 @@ import MarqueeGroup from "../../components/MarqueeGroup";
 import AboutMeCard from "../../components/AboutMeCard";
 import { Button } from "@/components/ui/button";
 import { IoRocketOutline } from "react-icons/io5";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import LogAccordionHeight from "../../components/LogAccordionHeight";
 // bg-[url(/Background.svg)]
 export default function Home() {
   return (
@@ -62,9 +69,15 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div className="p-4">
-          <AboutMeCard></AboutMeCard>
-        </div>
+        <Accordion type="single" collapsible className="bg-red-500">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+        <LogAccordionHeight />
       </section>
       <section>
         <div className="p-4">
