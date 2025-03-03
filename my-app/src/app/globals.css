@@ -217,7 +217,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-white text-kkjaguar;
+    @apply bg-kkhair text-kkjaguar font-clashDisplayBold;
+  }
+  section {
+    @apply py-8 px-12;
   }
 }
 @utility flex-center {
