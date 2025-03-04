@@ -4,10 +4,23 @@ import { BsEmojiSunglasses } from "react-icons/bs";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import MenuBar from "../../components/MenuBar";
 import ShinyText from "../../reactbits/textanimations/ShinyText/ShinyText";
-import MarqueeGroup from "../../components/MarqueeGroup";
+import MarqueeGroup from "../../components/MarqueeGroup1";
 import AboutMeCard from "../../components/AboutMeCard";
-import { Button } from "@/components/ui/button";
 import { IoRocketOutline } from "react-icons/io5";
+import { Button } from "@/components/ui/button";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import {
   Accordion,
   AccordionContent,
@@ -15,8 +28,29 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import LogAccordionHeight from "../../components/LogAccordionHeight";
+import ScrollCarousel from "../../components/ScrollCarousel";
+import Link from "next/link";
+import MarqueeGroup1 from "../../components/MarqueeGroup1";
+import MarqueeGroup2 from "../../components/MarqueeGroup2";
+
+const formSchema = z.object({
+  username: z.string().min(2).max(50),
+});
+
 // bg-[url(/Background.svg)]
 export default function Home() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+    },
+  });
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Do something with the form values.
+    // ✅ This will be type-safe and validated.
+    console.log(values);
+  }
+
   return (
     <div className="">
       <main className="w-full font-clashDisplayBold bg-kkhair  bg-cover">
@@ -48,10 +82,10 @@ export default function Home() {
           </span>
         </section>
 
-        <MarqueeGroup></MarqueeGroup>
+        <MarqueeGroup1></MarqueeGroup1>
       </main>
       <section className="mt-4">
-        <div className="scroll-reveal text-center  text-lg font-medium tracking-widest py-8 px-2 bg-kkwindy/10 rounded-lg  ">
+        <div className="scroll-reveal text-center  text-lg font-medium tracking-widest py-8 px-2 bg-kkwindy/1 0 rounded-lg  ">
           <h2 className="text-3xl">
             <span className="inline text-kkjaguar/10 bg-clip-text">
               About me
@@ -68,41 +102,138 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section>
-        <Accordion type="single" collapsible className="bg-red-500">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+
+      <div className="w-full">
+        <h2 className="text-center text-3xl my-4">My Services ✨</h2>
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full text-kkhair text-center"
+        >
+          <AccordionItem className="bg-kkwindy/80 " value="item-1">
+            <AccordionTrigger className="text-2xl text-center ">
+              Web Development
+            </AccordionTrigger>
+            <AccordionContent className="flex-center p-8 flex-col">
+              <Image
+                src="/Background.svg"
+                width={350}
+                height={400}
+                alt="Web Development"
+              />
+              <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
+                <li> Front-End Development </li>
+                <li> Back-End Development </li>
+                <li> Landing Pages and business websites</li>
+                <li> Portfolio Websites </li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem className="bg-kkwindy/80 " value="item-2">
+            <AccordionTrigger className="text-2xl text-center ">
+              UI/UX Design
+            </AccordionTrigger>
+            <AccordionContent className="flex-center py-4 flex-col">
+              <Image
+                src="/Background.svg"
+                width={350}
+                height={400}
+                alt="Web Development"
+              />
+              <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
+                <li> Responsive & Adaptive Design </li>
+                <li> Design Systems, Style Guides </li>
+                <li> User Flow & Navigation Optimization</li>
+                <li> Interaction Design </li>
+                <li>
+                  Branding,logo,typography,color pallete and brand personality
+                </li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem className="bg-kkwindy/80 " value="item-3">
+            <AccordionTrigger className="text-2xl text-center ">
+              Mobile Application
+            </AccordionTrigger>
+            <AccordionContent className="flex-center py-4 flex-col">
+              <Image
+                src="/Background.svg"
+                width={350}
+                height={400}
+                alt="Web Development"
+              />
+              <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
+                <li> Native Development </li>
+                <li> Cross-Platform Development </li>
+                <li> Back-End and API Integration</li>
+                <li> Bug Fixing </li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem className="bg-kkwindy/80 " value="item-4">
+            <AccordionTrigger className="text-2xl text-center ">
+              E-Commerce Platform
+            </AccordionTrigger>
+            <AccordionContent className="flex-center py-4 flex-col">
+              <Image
+                src="/Background.svg"
+                width={350}
+                height={400}
+                alt="Web Development"
+              />
+              <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
+                <li> Online Store Theme Set-up </li>
+                <li> Apps/Plugins Integrations </li>
+                <li> Search engine and Perfomance optimization</li>
+                <li> Convertion Rate Optimization </li>
+                <li> E-commerce Maintenance and Support </li>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem className="bg-kkwindy/80 " value="item-5">
+            <AccordionTrigger className="text-2xl text-center ">
+              Automations
+            </AccordionTrigger>
+            <AccordionContent className="flex-center py-4 flex-col">
+              <Image
+                src="/Background.svg"
+                width={350}
+                height={400}
+                alt="Web Development"
+              />
+              <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
+                <li> Online Store Theme Set-up </li>
+                <li> Apps/Plugins Integrations </li>
+                <li> Search engine and Perfomance optimization</li>
+                <li> Convertion Rate Optimization </li>
+                <li> E-commerce Maintenance and Support </li>
+              </ul>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        <LogAccordionHeight />
-      </section>
+      </div>
       <section>
-        <div className="p-4">
-          <AboutMeCard></AboutMeCard>
-        </div>
-      </section>
-      <section>
-        <div className="p-4">
-          <AboutMeCard></AboutMeCard>
-        </div>
-      </section>
-      <section>
-        <div className="p-4">
-          <AboutMeCard></AboutMeCard>
-        </div>
-      </section>
-      <section>
-        <div className="p-4">
-          <AboutMeCard></AboutMeCard>
-        </div>
-      </section>
-      <section>
-        <div className="p-4">
-          <AboutMeCard></AboutMeCard>
-        </div>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Username</FormLabel>
+                  <FormControl>
+                    <Input placeholder="shadcn" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    This is your public display name.
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit">Submit</Button>
+          </form>
+        </Form>
       </section>
 
       <footer className=""></footer>

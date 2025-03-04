@@ -2,7 +2,7 @@ import { Marquee } from "@/components/magicui/marquee";
 import Image from "next/image";
 import React from "react";
 
-const MarqueeGroup = () => {
+const MarqueeGroup1 = () => {
   return (
     <Marquee className="bg-kkwindy/80 text-kkhair py-4">
       <div className="flex-center gap-1">
@@ -90,4 +90,4 @@ const MarqueeGroup = () => {
   );
 };
 
-export default MarqueeGroup;
+export default MarqueeGroup1;

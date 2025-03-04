@@ -185,7 +185,25 @@
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --animate-shine: shine 5s linear infinite;
+  --animate-accordion-down: accordion-down 0.4s ease-out;
+  --animate-accordion-up: accordion-up 0.4s ease-out;
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
 
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -211,27 +229,7 @@
     }
   }
 }
-@theme {
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-  @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
-  }
 
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
-}
 @layer utilities {
   @keyframes accordion-up {
     from {
@@ -279,7 +277,7 @@
 }
 .scroll-reveal p span {
   animation-range-start: cover 28svh;
-  animation-range-end: cover 55svh;
+  animation-range-end: cover 70svh;
 }
 @keyframes scroll-reveal-text {
   to {
