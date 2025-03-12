@@ -29,7 +29,8 @@ export default function RootLayout({
       <body
         className={cn(
           clashDisplayBold.variable,
-          "antialiased",
+          "antialiased kazuha",
+
           geistSans.variable,
           geistMono.variable
         )}

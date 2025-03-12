@@ -8,19 +8,7 @@ import MarqueeGroup from "../../components/MarqueeGroup1";
 import AboutMeCard from "../../components/AboutMeCard";
 import { IoRocketOutline } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+
 import {
   Accordion,
   AccordionContent,
@@ -32,28 +20,13 @@ import ScrollCarousel from "../../components/ScrollCarousel";
 import Link from "next/link";
 import MarqueeGroup1 from "../../components/MarqueeGroup1";
 import MarqueeGroup2 from "../../components/MarqueeGroup2";
-
-const formSchema = z.object({
-  username: z.string().min(2).max(50),
-});
+import ContactForm from "../../components/ContactForm";
 
 // bg-[url(/Background.svg)]
 export default function Home() {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: "",
-    },
-  });
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-  }
-
   return (
     <div className="">
-      <main className="w-full font-clashDisplayBold bg-kkhair  bg-cover">
+      <main className="w-full font-clashDisplayBold bg-background  bg-cover">
         <HeaderNav></HeaderNav>
 
         <section className="w-full h-fit ">
@@ -85,7 +58,7 @@ export default function Home() {
         <MarqueeGroup1></MarqueeGroup1>
       </main>
       <section className="mt-4">
-        <div className="scroll-reveal text-center  text-lg font-medium tracking-widest py-8 px-2 bg-kkwindy/1 0 rounded-lg  ">
+        <div className="scroll-reveal text-center  text-lg font-medium tracking-widest py-8 px-2 rounded-lg  ">
           <h2 className="text-3xl">
             <span className="inline text-kkjaguar/10 bg-clip-text">
               About me
@@ -213,31 +186,12 @@ export default function Home() {
         </Accordion>
       </div>
       <section>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Username</FormLabel>
-                  <FormControl>
-                    <Input placeholder="shadcn" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    This is your public display name.
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit">Submit</Button>
-          </form>
-        </Form>
+        <ContactForm />
       </section>
 
       <footer className=""></footer>
       <MenuBar></MenuBar>
+      <section className="h-16"></section>
     </div>
   );
 }
