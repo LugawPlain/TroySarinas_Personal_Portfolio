@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { clashDisplayBold } from "../../public/fonts/Clash_Display";
 import { cn } from "@/lib/utils";
+import LetterGlitch from "../../reactbits/backgrounds/LetterGlitch/LetterGlitch";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +30,21 @@ export default function RootLayout({
       <body
         className={cn(
           clashDisplayBold.variable,
-          "antialiased",
-
+          "antialiased bg-nude ",
           geistSans.variable,
           geistMono.variable
         )}
       >
+        {/* <div className="h-full w-full">
+          <LetterGlitch
+            glitchColors={["2b4539", "#61dca3", "#61b3dc"]}
+            glitchSpeed={200}
+            centerVignette={false}
+            outerVignette={false}
+            smooth={true}
+          />
+        </div> */}
+
         {children}
       </body>
     </html>

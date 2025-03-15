@@ -25,7 +25,7 @@ import ContactForm from "../../components/ContactForm";
 export default function Home() {
   return (
     <div className="">
-      <main className="w-full font-clashDisplayBold bg-background  bg-cover">
+      <main className="w-full font-clashDisplayBold  bg-cover">
         <HeaderNav></HeaderNav>
 
         <section className="w-full h-fit ">
