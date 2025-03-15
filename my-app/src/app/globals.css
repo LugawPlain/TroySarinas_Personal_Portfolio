@@ -6,47 +6,6 @@
 @custom-variant dark (&:is(.dark *));
 /* Light mode semantic colors */
 :root {
-  /* Semantic Colors */
-  /*
-  --primary: #02cdad; /* Main brand or interactive color 
-  --secondary: #148f7c; /* Complementary color 
-  --accent: #af02ff; /* Accent or tertiary color */ /* Main background color */ /* Main text color 
-  --surface: #04272d; /* Cards or surfaces 
-  --error: #d32f2f; /* Error state 
-  --success: #388e3c; /* Success state 
-  --warning: #f57c00; /* Warning state 
-  --info: #1976d2; /* Informational messages 
-  */
-  /* 
-  --kkjaguar: rgb(0, 0, 0);
---kkdarkburgundy: rgb(89, 0, 0);
---kkgrey: rgb(166, 166, 166);
---kkrudybrown: rgb(140, 0, 0);
---kkyellow: #fab172
---kkorange: #DC835A
---kkiridium: rgb(64, 64, 64);
---kkpinkishgrey: rgb(191, 191, 191);
---kkbone: rgb(217, 217, 217);
---kkanemo: rgb(191, 191, 191);
---kkwindy: rgb(179, 179, 179); */
-
-  --kkjaguar: oklch(0.01 0.02 282.5);
-  --kkdarkburgundy: oklch(0.25 0.15 20);
-  --kkgrey: oklch(0.65 0.02 150);
-  --kkrudybrown: oklch(0.55 0.12 30);
-  --kkyellow: oklch(0.83 0.14 70);
-  --kkorange: oklch(0.74 0.14 70);
-  --kkhair: #f3e4d3;
-  --kkiridium: oklch(0.25 0.03 150);
-  --kkpinkishgrey: oklch(0.75 0.05 20);
-  --kkbone: oklch(74.04% 0.0325 54.55);
-  --kkanemo: oklch(0.75 0.15 180);
-  --kkelectro: #d859fa;
-  --kkelectric: f1c3f2;
-  --kkwindy: #447d6a;
-  --kkbackground: oklch(39.2% 0.115 32.23);
-  --kkborder: oklch(36.54% 0.027 55.4);
-
   --background: oklch(0.98 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -57,6 +16,7 @@
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
@@ -80,16 +40,6 @@
 }
 
 .dark {
-  --kkjaguar: oklch(0.01 0.02 282.5);
-  --kkdarkburgundy: oklch(0.25 0.15 20);
-  --kkgrey: oklch(0.65 0.02 150);
-  --kkrudybrown: oklch(0.55 0.12 30);
-  --kkiridium: oklch(0.25 0.03 150);
-  --kkpinkishgrey: oklch(0.75 0.05 20);
-  --kkbone: oklch(0.85 0.1 30);
-  --kkanemo: oklch(0.75 0.15 180);
-  --kkwindy: oklch(0.7 0.14 180);
-
   --background: oklch(17.3% 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(18.3% 0 0);
@@ -153,6 +103,7 @@
   --secondary-foreground: var(--kkhair);
   --muted: var(--kkwindy);
   --muted-foreground: var(--kkjaguar);
+  --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: var(--darkburgundy);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);

@@ -11,11 +11,11 @@ interface MenuBarProps {
 const MenuBar: React.FC<MenuBarProps> = (className) => {
   return (
     <div
-      className={` ${className} fixed w-full  bottom-0 bg-kkdarkburgundy/80 py-2  shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl backdrop-blur-xs `}
+      className={` ${className} fixed w-full  bottom-0 bg-accent/80 py-2  shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl backdrop-blur-xs `}
     >
-      <ul className="flex justify-evenly text-kkhair">
+      <ul className="flex justify-evenly text-accent-foreground">
         <li>
-          <Link href="" className="flex-center flex-col text-kkorange">
+          <Link href="" className="flex-center flex-col text-foreground">
             <RiHome3Line size={24} />
 
             <p>Home</p>

@@ -4,7 +4,7 @@ import React from "react";
 
 const MarqueeGroup1 = () => {
   return (
-    <Marquee className="bg-kkwindy/80 text-kkhair py-4">
+    <Marquee className="bg-card/80 text-card-foreground py-4">
       <div className="flex-center gap-1">
         <Image
           className="transition-transform hover:scale-110"
