@@ -22,40 +22,16 @@ import Link from "next/link";
 import MarqueeGroup1 from "../../components/MarqueeGroup1";
 import MarqueeGroup2 from "../../components/MarqueeGroup2";
 import ContactForm from "../../components/ContactForm";
+import HeroSection from "../../components/HeroSection";
 
 export default function Home() {
   return (
     <div className="">
       <main className="w-full font-clashDisplayBold  bg-cover">
         <HeaderNav></HeaderNav>
-
-        <HeroSection className="w-full h-fit ">
-          <div className="">
-            <h2 className="mt-12">Hi, I'm Troy Sarinas</h2>
-            <h1 className="text-nowrap text-6xl my-4   ">
-              <ShinyText text="Full-Stack" speed={5}></ShinyText>
-              <br />
-              <ShinyText text="Developer" speed={5}></ShinyText>
-            </h1>
-            <p className="mt-12 text-lg tracking-wide">
-              "Bringing visions to life with intuitive, high-performance through
-              <span className="text-accent-foreground"> innovative </span>{" "}
-              design and
-              <span className="text-accent-foreground"> creative </span>{" "}
-              solutions that captivate and engage users."
-            </p>
-            <p className="font-semibold motion-preset-typewriter motion-duration-200 motion-delay-1000 motion-ease-out-back "></p>
-          </div>
-          <span className="flex mt-4 py-4 border-t-2 border-accent justify-around">
-            <Button variant="outline" className="bg-card text-card-foreground">
-              Jump on a Call <MdOutlinePhoneInTalk />
-            </Button>
-            <Button variant="outline" className="bg-card text-card-foreground">
-              Know me Better <BsEmojiSunglasses />
-            </Button>
-          </span>
-        </HeroSection>
-
+        <section className="w-full h-fit">
+          <HeroSection></HeroSection>
+        </section>
         <MarqueeGroup1></MarqueeGroup1>
       </main>
       <section className="mt-4">
