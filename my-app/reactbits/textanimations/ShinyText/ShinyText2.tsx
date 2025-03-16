@@ -1,8 +1,8 @@
 "use client";
 /*
-	jsrepo 1.41.2
-	Installed from https://reactbits.dev/ts/tailwind/
-	2-28-2025
+    jsrepo 1.41.2
+    Installed from https://reactbits.dev/ts/tailwind/
+    2-28-2025
 */
 
 import React from "react";
@@ -14,7 +14,7 @@ interface ShinyTextProps {
   className?: string;
 }
 
-const ShinyText: React.FC<ShinyTextProps> = ({
+const ShinyText2: React.FC<ShinyTextProps> = ({
   text,
   disabled = false,
   speed = 5,
@@ -29,7 +29,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
       } ${className}`}
       style={{
         backgroundImage:
-          "linear-gradient(120deg, rgba(0, 0, 0, 1) 45%, rgba(250, 250, 250, 0.99) 50%, rgba(0, 0, 0, 1) 55%)",
+          "linear-gradient(120deg, rgba(0, 0, 0, 1) 35%, rgba(250, 250, 250, 0.99) 40%, rgba(0, 0, 0, 1) 45%)",
         backgroundSize: "200% 100%",
         WebkitBackgroundClip: "text",
         animationDuration: animationDuration,
@@ -40,7 +40,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
   );
 };
 
-export default ShinyText;
+export default ShinyText2;
 
 // tailwind.config.js
 // module.exports = {

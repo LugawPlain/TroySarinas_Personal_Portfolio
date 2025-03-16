@@ -1,5 +1,6 @@
 import React from "react";
 import ShinyText from "../reactbits/textanimations/ShinyText/ShinyText";
+import ShinyText2 from "../reactbits/textanimations/ShinyText/ShinyText2";
 const HeroSection = () => {
   return (
     <div className="">
@@ -11,10 +12,10 @@ const HeroSection = () => {
           <ShinyText text="Full-Stack" speed={5}></ShinyText>
         </div>
         <div className="w-fit motion-translate-x-in-[-150%] motion-delay-[1s]/translate motion-scale-in-[1.1] motion-delay-[1.75s]/scale motion-duration-[0.25s]/scale ">
-          <ShinyText text="Developer" speed={5}></ShinyText>
+          <ShinyText2 text="Developer" speed={5}></ShinyText2>
         </div>
       </h1>
-      <p className="mt-12 text-lg tracking-wide">
+      <p className="my-12 text-lg tracking-wide motion-translate-x-in-[150%] motion-delay-[1.75s]/translate motion-scale-in-[1.1] motion-delay-[2.5s]/scale motion-duration-[0.25s]/scale">
         "Bringing visions to life with intuitive, high-performance through
         <span className="text-accent"> innovative </span> design and
         <span className="text-accent"> creative </span> solutions that captivate
