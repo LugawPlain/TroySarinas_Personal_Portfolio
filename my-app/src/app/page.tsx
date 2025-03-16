@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import HeaderNav from "../../components/HeaderNav";
 import { BsEmojiSunglasses } from "react-icons/bs";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
@@ -28,22 +29,22 @@ export default function Home() {
       <main className="w-full font-clashDisplayBold  bg-cover">
         <HeaderNav></HeaderNav>
 
-        <section className="w-full h-fit ">
+        <HeroSection className="w-full h-fit ">
           <div className="">
             <h2 className="mt-12">Hi, I'm Troy Sarinas</h2>
-            <h1 className="text-nowrap text-6xl my-4  NameTitle">
-              Full-Stack
+            <h1 className="text-nowrap text-6xl my-4   ">
+              <ShinyText text="Full-Stack" speed={5}></ShinyText>
               <br />
-              <ShinyText text="Developer" speed={4}></ShinyText>
+              <ShinyText text="Developer" speed={5}></ShinyText>
             </h1>
-            <p className="NameTitle mt-12 text-lg tracking-wide">
+            <p className="mt-12 text-lg tracking-wide">
               "Bringing visions to life with intuitive, high-performance through
               <span className="text-accent-foreground"> innovative </span>{" "}
               design and
               <span className="text-accent-foreground"> creative </span>{" "}
               solutions that captivate and engage users."
             </p>
-            <p className="font-semibold motion-preset-typewriter motion-duration-200 motion-delay-1000 motion-ease-out-back NameTitle "></p>
+            <p className="font-semibold motion-preset-typewriter motion-duration-200 motion-delay-1000 motion-ease-out-back "></p>
           </div>
           <span className="flex mt-4 py-4 border-t-2 border-accent justify-around">
             <Button variant="outline" className="bg-card text-card-foreground">
@@ -53,7 +54,7 @@ export default function Home() {
               Know me Better <BsEmojiSunglasses />
             </Button>
           </span>
-        </section>
+        </HeroSection>
 
         <MarqueeGroup1></MarqueeGroup1>
       </main>
@@ -83,7 +84,7 @@ export default function Home() {
           collapsible
           className="w-full text-card-foreground text-center"
         >
-          <AccordionItem className="bg-card/80 " value="item-1">
+          <AccordionItem className="bg-card " value="item-1">
             <AccordionTrigger className="text-2xl text-center ">
               Web Development
             </AccordionTrigger>
@@ -102,7 +103,7 @@ export default function Home() {
               </ul>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem className="bg-card/80 " value="item-2">
+          <AccordionItem className="bg-card " value="item-2">
             <AccordionTrigger className="text-2xl text-center ">
               UI/UX Design
             </AccordionTrigger>
@@ -124,7 +125,7 @@ export default function Home() {
               </ul>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem className="bg-card/80 " value="item-3">
+          <AccordionItem className="bg-card " value="item-3">
             <AccordionTrigger className="text-2xl text-center ">
               Mobile Application
             </AccordionTrigger>
@@ -143,7 +144,7 @@ export default function Home() {
               </ul>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem className="bg-card /80 " value="item-4">
+          <AccordionItem className="bg-card " value="item-4">
             <AccordionTrigger className="text-2xl text-center ">
               E-Commerce Platform
             </AccordionTrigger>
@@ -163,7 +164,7 @@ export default function Home() {
               </ul>
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem className="bg-card /80 " value="item-5">
+          <AccordionItem className="bg-card " value="item-5">
             <AccordionTrigger className="text-2xl text-center ">
               Automations
             </AccordionTrigger>

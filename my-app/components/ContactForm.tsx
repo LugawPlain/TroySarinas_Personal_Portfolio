@@ -58,13 +58,15 @@ export default function ContactFormPreview() {
 
   return (
     <div className="flex min-h-[60vh] h-full w-full items-center justify-center">
-      <Card className="mx-auto max-w-md bg-kkwindy">
+      <Card className="mx-auto max-w-md bg-card">
         <CardHeader>
-          <CardDescription className="text-kkhair/60">
+          <CardDescription className="text-card-foreground">
             Lets Link
           </CardDescription>
-          <CardTitle className="text-2xl text-kkhair ">Contact Us</CardTitle>
-          <CardDescription className="text-kkhair/60">
+          <CardTitle className="text-2xl text-card-foreground ">
+            Contact Us
+          </CardTitle>
+          <CardDescription className="text-card-foreground">
             Please fill out the form below and we will get back to you shortly.
           </CardDescription>
         </CardHeader>

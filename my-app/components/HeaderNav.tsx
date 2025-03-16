@@ -10,7 +10,6 @@ import Image from "next/image";
 import ButtonStyled from "./ButtonStyled";
 import Dock from "../reactbits/components/Dock/Dock";
 import { Button } from "@/components/ui/button";
-
 const HeaderNav = () => {
   return (
     <>

@@ -11,16 +11,17 @@
 
   --background: oklch(0.95 0 0);
   --foreground: rgb(26, 26, 24);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
+  --card: rgb(26, 26, 24);
+  --card-foreground: #ece7e1;
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
   --primary-foreground: oklch(0.985 0 0);
+  --secondary: rgb(40, 40, 40);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
+  --accent: #571d0f;
+  --accent-foreground: #ece7e1;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
@@ -295,4 +296,7 @@
   to {
     background-size: 100% 100%;
   }
+}
+/* Scrolled  */
+.text-scroll-reveal {
 }
