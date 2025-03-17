@@ -94,9 +94,9 @@ const ScrollRevealText = () => {
   }, [supportsAnimationTimeline]);
 
   return supportsAnimationTimeline ? (
-    <ScrollRevealTextMotion />
-  ) : (
     <ScrollRevealTextFallback />
+  ) : (
+    <ScrollRevealTextMotion />
   );
 };
 
