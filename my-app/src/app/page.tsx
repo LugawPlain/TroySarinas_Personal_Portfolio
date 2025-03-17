@@ -26,8 +26,8 @@ import HeroSection from "../../components/HeroSection";
 
 export default function Home() {
   return (
-    <div className="max-w-vw overflow-hidden  ">
-      <main className="w-full font-clashDisplayBold  bg-cover ">
+    <div className="">
+      <main className="w-full font-clashDisplayBold bg-cover ">
         <HeaderNav></HeaderNav>
         <section className="w-full h-fit">
           <HeroSection></HeroSection>
@@ -35,7 +35,7 @@ export default function Home() {
         <MarqueeGroup1></MarqueeGroup1>
       </main>
       <section className="mt-4">
-        <div className="scroll-reveal text-center  text-lg font-medium tracking-widest py-8 px-2 rounded-lg  ">
+        <div className="scroll-reveal-text text-center  text-lg font-medium tracking-widest py-8 px-2 rounded-lg  ">
           <h2 className="text-3xl">
             <span className="inline text-foreground/10 bg-clip-text">
               About me

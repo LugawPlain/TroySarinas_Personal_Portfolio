@@ -273,20 +273,22 @@
   justify-content: center;
   align-items: center;
 }
-
+.NameTitle {
+  @apply motion-scale-in-[0.5] motion-translate-x-in-[0%] motion-translate-y-in-[154%] motion-blur-in-[10px] motion-delay-[0.53s]/scale motion-duration-[1.13s]/translate motion-duration-[0.89s]/blur motion-delay-[0.45s]/blur;
+}
 /* scroll reveal */
-.scroll-reveal span {
+.scroll-reveal-text span {
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-image: linear-gradient(var(--foreground), var(--foreground));
   animation: scroll-reveal-text linear forwards;
   animation-timeline: view();
 }
-.scroll-reveal h2 span {
+.scroll-reveal-text h2 span {
   animation-range-start: cover 25svh;
   animation-range-end: cover 30svh;
 }
-.scroll-reveal p span {
+.scroll-reveal-text p span {
   animation-range-start: cover 28svh;
   animation-range-end: cover 70svh;
 }
@@ -295,6 +297,20 @@
     background-size: 100% 100%;
   }
 }
-/* Scrolled  */
-.text-scroll-reveal {
+.scroll-opacity-reveal {
+  opacity: 0;
+  animation: scroll-reveal-opacity linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover 10svh;
+  animation-range-end: cover 20svh;
+}
+@keyframes scroll-reveal-opacity {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
