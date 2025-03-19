@@ -10,10 +10,17 @@ import Image from "next/image";
 import ButtonStyled from "./ButtonStyled";
 import Dock from "../reactbits/components/Dock/Dock";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
 const HeaderNav = () => {
   return (
     <>
-      <div className="flex w-full py-2 px-6 text-sm items-center bg-transparent shadow-md justify-between border-b-2 border-border">
+      <motion.div
+        initial={{ y: -65 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 1.75, duration: 2, type: "spring" }}
+        className="flex w-full py-2 px-6 text-sm items-center bg-transparent shadow-md justify-between border-b-2 border-border"
+      >
         <span className="p-0.5 rounded-lg bg-status  shadow-sm ">
           <Avatar className="w-[40px] h-[40px] rounded-md  ">
             <AvatarImage src="/Icons/Troy_Sarinas_Pfp.jpg" />
@@ -28,7 +35,7 @@ const HeaderNav = () => {
           </span>
           <p className="text-xs text-text-primary">Available for work</p>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

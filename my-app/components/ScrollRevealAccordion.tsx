@@ -14,7 +14,7 @@ interface ScrollAnimationResult {
 }
 
 const useScrollAnimation = (
-  offset: [any, any] = ["start 0.85", "start 0.80"]
+  offset: [any, any] = ["start 1", "start 0.9"]
 ): ScrollAnimationResult => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset });

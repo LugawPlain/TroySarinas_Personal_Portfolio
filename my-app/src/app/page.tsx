@@ -20,16 +20,17 @@ import HeroSection from "../../components/HeroSection";
 import ScrollRevealText from "../../components/ScrollRevealText";
 import Testing from "../../components/Testing";
 import ScrollRevealAccordion from "../../components/ScrollRevealAccordion";
+import Portfolio from "../../components/Portfolio";
 
 export default function Home() {
   return (
     <div className="">
       <main className="w-full font-clashDisplayBold bg-cover ">
         <HeaderNav></HeaderNav>
-        <section className="w-full h-fit">
-          <HeroSection></HeroSection>
-        </section>
+        <HeroSection></HeroSection>
+
         <MarqueeGroup1></MarqueeGroup1>
+        <MarqueeGroup2></MarqueeGroup2>
       </main>
       <section className="mt-4">
         <ScrollRevealText />
@@ -39,7 +40,9 @@ export default function Home() {
         <h2 className="text-center text-3xl my-4">My Services ✨</h2>
         <ScrollRevealAccordion></ScrollRevealAccordion>
       </div>
-
+      <section>
+        <Portfolio></Portfolio>
+      </section>
       <section>
         <ContactForm />
       </section>

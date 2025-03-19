@@ -285,12 +285,12 @@
   animation-timeline: view();
 }
 .scroll-reveal-text h2 span {
-  animation-range-start: cover 25svh;
-  animation-range-end: cover 30svh;
+  animation-range-start: cover 25vh;
+  animation-range-end: cover 30vh;
 }
 .scroll-reveal-text p span {
-  animation-range-start: cover 28svh;
-  animation-range-end: cover 70svh;
+  animation-range-start: cover 28vh;
+  animation-range-end: cover 70vh;
 }
 @keyframes scroll-reveal-text {
   to {
@@ -301,13 +301,14 @@
   transform-origin: bottom;
 }
 
-/* @supports (animation-timeline: view()) {
+@supports (animation-timeline: view()) {
   .scroll-opacity-reveal {
-  animation: scroll-reveal-opacity linear forwards;
-
+    opacity: 0;
+    scale: 0;
+    animation: scroll-reveal-opacity linear forwards;
     animation-timeline: view();
-    animation-range-start: cover 10svh;
-    animation-range-end: cover 15svh;
+    animation-range-start: cover 10vh;
+    animation-range-end: cover 15vh;
   }
   @keyframes scroll-reveal-opacity {
     from {
@@ -319,4 +320,7 @@
       scale: 1;
     }
   }
-} */
+}
+h2 {
+  @apply text-center text-3xl;
+}

@@ -17,7 +17,7 @@ const ScrollRevealTextMotion = () => {
   const paragraphRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: paragraphRef,
-    offset: ["start 0.72", "start 0.5"],
+    offset: ["start 0.72", "start 0.3"],
   });
   const paragraphBackgroundSize = useTransform(
     scrollYProgress,
