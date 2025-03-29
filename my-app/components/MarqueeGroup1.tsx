@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const MarqueeGroup1 = () => {
   return (
-    <div className="relative">
+    <div className="relative max-w-screen overflow-hidden">
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "-100vw" }}

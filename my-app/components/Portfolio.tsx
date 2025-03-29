@@ -24,12 +24,12 @@ const portfolioItems: PortfolioItem[] = [
 
 const Portfolio = () => {
   return (
-    <div className="">
+    <div className="space-y-8">
       <h2>Projects </h2>
       {portfolioItems.map((item, index) => (
         <div
           key={index}
-          className="flex-col space-y-4 py-4 odd:bg-gray-100 even:bg-gray-200"
+          className="flex-col shadow-md space-y-4  odd:bg-gray-100 even:bg-gray-200"
         >
           <div className="relative h-96 w-full">
             <Image

@@ -25,7 +25,7 @@ import Portfolio from "../../components/Portfolio";
 export default function Home() {
   return (
     <div className="">
-      <main className="w-full font-clashDisplayBold bg-cover ">
+      <main className="w-full  font-clashDisplayBold bg-cover ">
         <HeaderNav></HeaderNav>
         <HeroSection></HeroSection>
 
