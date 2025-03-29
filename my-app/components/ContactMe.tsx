@@ -2,10 +2,20 @@ import React from "react";
 
 const ContactMe = () => {
   return (
-    <div>
-      <button className="text-nowrap outline-amber-400 outline-1 px-2 py-1 rounded-4xl">
-        Contact Me
-      </button>
+    <div className="mt-16 ">
+      <div className=" space-y-5 py-4 px-2 text-foreground ">
+        <h3 className="text-4xl tracking-tighter word-spacing font-serif font-extrabold text-center">
+          Let's get that project Started!!
+        </h3>
+        {/* <p className="text-sm text-foreground/80">
+          Conteact me now alsdaskdlakdlawkdlaksd
+        </p> */}
+        <div className="flex-center">
+          <button className="text-2xl text-nowrap text-card-foreground mx-auto bg-card px-6 py-2 rounded-lg">
+            Get Started 🚀
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

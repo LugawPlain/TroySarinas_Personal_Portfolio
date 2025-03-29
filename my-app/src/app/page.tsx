@@ -17,7 +17,7 @@ export default function Home() {
     <div className=" h-screen scroll-smooth">
       <section
         id="hero"
-        className="min-h-screen w-full px-0 font-clashDisplayBold bg-cover  "
+        className="w-full px-0 font-clashDisplayBold bg-cover  "
       >
         <HeaderNav></HeaderNav>
         <HeroSection></HeroSection>
@@ -25,7 +25,7 @@ export default function Home() {
         <MarqueeGroup1></MarqueeGroup1>
         <MarqueeGroup2></MarqueeGroup2>
       </section>
-      <section id="about" className="min-h-screen mt-4 px-0">
+      <section id="about" className=" mt-4 px-0">
         <ScrollRevealText />
 
         <div id="services" className="w-full">
@@ -33,22 +33,18 @@ export default function Home() {
           <ScrollRevealAccordion></ScrollRevealAccordion>
         </div>
       </section>
-      <section
-        id="projects"
-        className="min-h-screen max-w-screen overflow-hidden px-0"
-      >
+      <section id="projects" className="  max-w-screen overflow-hidden px-0">
         <Portfolio></Portfolio>
       </section>
-      <section id="contact" className="min-h-screen">
+      <section id="contact" className="">
         <ContactMe />
       </section>
-      <section id="certificates" className=" ">
+      <section id="certificates" className="min-h-96">
         <Certificates></Certificates>
       </section>
 
-      <footer id="footer" className=" "></footer>
+      <footer id="footer" className="h-196"></footer>
       <MenuBar></MenuBar>
-      <section className="h-16"></section>
     </div>
   );
 }

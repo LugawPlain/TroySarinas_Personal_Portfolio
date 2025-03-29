@@ -267,7 +267,9 @@
     @apply p-6;
   }
 }
-
+.word-tight {
+  word-spacing: -2px;
+}
 @utility flex-center {
   display: flex;
   justify-content: center;

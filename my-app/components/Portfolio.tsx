@@ -105,7 +105,7 @@ const Portfolio = () => {
         >
           {portfolioItems.map((item, index) => (
             <div key={index} className="flex-none w-full snap-center">
-              <div className="flex-col shadow-md space-y-4 border-2 border-gray-300">
+              <div className="flex-col shadow-md space-y-4">
                 <div className="relative h-96 w-full overflow-hidden">
                   <Image
                     src={item.image}
@@ -123,7 +123,7 @@ const Portfolio = () => {
           ))}
 
           {/* See More Card */}
-          <div className="flex-none w-full snap-center border-2 border-gray-300 relative">
+          <div className="flex-none w-full snap-center relative">
             <div className="relative flex-col shadow-md space-y-4 h-96 blur-sm">
               <div className="relative h-full w-full">
                 <Image
@@ -171,7 +171,7 @@ const Portfolio = () => {
           ))}
         </div>
         <div className="w-full flex mt-4">
-          <Button className="bg-card text-card-foreground mx-auto">
+          <Button className="shadow-none text-foreground underline text-md font-serif mx-auto hover:scale-110 active:scale-110 transition-all duration-300">
             See more ↗
           </Button>
         </div>
