@@ -33,10 +33,8 @@ export default function Home() {
       </section>
       <section id="projects" className="">
         <Portfolio></Portfolio>
-        <section id="certificates" className="">
-          <Technologies></Technologies>
-          <Certificates></Certificates>
-        </section>
+        <Technologies></Technologies>
+        <Certificates></Certificates>
       </section>
 
       <section id="contact" className="">

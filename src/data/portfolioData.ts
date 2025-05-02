@@ -26,7 +26,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/VRSSCR.png",
     titleLink: "https://vr-sscr.netlify.app/", // Add link if available
     githubLink: "https://github.com/LugawPlain/VR-SSCR",
-    techStack: ["React", "CSS", "JavaScript"],
+    techStack: ["HTML5", "CSS", "JavaScript", "Three.js", "A-Frame"],
   },
   {
     title: "Zipto POS/Inventory System",
@@ -35,7 +35,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: "/Background.jpg",
     titleLink: "https://example.com/project3", // Add link if available
     githubLink: "https://github.com/your-username/yorticia-repo",
-    techStack: ["Vue", "Firebase", "Tailwind"],
+    techStack: ["Flutter", "Dart", "Firebase", "MongoDB"],
   },
   {
     title: "Onboarding Automation System",

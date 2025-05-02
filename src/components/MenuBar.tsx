@@ -19,7 +19,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
       (entries) => {
         entries.forEach((entry) => {
           // Update active section when section is more than 50% visible
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
             setActiveSection(entry.target.id);
           }
         });
@@ -27,7 +27,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5,
+        threshold: 0.2,
       }
     );
 

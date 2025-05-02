@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactForm";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "@/components/ui/card";
@@ -13,6 +13,18 @@ import Link from "next/link";
 
 const ContactMe = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    // Cleanup function to reset overflow when the component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -37,52 +49,51 @@ const ContactMe = () => {
               className="text-2xl text-nowrap text-card-foreground mx-auto bg-accent2 px-6 py-2 rounded-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               Get Started 🚀
             </motion.button>
           </div>
-
-          {/* Modal */}
-          <AnimatePresence>
-            {isOpen && (
-              <>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2, delay: 0.15 }}
-                  className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
-                />
-                <div className="fixed inset-0 z-50 flex items-center justify-center">
-                  <motion.div
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0, opacity: 0 }}
-                    transition={{
-                      type: "spring",
-                      duration: 0.5,
-                    }}
-                    className="bg-background rounded-lg p-6 max-w-3xl w-[90%] max-h-[90vh] overflow-y-auto relative"
-                  >
-                    <button
-                      onClick={() => setIsOpen(false)}
-                      className="absolute top-4 right-4 text-foreground/70 hover:text-foreground"
-                    >
-                      ✕
-                    </button>
-                    <h2 className="text-2xl font-bold text-center mb-4">
-                      Contact Me
-                    </h2>
-                    <ContactForm />
-                  </motion.div>
-                </div>
-              </>
-            )}
-          </AnimatePresence>
-          <div></div>
         </div>
       </motion.div>
+
+      {/* Modal moved outside the animated div */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2, delay: 0.15 }}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+            />
+            <div className="fixed inset-0 z-50 flex items-center justify-center">
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0, opacity: 0 }}
+                transition={{
+                  type: "spring",
+                  duration: 0.5,
+                }}
+                className="bg-background rounded-lg p-6 max-w-3xl w-[90%] max-h-[90vh] overflow-y-auto relative"
+              >
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="absolute top-4 right-4 text-foreground/70 hover:text-foreground"
+                >
+                  ✕
+                </button>
+                <h2 className="text-2xl font-bold text-center mb-4">
+                  Contact Me
+                </h2>
+                <ContactForm />
+              </motion.div>
+            </div>
+          </>
+        )}
+      </AnimatePresence>
+
       <div className="px-4 py-4 mt-8">
         <h3 className="text-4xl font-bold text-center mb-4">
           Let's Get in Touch
