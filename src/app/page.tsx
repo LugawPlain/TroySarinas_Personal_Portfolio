@@ -11,6 +11,7 @@ import Portfolio from "@/components/Portfolio";
 import Certificates from "@/components/Certificates";
 import ContactMe from "@/components/ContactMe";
 import Technologies from "@/components/Technologies";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -32,17 +33,20 @@ export default function Home() {
       </section>
       <section id="projects" className="">
         <Portfolio></Portfolio>
+        <section id="certificates" className="">
+          <Technologies></Technologies>
+          <Certificates></Certificates>
+        </section>
       </section>
 
-      <section id="certificates" className="">
-        <Technologies></Technologies>
-        <Certificates></Certificates>
-      </section>
-      <section id="contact" className="min-h-screen">
+      <section id="contact" className="">
         <ContactMe />
       </section>
+      <footer id="footer" className="">
+        <Footer></Footer>
+      </footer>
+      <div className="min-h-10"></div>
 
-      <footer id="footer" className="h-196"></footer>
       <MenuBar></MenuBar>
     </div>
   );

@@ -25,9 +25,9 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
         });
       },
       {
-        root: null, // viewport
+        root: null,
         rootMargin: "0px",
-        threshold: 0.5, // 50% visibility threshold
+        threshold: 0.5,
       }
     );
 

@@ -92,7 +92,7 @@ const ContactMe = () => {
           I always appreciate your feedback, suggestions, or just a friendly
           hello. I'm looking forward to hearing from you!
         </p>
-        <div className="flex flex-col justify-center items-start space-y-2 px-4 text-accent">
+        <div className="mt-4 flex flex-col justify-center items-start space-y-2 px-4 text-accent">
           <Link href="https://www.facebook.com/lugawplain">
             <div className="flex flex-row justify-center items-center space-x-4">
               <FaFacebookSquare size={40} />
