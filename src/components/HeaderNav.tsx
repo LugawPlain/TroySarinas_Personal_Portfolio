@@ -15,7 +15,7 @@ const HeaderNav = () => {
       >
         <span className="p-0.5 rounded-lg bg-status  shadow-sm ">
           <Avatar className="w-[40px] h-[40px] rounded-md  ">
-            <AvatarImage src="/Icons/Troy_Sarinas_Pfp.jpg" />
+            <AvatarImage src="/Icons/Troy_Sarinas_Pfp3.jpg" />
             <AvatarFallback>TS</AvatarFallback>
           </Avatar>
         </span>

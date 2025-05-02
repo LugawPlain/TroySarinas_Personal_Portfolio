@@ -17,21 +17,30 @@ export const portfolioItems: PortfolioItem[] = [
     // Developed a professional online portfolio for Yorticia, a fashion model. The website serves as a central hub to showcase her diverse modeling work through curated galleries, clearly outline her services, and streamline the process for booking inquiries. Key features include [mention 1-2 specific features like 'a dynamic gallery filter', 'an integrated contact form', 'a responsive design optimized for all devices'].
     // Designed and built a bespoke portfolio website for model Yorticia. The goal was to create an elegant and user-friendly platform that effectively presents her visual portfolio and professional services to potential clients and agencies. My role involved [mention your role, e.g., 'full-stack development', 'front-end development and UI design'] using [mention key technologies, e.g., 'Next.js, Tailwind CSS, and Framer Motion']
     techStack: ["Next.js", "Tailwind", "TypeScript", "Node.js", "Express"],
-    githubLink: "https://github.com/your-username/yorticia-repo",
+    githubLink: "https://github.com/LugawPlain/JazzilCrizhna",
   },
   {
-    title: "Sample Project 2",
+    title: "SSCRDC VR",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda unde, impedit dolorem possimus eveniet voluptatum.",
-    image: "/Background.jpg",
-    titleLink: "https://example.com/project2", // Add link if available
-    githubLink: "https://github.com/your-username/project2-repo",
+      "Created a VR educational experience for SSCRDC students focused on microcontrollers and logic gates. The simulation allowed students to interactively build virtual circuits, visualize signal flow, and grasp complex digital logic concepts in an intuitive 3D environment",
+    image: "/VRSSCR.png",
+    titleLink: "https://vr-sscr.netlify.app/", // Add link if available
+    githubLink: "https://github.com/LugawPlain/VR-SSCR",
     techStack: ["React", "CSS", "JavaScript"],
   },
   {
-    title: "Sample Project 3",
+    title: "Zipto POS/Inventory System",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda unde, impedit dolorem possimus eveniet voluptatum.",
+      "Developed and implemented a custom Point-of-Sale (POS) and Inventory Management system for a small beverage business, significantly streamlining daily operations by automating sales tracking and stock control.",
+    image: "/Background.jpg",
+    titleLink: "https://example.com/project3", // Add link if available
+    githubLink: "https://github.com/your-username/yorticia-repo",
+    techStack: ["Vue", "Firebase", "Tailwind"],
+  },
+  {
+    title: "Onboarding Automation System",
+    description:
+      " Engineered an automation solution that significantly reduced manual effort in employee onboarding. The system automatically generates new Microsoft Outlook accounts, utilizes Intune for standardized device configuration, and monitors OS versions, ensuring a consistent and efficient setup for new hires.",
     image: "/Background.jpg",
     titleLink: "https://example.com/project3", // Add link if available
     githubLink: "https://github.com/your-username/yorticia-repo",

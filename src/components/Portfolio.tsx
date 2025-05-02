@@ -42,7 +42,7 @@ const Portfolio = () => {
   }, [api]);
 
   return (
-    <div className="px-8 py-2">
+    <div className="px-8 py-2 overflow-x-hidden">
       <h2 className="py-2">Projects ✨</h2>
       <motion.div
         className="w-full"

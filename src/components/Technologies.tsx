@@ -37,6 +37,8 @@ import { FaWix } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa";
 import { SiWoocommerce } from "react-icons/si";
 import { FaSquarespace } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 // Define the technology data array
@@ -61,6 +63,7 @@ const technologies = [
   { name: "GitHub", IconComponent: FaGithub },
   { name: "Git", IconComponent: BiLogoGit },
   { name: "MongoDB", IconComponent: SiMongodb },
+  { name: "MySQL", IconComponent: SiMysql },
   { name: "PostgreSQL", IconComponent: BiLogoPostgresql },
   { name: "Prisma", IconComponent: SiPrisma },
   { name: "Netlify", IconComponent: SiNetlify },
@@ -86,7 +89,7 @@ const Technologies = () => {
   // Animation variants for the grid container
   const gridVariants = {
     hidden: {
-      height: "20rem", // Approx height for 5 rows (10 items / 2 columns)
+      height: "21rem", // Approx height for 5 rows (10 items / 2 columns)
       opacity: 1, // Keep opacity 1, fade is handled by gradient
       transition: { duration: 0.75, ease: "easeInOut" },
     },
@@ -137,7 +140,7 @@ const Technologies = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute bottom-0 left-4 right-4 h-40 bg-gradient-to-t from-background to-transparent pointer-events-none md:hidden"
+              className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-nude via-nude/90 to-transparent pointer-events-none md:hidden"
             ></motion.div>
           )}
         </AnimatePresence>

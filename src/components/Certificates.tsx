@@ -95,8 +95,6 @@ const Certificates = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2" />
-        <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2" />
       </Carousel>
 
       {/* Bottom Center Index Indicator */}
@@ -107,7 +105,7 @@ const Certificates = () => {
               key={index}
               onClick={() => api?.scrollTo(index)}
               className={`h-2 w-2 rounded-full ${
-                current === index + 1 ? "bg-primary" : "bg-muted"
+                current === index + 1 ? "bg-accent" : "bg-gray-300"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

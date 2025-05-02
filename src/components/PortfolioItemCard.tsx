@@ -14,7 +14,7 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
         {item.techStack.map((tech, idx) => (
           <span
             key={idx}
-            className="bg-card text-card-foreground px-2 py-1 rounded-md"
+            className="bg-accent text-card-foreground px-2 py-1 rounded-md"
           >
             {tech}
           </span>
@@ -37,7 +37,7 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
           <div className="flex-row  flex justify-between">
             <Link
               href={item.titleLink || ""}
-              className=" flex items-start gap-2 underline text-md font-serif mt-4 hover:scale-110  active:scale-110 transition-all duration-300"
+              className="text-accent flex items-start gap-2 underline text-md font-serif mt-4 hover:scale-110  active:scale-110 transition-all duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
             </Link>
             <Link
               href={item.githubLink || ""}
-              className=" flex items-start gap-2 underline text-md font-serif mt-4 hover:scale-110  active:scale-110 transition-all duration-300"
+              className="text-accent flex items-start gap-2 underline text-md font-serif mt-4 hover:scale-110  active:scale-110 transition-all duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
