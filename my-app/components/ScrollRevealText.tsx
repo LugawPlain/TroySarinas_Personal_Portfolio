@@ -63,41 +63,8 @@ const ScrollRevealTextMotion = () => {
   );
 };
 
-const ScrollRevealTextFallback = () => (
-  <div className="scroll-reveal-text text-center text-lg font-medium tracking-widest py-8 px-2 rounded-lg">
-    <h2 className="text-3xl">
-      <span className="inline text-foreground/10 bg-clip-text">About me</span>
-      <p className="inline">✨</p>
-    </h2>
-    <p className="scroll-reveal-text mt-4">
-      <span className="text-foreground/10 bg-clip-text">
-        I am a Computer Engineer with a passion for technology and design.
-        Collaborating with companies worldwide to create visually stunning,
-        highly functional, and user-friendly digital experiences that deliver
-        measurable results and support business growth.
-      </span>
-    </p>
-  </div>
-);
-
 const ScrollRevealText = () => {
-  const [supportsAnimationTimeline, setSupportsAnimationTimeline] =
-    useState(false);
-
-  useEffect(() => {
-    const isSupported = CSS.supports("animation-timeline", "view()");
-    setSupportsAnimationTimeline(isSupported);
-  }, []);
-
-  useEffect(() => {
-    console.log("Updated state:", supportsAnimationTimeline);
-  }, [supportsAnimationTimeline]);
-
-  return supportsAnimationTimeline ? (
-    <ScrollRevealTextFallback />
-  ) : (
-    <ScrollRevealTextMotion />
-  );
+  return <ScrollRevealTextMotion />;
 };
 
 export default ScrollRevealText;

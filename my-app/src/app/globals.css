@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
-@plugin "tailwindcss-motion";
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -263,9 +262,6 @@
   body {
     @apply text-foreground bg-background font-clashDisplayBold;
   }
-  section {
-    @apply p-6;
-  }
 }
 .word-tight {
   word-spacing: -2px;
@@ -275,9 +271,7 @@
   justify-content: center;
   align-items: center;
 }
-.NameTitle {
-  @apply motion-scale-in-[0.5] motion-translate-x-in-[0%] motion-translate-y-in-[154%] motion-blur-in-[10px] motion-delay-[0.53s]/scale motion-duration-[1.13s]/translate motion-duration-[0.89s]/blur motion-delay-[0.45s]/blur;
-}
+
 /* scroll reveal */
 .scroll-reveal-text span {
   background-repeat: no-repeat;

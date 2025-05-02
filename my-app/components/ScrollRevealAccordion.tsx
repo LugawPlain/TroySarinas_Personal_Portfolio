@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
-import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, MotionValue } from "framer-motion";
 import Image from "next/image";
 import {
   Accordion,
@@ -8,19 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-interface ScrollAnimationResult {
-  ref: React.RefObject<HTMLDivElement | null>;
-  animationValue: MotionValue<number>;
-}
 
-const useScrollAnimation = (
-  offset: [any, any] = ["start 1", "start 0.9"]
-): ScrollAnimationResult => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset });
-  const animationValue = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  return { ref, animationValue };
-};
 interface AccordionMotionItemProps {
   value: string;
   title: string;
@@ -34,22 +22,34 @@ const AccordionMotionItem: React.FC<AccordionMotionItemProps> = ({
   image,
   listItems,
 }) => {
-  const { ref, animationValue } = useScrollAnimation();
+  const ref = useRef(null);
 
   return (
     <motion.div
       ref={ref}
-      initial={{ scale: 0, opacity: 0 }}
-      style={{ opacity: animationValue, scale: animationValue }}
-      className="scroll-opacity-reveal"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
     >
-      <AccordionItem className="bg-card" value={value}>
-        <AccordionTrigger className="text-2xl text-center">
+      <AccordionItem
+        className="bg-card mb-4 border-none rounded-md overflow-hidden"
+        value={value}
+      >
+        <AccordionTrigger className="text-xl text-center hover:no-underline px-4 py-3">
           {title}
         </AccordionTrigger>
-        <AccordionContent className="flex-center py-4 flex-col">
-          <Image src={image} width={350} height={400} alt={title} />
-          <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
+        <AccordionContent className="flex-center py-4 flex-col px-4">
+          <div className="relative w-full max-w-[350px] aspect-[350/400] mb-4">
+            <Image
+              src={image}
+              fill
+              style={{ objectFit: "contain" }}
+              alt={title}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 350px"
+            />
+          </div>
+          <ul className="text-start w-full text-sm list-disc pl-5 space-y-1">
             {listItems.map((item, idx) => (
               <li key={idx}>{item}</li>
             ))}
@@ -60,64 +60,66 @@ const AccordionMotionItem: React.FC<AccordionMotionItemProps> = ({
   );
 };
 
-const ScrollRevealAccordionMotion: React.FC = () => {
+const ScrollRevealAccordion = () => {
   const accordionData: AccordionMotionItemProps[] = [
     {
       value: "item-1",
       title: "Web Development",
-      image: "/Background.svg",
+      image: "/services/webdev.svg",
       listItems: [
-        "Front-End Development",
-        "Back-End Development",
-        "Landing Pages and business websites",
-        "Portfolio Websites",
+        "Front-End Development (React, Next.js, Vue)",
+        "Back-End Development (Node.js, Express, Databases)",
+        "Landing Pages and Business Websites",
+        "Portfolio Websites & E-commerce Solutions",
+        "API Integration & Development",
       ],
     },
     {
       value: "item-2",
       title: "UI/UX Design",
-      image: "/Background.svg",
+      image: "/services/uiux.svg",
       listItems: [
         "Responsive & Adaptive Design",
-        "Design Systems, Style Guides",
+        "Wireframing & Prototyping (Figma)",
         "User Flow & Navigation Optimization",
-        "Interaction Design",
-        "Branding, logo, typography, color pallete and brand personality",
+        "Interaction Design & Microinteractions",
+        "Branding, Style Guides & Design Systems",
       ],
     },
     {
       value: "item-3",
       title: "Mobile Application",
-      image: "/Background.svg",
+      image: "/services/mobile.svg",
       listItems: [
-        "Native Development",
-        "Cross-Platform Development",
-        "Back-End and API Integration",
-        "Bug Fixing",
+        "Cross-Platform Development (React Native)",
+        "Native Module Integration",
+        "API Integration & Offline Sync",
+        "Performance Optimization & Bug Fixing",
+        "App Store Submission & Maintenance",
       ],
     },
     {
       value: "item-4",
       title: "E-Commerce Platform",
-      image: "/Background.svg",
+      image: "/services/ecommerce.svg",
       listItems: [
-        "Online Store Theme Set-up",
-        "Apps/Plugins Integrations",
-        "Search engine and Perfomance optimization",
-        "Convertion Rate Optimization",
-        "E-commerce Maintenance and Support",
+        "Platform Setup (Shopify, WooCommerce)",
+        "Custom Theme Development & Customization",
+        "App/Plugin Integration & Configuration",
+        "Conversion Rate Optimization (CRO)",
+        "Performance Tuning & SEO for E-commerce",
       ],
     },
     {
       value: "item-5",
-      title: "Automations",
-      image: "/Background.svg",
+      title: "Automation & Integration",
+      image: "/services/automation.svg",
       listItems: [
-        "Online Store Theme Set-up",
-        "Apps/Plugins Integrations",
-        "Search engine and Perfomance optimization",
-        "Convertion Rate Optimization",
-        "E-commerce Maintenance and Support",
+        "Workflow Automation (Zapier, Make)",
+        "API Integrations (CRM, Marketing Tools)",
+        "Custom Scripting (Python, Node.js)",
+        "Data Scraping & Processing",
+        "Process Analysis & Optimization Consulting",
       ],
     },
   ];
@@ -126,139 +128,12 @@ const ScrollRevealAccordionMotion: React.FC = () => {
     <Accordion
       type="single"
       collapsible
-      className="w-full text-card-foreground text-center"
+      className="w-full text-card-foreground text-center max-w-3xl mx-auto space-y-4 px-4"
     >
       {accordionData.map((data) => (
         <AccordionMotionItem key={data.value} {...data} />
       ))}
     </Accordion>
-  );
-};
-
-const ScrollRevealAccordionFallback = () => (
-  <Accordion
-    type="single"
-    collapsible
-    className="w-full text-card-foreground text-center"
-  >
-    <AccordionItem className="bg-card  scroll-opacity-reveal" value="item-1">
-      <AccordionTrigger className="text-2xl text-center ">
-        Web Development
-      </AccordionTrigger>
-      <AccordionContent className="flex-center p-8 flex-col">
-        <Image
-          src="/Background.svg"
-          width={350}
-          height={400}
-          alt="Web Development"
-        />
-        <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
-          <li> Front-End Development </li>
-          <li> Back-End Development </li>
-          <li> Landing Pages and business websites</li>
-          <li> Portfolio Websites </li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-    <AccordionItem className="bg-card  scroll-opacity-reveal" value="item-2">
-      <AccordionTrigger className="text-2xl text-center ">
-        UI/UX Design
-      </AccordionTrigger>
-      <AccordionContent className="flex-center py-4 flex-col">
-        <Image
-          src="/Background.svg"
-          width={350}
-          height={400}
-          alt="Web Development"
-        />
-        <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
-          <li> Responsive & Adaptive Design </li>
-          <li> Design Systems, Style Guides </li>
-          <li> User Flow & Navigation Optimization</li>
-          <li> Interaction Design </li>
-          <li>Branding,logo,typography,color pallete and brand personality</li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-    <AccordionItem className="bg-card  scroll-opacity-reveal" value="item-3">
-      <AccordionTrigger className="text-2xl text-center ">
-        Mobile Application
-      </AccordionTrigger>
-      <AccordionContent className="flex-center py-4 flex-col">
-        <Image
-          src="/Background.svg"
-          width={350}
-          height={400}
-          alt="Web Development"
-        />
-        <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
-          <li> Native Development </li>
-          <li> Cross-Platform Development </li>
-          <li> Back-End and API Integration</li>
-          <li> Bug Fixing </li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-    <AccordionItem className="bg-card  scroll-opacity-reveal" value="item-4">
-      <AccordionTrigger className="text-2xl text-center ">
-        E-Commerce Platform
-      </AccordionTrigger>
-      <AccordionContent className="flex-center py-4 flex-col">
-        <Image
-          src="/Background.svg"
-          width={350}
-          height={400}
-          alt="Web Development"
-        />
-        <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
-          <li> Online Store Theme Set-up </li>
-          <li> Apps/Plugins Integrations </li>
-          <li> Search engine and Perfomance optimization</li>
-          <li> Convertion Rate Optimization </li>
-          <li> E-commerce Maintenance and Support </li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-    <AccordionItem className="bg-card  scroll-opacity-reveal" value="item-5">
-      <AccordionTrigger className="text-2xl text-center ">
-        Automations
-      </AccordionTrigger>
-      <AccordionContent className="flex-center py-4 flex-col">
-        <Image
-          src="/Background.svg"
-          width={350}
-          height={400}
-          alt="Web Development"
-        />
-        <ul className="text-start w-full mt-2 text-sm list-disc pl-5">
-          <li> Online Store Theme Set-up </li>
-          <li> Apps/Plugins Integrations </li>
-          <li> Search engine and Perfomance optimization</li>
-          <li> Convertion Rate Optimization </li>
-          <li> E-commerce Maintenance and Support </li>
-        </ul>
-      </AccordionContent>
-    </AccordionItem>
-  </Accordion>
-);
-
-const ScrollRevealAccordion = () => {
-  const [supportsAnimationTimeline, setSupportsAnimationTimeline] =
-    useState(false);
-
-  useEffect(() => {
-    const isSupported = CSS.supports("animation-timeline", "view()");
-    setSupportsAnimationTimeline(isSupported);
-  }, []);
-
-  useEffect(() => {
-    console.log("Updated state accordion:", supportsAnimationTimeline);
-  }, [supportsAnimationTimeline]);
-
-  return supportsAnimationTimeline ? (
-    <ScrollRevealAccordionFallback />
-  ) : (
-    <ScrollRevealAccordionMotion />
   );
 };
 

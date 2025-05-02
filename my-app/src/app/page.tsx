@@ -4,7 +4,6 @@ import MenuBar from "../../components/MenuBar";
 
 import MarqueeGroup1 from "../../components/MarqueeGroup1";
 import MarqueeGroup2 from "../../components/MarqueeGroup2";
-import ContactForm from "../../components/ContactForm";
 import HeroSection from "../../components/HeroSection";
 import ScrollRevealText from "../../components/ScrollRevealText";
 import ScrollRevealAccordion from "../../components/ScrollRevealAccordion";
@@ -21,7 +20,6 @@ export default function Home() {
       >
         <HeaderNav></HeaderNav>
         <HeroSection></HeroSection>
-
         <MarqueeGroup1></MarqueeGroup1>
         <MarqueeGroup2></MarqueeGroup2>
       </section>

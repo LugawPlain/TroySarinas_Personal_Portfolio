@@ -2,21 +2,13 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import React from "react";
-import ProfilePic from "./ProfilePic";
-import ContactMe from "./ContactMe";
-import HoverUpAnimationText from "./HoverUpAnimationText";
-import StarBorder from "../reactbits/animations/StarBorder/StarBorder";
-import Image from "next/image";
-import ButtonStyled from "./ButtonStyled";
-import Dock from "../reactbits/components/Dock/Dock";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const HeaderNav = () => {
   return (
     <>
       <motion.div
-        initial={{ y: -65 }}
+        initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ delay: 1.75, duration: 2, type: "spring" }}
         className="flex w-full py-2 px-6 text-sm items-center bg-transparent shadow-md justify-between border-b-2 border-border"

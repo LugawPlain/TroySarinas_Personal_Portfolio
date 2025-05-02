@@ -1,37 +1,65 @@
+"use client";
 import React from "react";
 import ShinyText from "../reactbits/textanimations/ShinyText/ShinyText";
 import ShinyText2 from "../reactbits/textanimations/ShinyText/ShinyText2";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
 const HeroSection = () => {
   return (
     <div className="overflow-hidden px-8 py-8 ">
-      <h3 className="motion-translate-x-in-[-100vw] motion-scale-in-[1.1] motion-delay-[0.75s]/scale motion-duration-[0.25s]/scale ">
+      <motion.h3
+        initial={{ x: "-100vw", scale: 1.1 }}
+        animate={{ x: 0, scale: 1 }}
+        transition={{
+          x: { delay: 0, duration: 1 },
+          scale: { delay: 1, duration: 0.25 },
+        }}
+      >
         Hi, I'm Troy Sarinas
-      </h3>
+      </motion.h3>
       <h1 className="text-nowrap text-6xl my-4 ">
-        <div
-          className="motion-translate-x-in-[150vw] motion-delay-[0.75s]/translate motion-duration-[1.5s]/translate 
-                     motion-scale-in-[1.1] motion-delay-[2.25s]/scale motion-duration-[0.25s]/scale "
+        <motion.div
+          initial={{ x: "150vw", scale: 1.1 }}
+          animate={{ x: 0, scale: 1 }}
+          transition={{
+            x: { delay: 0.25, duration: 1 },
+            scale: { delay: 1.25, duration: 0.25 },
+          }}
         >
           <ShinyText text="Full-Stack" speed={5}></ShinyText>
-        </div>
-        <div
-          className="motion-translate-x-in-[-150vw] motion-delay-[1.5s]/translate motion-duration-[1.5s]/translate 
-                      motion-scale-in-[1.1] motion-delay-[3s]/scale motion-duration-[0.25s]/scale "
+        </motion.div>
+        <motion.div
+          initial={{ x: "-150vw", scale: 1.1 }}
+          animate={{ x: 0, scale: 1 }}
+          transition={{
+            x: { delay: 0.5, duration: 1 },
+            scale: { delay: 1.5, duration: 0.25 },
+          }}
         >
           <ShinyText2 text="Developer" speed={5}></ShinyText2>
-        </div>
+        </motion.div>
       </h1>
-      <p
-        className="my-12 text-lg tracking-wide motion-translate-x-in-[150vw] motion-delay-[2.25s]/translate motion-duration-[1.5s]/translate  
-                    motion-scale-in-[1.1] motion-delay-[3.75s]/scale motion-duration-[0.25s]/scale"
+      <motion.p
+        className="my-12 text-lg tracking-wide"
+        initial={{ x: "150vw", scale: 1.1 }}
+        animate={{ x: 0, scale: 1 }}
+        transition={{
+          x: { delay: 1, duration: 1.5 },
+          scale: { delay: 2.5, duration: 0.25 },
+        }}
       >
         "Bringing visions to life with intuitive, high-performance through
         <span className="text-accent"> innovative </span> design and
         <span className="text-accent"> creative </span> solutions that captivate
         and engage users."
-      </p>
-      <p className="font-semibold motion-preset-typewriter motion-duration-200 motion-delay-1000 motion-ease-out-back "></p>
+      </motion.p>
+      <motion.p
+        className="font-semibold"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.2, ease: "backOut" }}
+      ></motion.p>
       <Button variant="outline">Contact Me</Button>
     </div>
   );
