@@ -34,7 +34,7 @@ export default function Home() {
         <Portfolio></Portfolio>
       </section>
 
-      <section id="certificates" className="min-h-screen">
+      <section id="certificates" className="">
         <Technologies></Technologies>
         <Certificates></Certificates>
       </section>
