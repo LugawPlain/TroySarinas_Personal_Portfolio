@@ -1,38 +1,51 @@
 "use client";
-import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PortfolioItemCard from "@/components/PortfolioItemCard";
 import { portfolioItems } from "@/data/portfolioData";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
   const totalItemsCount = portfolioItems.length;
+  const [api, setApi] = useState<CarouselApi>();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const isFullyInView = useInView(containerRef, { amount: 0.5 });
 
-  const handleItemInView = (index: number) => {
-    setCurrentIndex(index);
+  const handleDotClick = (index: number) => {
+    api?.scrollTo(index);
   };
 
-  const handleDotClick = (index: number) => {
-    if (scrollRef.current) {
-      const scrollPosition = index * scrollRef.current.clientWidth;
-      scrollRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
+  useEffect(() => {
+    if (!api) {
+      return;
     }
-  };
+
+    setCurrentIndex(api.selectedScrollSnap());
+
+    const handleSelect = () => {
+      setCurrentIndex(api.selectedScrollSnap());
+    };
+
+    api.on("select", handleSelect);
+
+    return () => {
+      api.off("select", handleSelect); // Provide the listener function to remove
+    };
+  }, [api]);
 
   return (
-    <div className="space-y-4 px-8 py-2">
-      <h2>Projects ✨</h2>
+    <div className="px-8 py-2">
+      <h2 className="py-2">Projects ✨</h2>
       <motion.div
-        className="relative w-full min-h-4/5"
+        className="w-full"
         ref={containerRef}
         initial={{ opacity: 0, transform: "translateX(75px)" }}
         animate={{
@@ -41,25 +54,24 @@ const Portfolio = () => {
         }}
         transition={{ duration: 0.5, delay: 0.25 }}
       >
-        <div
-          ref={scrollRef}
-          className="flex flex-row gap-16 overflow-x-scroll snap-x snap-mandatory"
-          style={{
-            WebkitOverflowScrolling: "touch",
-            scrollSnapType: "x mandatory",
-            scrollBehavior: "smooth",
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+            slidesToScroll: 1,
           }}
+          className="w-full"
         >
-          {portfolioItems.map((item, index) => (
-            <PortfolioItemCard
-              key={index}
-              item={item}
-              index={index}
-              setCurrentIndex={handleItemInView}
-              isCurrent={currentIndex === index}
-            />
-          ))}
-        </div>
+          <CarouselContent className="-ml-4">
+            {portfolioItems.map((item, index) => (
+              <CarouselItem key={index} className="basis-full pl-4">
+                <PortfolioItemCard item={item} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
         <div className="flex justify-center gap-2 mt-4">
           {Array.from({ length: totalItemsCount }).map((_, index) => (
             <button
@@ -68,11 +80,12 @@ const Portfolio = () => {
                 currentIndex === index ? "bg-accent" : "bg-gray-300"
               }`}
               onClick={() => handleDotClick(index)}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
-        <div className="w-full flex mt-4">
-          <Button className="shadow-none text-foreground underline text-md font-serif mx-auto hover:scale-110 active:scale-110 transition-all duration-300">
+        <div className="w-full flex mt-4 ">
+          <Button className="shadow-none text-foreground underline text-lg font-serif mx-auto hover:scale-110 active:scale-110 transition-all duration-300">
             See more ↗
           </Button>
         </div>

@@ -22,7 +22,7 @@ export default function Home() {
         <MarqueeGroup2></MarqueeGroup2>
         <MarqueeGroup1></MarqueeGroup1>
       </section>
-      <section id="about" className="min-h-screen">
+      <section id="about" className="">
         <ScrollRevealText />
 
         <div id="services" className="w-full">
@@ -30,7 +30,7 @@ export default function Home() {
           <ScrollRevealAccordion></ScrollRevealAccordion>
         </div>
       </section>
-      <section id="projects" className="min-h-screen">
+      <section id="projects" className="">
         <Portfolio></Portfolio>
       </section>
 
