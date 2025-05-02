@@ -70,10 +70,10 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
       transition={{ duration: 0.5 }}
     >
       <AccordionItem
-        className="bg-card mb-4 border-none rounded-md overflow-hidden shadow-sm"
+        className="bg-card border-none overflow-hidden shadow-sm"
         value={value}
       >
-        <AccordionTrigger className="text-xl text-left hover:bg-muted/50 hover:no-underline px-4 py-3 group">
+        <AccordionTrigger className="text-xl text-left hover:bg-muted/50 hover:no-underline px-4 py-4 group">
           <div className="flex items-center space-x-3">
             {IconComponent && (
               <IconComponent className="w-5 h-5 text-primary flex-shrink-0" />
@@ -164,10 +164,7 @@ const ScrollRevealAccordion = () => {
   }
 
   return (
-    <Accordion
-      type="multiple"
-      className="w-full text-card-foreground max-w-4xl mx-auto space-y-4 px-4"
-    >
+    <Accordion type="multiple" className="w-full text-card-foreground mx-auto ">
       {servicesData.map((data: ServiceItemData) => {
         const Icon = iconMap[data.iconName];
         return (

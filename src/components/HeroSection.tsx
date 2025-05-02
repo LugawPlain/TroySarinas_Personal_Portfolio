@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import ShinyText from "../reactbits/textanimations/ShinyText/ShinyText";
-import ShinyText2 from "../reactbits/textanimations/ShinyText/ShinyText2";
+import ShinyText from "@/../reactbits/textanimations/ShinyText/ShinyText";
+import ShinyText2 from "@/../reactbits/textanimations/ShinyText/ShinyText2";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
@@ -27,7 +27,7 @@ const HeroSection = () => {
             scale: { delay: 1.25, duration: 0.25 },
           }}
         >
-          <ShinyText text="Full-Stack" speed={5}></ShinyText>
+          <ShinyText text="Software" speed={5}></ShinyText>
         </motion.div>
         <motion.div
           initial={{ x: "-150vw", scale: 1.1 }}
@@ -37,7 +37,7 @@ const HeroSection = () => {
             scale: { delay: 1.5, duration: 0.25 },
           }}
         >
-          <ShinyText2 text="Developer" speed={5}></ShinyText2>
+          <ShinyText2 text="Engineer" speed={5}></ShinyText2>
         </motion.div>
       </h1>
       <motion.p

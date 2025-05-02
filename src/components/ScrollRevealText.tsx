@@ -53,10 +53,10 @@ const ScrollRevealTextMotion = () => {
           }}
           className="text-foreground/10 bg-clip-text"
         >
-          I am a Computer Engineer with a passion for technology and design.
-          Collaborating with companies worldwide to create visually stunning,
-          highly functional, and user-friendly digital experiences that deliver
-          measurable results and support business growth.
+          I am a graduate of Computer Engineering with a passion for technology
+          and design. Collaborating with companies worldwide to create visually
+          stunning, highly functional, and user-friendly digital experiences
+          that deliver measurable results and support business growth.
         </motion.span>
       </p>
     </div>
