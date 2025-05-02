@@ -1,27 +1,64 @@
 "use client";
-import React, { useRef } from "react";
-import { motion, MotionValue } from "framer-motion";
+import React, { useRef, ComponentType } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import {
+  LucideIcon,
+  Code,
+  PenTool,
+  Smartphone,
+  ShoppingCart,
+  Zap,
+  CheckCircle,
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import {
+  servicesData,
+  ServiceItemData,
+  ServiceListItem,
+} from "@/data/services";
 
-interface AccordionMotionItemProps {
-  value: string;
-  title: string;
-  image: string;
-  listItems: string[];
+const listVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0 },
+};
+
+interface AccordionMotionItemPassedProps
+  extends Omit<ServiceItemData, "iconName"> {
+  IconComponent?: LucideIcon;
+  CheckIcon: LucideIcon;
 }
 
-const AccordionMotionItem: React.FC<AccordionMotionItemProps> = ({
-  value,
-  title,
-  image,
-  listItems,
-}) => {
+const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
+  props
+) => {
+  const {
+    value,
+    title,
+    IconComponent,
+    image,
+    listItems,
+    ctaText,
+    ctaUrl,
+    CheckIcon,
+  } = props;
   const ref = useRef(null);
 
   return (
@@ -33,106 +70,115 @@ const AccordionMotionItem: React.FC<AccordionMotionItemProps> = ({
       transition={{ duration: 0.5 }}
     >
       <AccordionItem
-        className="bg-card mb-4 border-none rounded-md overflow-hidden"
+        className="bg-card mb-4 border-none rounded-md overflow-hidden shadow-sm"
         value={value}
       >
-        <AccordionTrigger className="text-xl text-center hover:no-underline px-4 py-3">
-          {title}
-        </AccordionTrigger>
-        <AccordionContent className="flex-center py-4 flex-col px-4">
-          <div className="relative w-full max-w-[350px] aspect-[350/400] mb-4">
-            <Image
-              src={image}
-              fill
-              style={{ objectFit: "contain" }}
-              alt={title}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 350px"
-            />
+        <AccordionTrigger className="text-xl text-left hover:bg-muted/50 hover:no-underline px-4 py-3 group">
+          <div className="flex items-center space-x-3">
+            {IconComponent && (
+              <IconComponent className="w-5 h-5 text-primary flex-shrink-0" />
+            )}
+            <span>{title}</span>
           </div>
-          <ul className="text-start w-full text-sm list-disc pl-5 space-y-1">
-            {listItems.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
+        </AccordionTrigger>
+        <AccordionContent>
+          <motion.div
+            key="content"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={listVariants}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="flex flex-col md:flex-row items-start py-4 px-4 overflow-hidden"
+          >
+            <div className="relative w-full md:w-2/5 aspect-[350/400] mb-4 md:mb-0 md:mr-6 flex-shrink-0">
+              <Image
+                src={image}
+                fill
+                style={{ objectFit: "contain" }}
+                alt={`${title} service illustration`}
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+            </div>
+
+            <div className="flex flex-col w-full md:w-3/5">
+              <motion.ul
+                className="text-start w-full text-sm list-none space-y-2 mb-4"
+                variants={listVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {listItems.map((item: ServiceListItem, idx: number) => (
+                  <motion.li
+                    key={idx}
+                    variants={itemVariants}
+                    className="flex items-start"
+                  >
+                    {CheckIcon && (
+                      <CheckIcon className="w-4 h-4 mr-2 mt-0.5 text-primary flex-shrink-0" />
+                    )}
+                    {item.url ? (
+                      <Link
+                        href={item.url}
+                        className="hover:underline text-foreground hover:text-primary transition-colors"
+                      >
+                        {item.text}
+                      </Link>
+                    ) : (
+                      <span>{item.text}</span>
+                    )}
+                  </motion.li>
+                ))}
+              </motion.ul>
+
+              {ctaText && ctaUrl && (
+                <motion.div variants={itemVariants} className="mt-auto pt-4">
+                  <Button asChild variant="outline" size="sm">
+                    <Link href={ctaUrl}>{ctaText}</Link>
+                  </Button>
+                </motion.div>
+              )}
+            </div>
+          </motion.div>
         </AccordionContent>
       </AccordionItem>
     </motion.div>
   );
 };
 
+const iconMap: Record<string, LucideIcon> = {
+  Code,
+  PenTool,
+  Smartphone,
+  ShoppingCart,
+  Zap,
+};
+
 const ScrollRevealAccordion = () => {
-  const accordionData: AccordionMotionItemProps[] = [
-    {
-      value: "item-1",
-      title: "Web Development",
-      image: "/services/webdev.svg",
-      listItems: [
-        "Front-End Development (React, Next.js, Vue)",
-        "Back-End Development (Node.js, Express, Databases)",
-        "Landing Pages and Business Websites",
-        "Portfolio Websites & E-commerce Solutions",
-        "API Integration & Development",
-      ],
-    },
-    {
-      value: "item-2",
-      title: "UI/UX Design",
-      image: "/services/uiux.svg",
-      listItems: [
-        "Responsive & Adaptive Design",
-        "Wireframing & Prototyping (Figma)",
-        "User Flow & Navigation Optimization",
-        "Interaction Design & Microinteractions",
-        "Branding, Style Guides & Design Systems",
-      ],
-    },
-    {
-      value: "item-3",
-      title: "Mobile Application",
-      image: "/services/mobile.svg",
-      listItems: [
-        "Cross-Platform Development (React Native)",
-        "Native Module Integration",
-        "API Integration & Offline Sync",
-        "Performance Optimization & Bug Fixing",
-        "App Store Submission & Maintenance",
-      ],
-    },
-    {
-      value: "item-4",
-      title: "E-Commerce Platform",
-      image: "/services/ecommerce.svg",
-      listItems: [
-        "Platform Setup (Shopify, WooCommerce)",
-        "Custom Theme Development & Customization",
-        "App/Plugin Integration & Configuration",
-        "Conversion Rate Optimization (CRO)",
-        "Performance Tuning & SEO for E-commerce",
-      ],
-    },
-    {
-      value: "item-5",
-      title: "Automation & Integration",
-      image: "/services/automation.svg",
-      listItems: [
-        "Workflow Automation (Zapier, Make)",
-        "API Integrations (CRM, Marketing Tools)",
-        "Custom Scripting (Python, Node.js)",
-        "Data Scraping & Processing",
-        "Process Analysis & Optimization Consulting",
-      ],
-    },
-  ];
+  if (!servicesData || servicesData.length === 0) {
+    return (
+      <div className="text-center py-10 text-muted-foreground">
+        No services information available at the moment.
+      </div>
+    );
+  }
 
   return (
     <Accordion
-      type="single"
-      collapsible
-      className="w-full text-card-foreground text-center max-w-3xl mx-auto space-y-4 px-4"
+      type="multiple"
+      className="w-full text-card-foreground max-w-4xl mx-auto space-y-4 px-4"
     >
-      {accordionData.map((data) => (
-        <AccordionMotionItem key={data.value} {...data} />
-      ))}
+      {servicesData.map((data: ServiceItemData) => {
+        const Icon = iconMap[data.iconName];
+        return (
+          <AccordionMotionItem
+            key={data.value}
+            {...data}
+            IconComponent={Icon}
+            CheckIcon={CheckCircle}
+          />
+        );
+      })}
     </Accordion>
   );
 };
