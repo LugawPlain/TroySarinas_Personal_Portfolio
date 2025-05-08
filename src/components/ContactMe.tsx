@@ -95,7 +95,7 @@ const ContactMe = () => {
 
       <div className="px-4 py-4 mt-8">
         <h3 className="text-4xl font-bold text-center mb-4">
-          Lets Get in Touch
+          Let&apos;s Get in Touch
         </h3>
         <p className="text-center text-muted-foreground">
           Feel free to reach out through any of my social platforms or by email.
@@ -109,19 +109,19 @@ const ContactMe = () => {
               <p>Facebook</p>
             </div>
           </Link>
-          <Link href="https://twitter.com/LugawPlain">
+          <Link href="#">
             <div className="flex flex-row justify-center items-center space-x-4">
               <FaSquareXTwitter size={40} />
               <p>Twitter</p>
             </div>
           </Link>
-          <Link href="https://www.instagram.com/lugawplain/">
+          <Link href="https://www.instagram.com/troysarinas/">
             <div className="flex flex-row justify-center items-center space-x-4">
               <FaInstagramSquare size={40} />
               <p>Instagram</p>
             </div>
           </Link>
-          <Link href="https://www.linkedin.com/in/lugawplain/">
+          <Link href="https://www.linkedin.com/in/troy-sarinas-47062b1ba/">
             <div className="flex flex-row justify-center items-center space-x-4">
               <FaLinkedin size={40} />
               <p>Linkedin</p>
@@ -133,7 +133,7 @@ const ContactMe = () => {
               <p>Github</p>
             </div>
           </Link>
-          <Link href="mailto:lugawplain@gmail.com">
+          <Link href="mailto:troysarinas22@gmail.com">
             <div className="flex flex-row justify-center items-center space-x-4">
               <MdEmail size={40} />
               <p>Email (Troysarinas22@gmail.com)</p>

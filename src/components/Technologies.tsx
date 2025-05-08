@@ -38,6 +38,8 @@ import { FaShopify } from "react-icons/fa";
 import { SiWoocommerce } from "react-icons/si";
 import { FaSquarespace } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
+import { SiAframe } from "react-icons/si";
+import { SiThreedotjs } from "react-icons/si";
 
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -59,6 +61,8 @@ const technologies = [
   { name: "Figma", IconComponent: IoLogoFigma },
   { name: "Framer", IconComponent: SiFramer },
   { name: "Tailwind CSS", IconComponent: RiTailwindCssFill },
+  { name: "Aframe", IconComponent: SiAframe },
+  { name: "Three.js", IconComponent: SiThreedotjs },
   { name: "Ruby", IconComponent: DiRuby },
   { name: "GitHub", IconComponent: FaGithub },
   { name: "Git", IconComponent: BiLogoGit },
