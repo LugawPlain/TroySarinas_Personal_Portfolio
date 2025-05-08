@@ -41,7 +41,7 @@ const HeaderNav = () => {
               className="text-[13px] bg-gradient-to-r from-purple-500 via-pink-600 to-purple-500 text-white py-1 overflow-hidden"
             >
               <Marquee direction="right" pauseOnHover speed={100}>
-                <p>Website is not developed for desktop layout</p>
+                <p>Website is not yet developed for desktop layout</p>
               </Marquee>
             </motion.div>
           </>
