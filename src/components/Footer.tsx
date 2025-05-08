@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="relative border-t border-accent py-2 text-center text-sm text-muted-foreground">
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-2">
+      <div className="flex flex-col  justify-center items-center gap-2">
         {/* GitHub Star Button */}
         <GitHubStarCount
           username="LugawPlain"
