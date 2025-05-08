@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className=" h-screen scroll-smooth space-y-6">
+    <div className="  scroll-smooth space-y-6 max-w-md mx-auto shadow-2xl">
       <section id="hero" className="w-full font-clashDisplayBold  min-h-screen">
         <HeaderNav></HeaderNav>
         <HeroSection></HeroSection>
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
       <section id="projects" className="">
         <Portfolio></Portfolio>
-        <Technologies></Technologies> 
+        <Technologies></Technologies>
         <Certificates></Certificates>
       </section>
 

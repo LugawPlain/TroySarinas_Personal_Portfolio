@@ -112,7 +112,7 @@ const Technologies = () => {
         {/* but good practice if items were animating in/out individually */}
         {/* Use motion.div and apply variants */}
         <motion.div
-          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 overflow-hidden md:overflow-visible`}
+          className={`grid grid-cols-2  gap-4 overflow-hidden `}
           variants={gridVariants}
           initial="hidden" // Start hidden (collapsed)
           animate={showAll ? "visible" : "hidden"} // Animate based on state
@@ -144,7 +144,7 @@ const Technologies = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-nude via-nude/90 to-transparent pointer-events-none md:hidden"
+              className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-nude via-nude/90 to-transparent pointer-events-none "
             ></motion.div>
           )}
         </AnimatePresence>
@@ -153,7 +153,7 @@ const Technologies = () => {
       {/* Toggle button - visible only on mobile */}
       <button
         onClick={() => setShowAll(!showAll)}
-        className="block md:hidden mx-auto mt-4 px-4 py-2 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground text-sm"
+        className="block  mx-auto mt-4 px-4 py-2 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground text-sm"
       >
         {showAll ? "Show Less" : "Show More"}
       </button>

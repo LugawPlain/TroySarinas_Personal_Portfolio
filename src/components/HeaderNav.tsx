@@ -1,12 +1,52 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import React from "react";
-import { motion } from "framer-motion";
-
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 const HeaderNav = () => {
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
+
+  useEffect(() => {
+    setShowAnnouncement(true);
+
+    const timer = setTimeout(() => {
+      setShowAnnouncement(false);
+    }, 20000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+      <AnimatePresence>
+        {showAnnouncement && (
+          <>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.5 }}
+              className="text-[13px] bg-gradient-to-r from-purple-700 via-pink-600 to-purple-700 text-white py-1 overflow-hidden"
+            >
+              <Marquee pauseOnHover speed={100}>
+                <p>Website is still on Beta🥰, Developments are underway</p>
+              </Marquee>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.5 }}
+              className="text-[13px] bg-gradient-to-r from-purple-500 via-pink-600 to-purple-500 text-white py-1 overflow-hidden"
+            >
+              <Marquee direction="right" pauseOnHover speed={100}>
+                <p>Website is not developed for desktop layout</p>
+              </Marquee>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
       <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
