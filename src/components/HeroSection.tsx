@@ -16,7 +16,7 @@ const HeroSection = () => {
           scale: { delay: 1, duration: 0.25 },
         }}
       >
-        Hi, I'm Troy Sarinas
+        Hi, I&apos;m Troy Sarinas
       </motion.h3>
       <h1 className="text-nowrap text-6xl my-4 ">
         <motion.div
@@ -49,10 +49,10 @@ const HeroSection = () => {
           scale: { delay: 2.5, duration: 0.25 },
         }}
       >
-        "Bringing visions to life with intuitive, high-performance through
+        &quot;Bringing visions to life with intuitive, high-performance through
         <span className="text-accent"> innovative </span> design and
         <span className="text-accent"> creative </span> solutions that captivate
-        and engage users."
+        and engage users.&quot;
       </motion.p>
       <motion.p
         className="font-semibold"

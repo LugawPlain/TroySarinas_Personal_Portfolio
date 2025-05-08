@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Clash+Display:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -130,7 +131,7 @@
   --sidebar-ring: oklch(0.871 0.006 286.286);
 }
 @theme {
-  --font-clashDisplayBold: "var(--font-clashDisplayBold)", "sans-serif";
+  --font-clashDisplayBold: var(--font-clashDisplayBold);
   --font-Montserrat: "Montserrat", sans-serif;
 }
 @theme inline {

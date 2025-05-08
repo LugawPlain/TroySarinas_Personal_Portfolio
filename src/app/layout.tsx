@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { clashDisplayBold } from "@/../public/fonts/Clash_Display";
 import { cn } from "@/lib/utils";
-import LetterGlitch from "@/../reactbits/backgrounds/LetterGlitch/LetterGlitch";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactForm";
 import { motion, AnimatePresence } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
@@ -37,7 +36,7 @@ const ContactMe = () => {
       >
         <div className="space-y-5 py-4 px-2 text-foreground">
           <h3 className="text-4xl tracking-tighter word-spacing font-serif font-extrabold text-center">
-            Let's get that project Started!!
+            Let&apos;s get that project Started!!
           </h3>
           {/* <p className="text-sm text-foreground/80">
           Conteact me now alsdaskdlakdlawkdlaksd
@@ -96,12 +95,12 @@ const ContactMe = () => {
 
       <div className="px-4 py-4 mt-8">
         <h3 className="text-4xl font-bold text-center mb-4">
-          Let's Get in Touch
+          Lets Get in Touch
         </h3>
         <p className="text-center text-muted-foreground">
           Feel free to reach out through any of my social platforms or by email.
           I always appreciate your feedback, suggestions, or just a friendly
-          hello. I'm looking forward to hearing from you!
+          hello. I&apos;m looking forward to hearing from you!
         </p>
         <div className="mt-4 flex flex-col justify-center items-start space-y-2 px-4 text-accent">
           <Link href="https://www.facebook.com/lugawplain">

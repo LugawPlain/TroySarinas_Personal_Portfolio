@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const CloudfareIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+const CloudfareIcon: React.FC<React.SVGProps<SVGSVGElement>> = () => (
   <svg
     fill="currentColor"
     width="24"

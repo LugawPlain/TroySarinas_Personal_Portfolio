@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { PortfolioItem } from "@/data/portfolioData"; // Import the interface
 import Link from "next/link";

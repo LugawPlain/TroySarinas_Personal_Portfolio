@@ -5,8 +5,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel"; // Adjust import path if needed
 import { Card, CardContent } from "@/components/ui/card"; // Adjust import path if needed

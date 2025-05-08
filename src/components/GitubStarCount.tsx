@@ -14,13 +14,7 @@ const GitHubStarCount: React.FC<GitHubStarCountProps> = ({
   username,
   repo,
 }) => {
-  const [starCount, setStarCount] = useState<number | null>(null);
-  const [error, setError] = useState<string | null>(null); // State for error message
-
   useEffect(() => {
-    setStarCount(null); // Reset states on prop change
-    setError(null);
-
     fetch(`https://api.github.com/repos/${username}/${repo}`)
       .then((response) => {
         if (!response.ok) {
@@ -31,7 +25,6 @@ const GitHubStarCount: React.FC<GitHubStarCountProps> = ({
       })
       .then((data) => {
         if (typeof data.stargazers_count === "number") {
-          setStarCount(data.stargazers_count);
         } else {
           // Handle cases where stargazers_count might be missing or not a number
           throw new Error("Invalid data format received");
@@ -40,7 +33,6 @@ const GitHubStarCount: React.FC<GitHubStarCountProps> = ({
       .catch((error) => {
         console.error("Error fetching star count:", error);
         // Set a user-friendly error message
-        setError("Could not fetch stars");
       });
   }, [username, repo]);
 
