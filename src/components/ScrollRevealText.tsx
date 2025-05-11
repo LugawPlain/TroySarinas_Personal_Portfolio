@@ -26,8 +26,8 @@ const ScrollRevealTextMotion = () => {
   );
 
   return (
-    <div className="text-center text-lg font-medium tracking-widest py-8 px-2 rounded-lg">
-      <h2 className="text-3xl">
+    <div className="text-center text-lg font-medium tracking-widest py-8 px-2 rounded-lg max-w-7xl mx-auto">
+      <h2 className="py-2 sm:py-4">
         <motion.span
           ref={headingRef}
           style={{
@@ -36,13 +36,13 @@ const ScrollRevealTextMotion = () => {
             backgroundImage:
               "linear-gradient(var(--foreground), var(--foreground))",
           }}
-          className="inline text-foreground/10 bg-clip-text"
+          className="inline text-foreground/10 bg-clip-text text-3xl sm:text-4xl"
         >
           About me
         </motion.span>
         <p className="inline">✨</p>
       </h2>
-      <p className="">
+      <p className="max-w-lg mx-auto ">
         <motion.span
           ref={paragraphRef}
           style={{
@@ -51,7 +51,7 @@ const ScrollRevealTextMotion = () => {
             backgroundImage:
               "linear-gradient(var(--foreground), var(--foreground))",
           }}
-          className="text-foreground/10 bg-clip-text"
+          className="text-foreground/10 bg-clip-text md:text-xl"
         >
           I am a graduate of Computer Engineering with a passion for technology
           and design. Collaborating with companies worldwide to create visually

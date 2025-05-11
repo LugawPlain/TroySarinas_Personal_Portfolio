@@ -16,14 +16,14 @@ import SideNav from "@/components/SideNav";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth space-y-6 shadow-2xl z-10 relative bg-nude">
+    <div className="scroll-smooth space-y-6 z-10 bg-nude  mx-auto ">
       <HeaderNav className="z-10 relative block"></HeaderNav>
       <section
         id="hero"
-        className="w-full font-clashDisplayBold sm:py-16 lg:flex-row flex-col flex"
+        className="w-full font-clashDisplayBold sm:py-16  flex-col flex"
       >
         <HeroSection></HeroSection>
-        <div className="flex-col flex">
+        <div className="flex-col flex w-screen  sm:mt overflow-hidden">
           <MarqueeGroup1></MarqueeGroup1>
           <MarqueeGroup2></MarqueeGroup2>
           <MarqueeGroup1></MarqueeGroup1>
@@ -33,7 +33,9 @@ export default function Home() {
         <ScrollRevealText />
 
         <div id="services" className="w-full">
-          <h2 className="text-center text-3xl my-4">My Services ✨</h2>
+          <h2 className="text-center text-3xl sm:text-4xl my-4">
+            My Services ✨
+          </h2>
           <ScrollRevealAccordion></ScrollRevealAccordion>
         </div>
       </section>

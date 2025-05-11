@@ -70,18 +70,22 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
       transition={{ duration: 0.5 }}
     >
       <AccordionItem
-        className="bg-card border-none overflow-hidden shadow-sm"
+        className="bg-card border-none overflow-hidden shadow-sm "
         value={value}
       >
-        <AccordionTrigger className="text-xl text-left hover:bg-muted/50 hover:no-underline px-4 py-4 group">
-          <div className="flex items-center space-x-3">
-            {IconComponent && (
-              <IconComponent className="w-5 h-5 text-primary flex-shrink-0" />
-            )}
-            <span>{title}</span>
+        <AccordionTrigger className="text-xl text-left hover:bg-muted/50 hover:no-underline px-4 py-4 group ">
+          <div className="sm:mx-auto sm:max-w-7xl sm:w-7xl px-4">
+            <div className="flex items-center sm:text-start space-x-3 ">
+              {IconComponent && (
+                <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-12 lg:h-12 text-primary flex-shrink-0" />
+              )}
+              <span className="text-md sm:text-base md:text-lg lg:text-7xl group-hover:translate-x-8 transition-all duration-300">
+                {title}
+              </span>
+            </div>
           </div>
         </AccordionTrigger>
-        <AccordionContent>
+        <AccordionContent className="md:max-h-80">
           <motion.div
             key="content"
             initial="hidden"
@@ -89,21 +93,21 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
             exit="hidden"
             variants={listVariants}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="flex flex-col md:flex-row items-start py-4 px-4 overflow-hidden"
+            className="flex flex-col md:flex-row items-start py-4 px-4 overflow-hidden max-w-7xl mx-auto"
           >
-            <div className="relative w-full md:w-2/5 aspect-[350/400] mb-4 md:mb-0 md:mr-6 flex-shrink-0">
+            <div className="relative w-sm md:w-2/5 aspect-[350/400] mb-4 md:mb-0 md:mr-6 flex-shrink-0">
               <Image
                 src={image}
                 fill
                 style={{ objectFit: "contain" }}
                 alt={`${title} service illustration`}
-                sizes="(max-width: 768px) 100vw, 40vw"
+                sizes="(max-width: 768px) 50vw, 30vw"
               />
             </div>
 
             <div className="flex flex-col w-full md:w-3/5">
               <motion.ul
-                className="text-start w-full text-sm list-none space-y-2 mb-4"
+                className="text-start w-full text-sm  list-none space-y-2 mb-4"
                 variants={listVariants}
                 initial="hidden"
                 animate="visible"
@@ -117,23 +121,23 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
                     {CheckIcon && (
                       <CheckIcon className="w-4 h-4 mr-2 mt-0.5 text-primary flex-shrink-0" />
                     )}
-                    {item.url ? (
-                      <Link
-                        href={item.url}
-                        className="hover:underline text-foreground hover:text-primary transition-colors"
-                      >
-                        {item.text}
-                      </Link>
-                    ) : (
-                      <span>{item.text}</span>
-                    )}
+
+                    <span>{item.text}</span>
                   </motion.li>
                 ))}
               </motion.ul>
 
               {ctaText && ctaUrl && (
-                <motion.div variants={itemVariants} className="mt-auto pt-4">
-                  <Button asChild variant="outline" size="sm">
+                <motion.div
+                  variants={itemVariants}
+                  className="mt-auto w-fit pt-4"
+                >
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="sm"
+                    className="bg-accent"
+                  >
                     <Link href={ctaUrl}>{ctaText}</Link>
                   </Button>
                 </motion.div>
@@ -164,7 +168,11 @@ const ScrollRevealAccordion = () => {
   }
 
   return (
-    <Accordion type="multiple" className="w-full text-card-foreground mx-auto ">
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full text-card-foreground mx-auto "
+    >
       {servicesData.map((data: ServiceItemData) => {
         const Icon = iconMap[data.iconName];
         return (
