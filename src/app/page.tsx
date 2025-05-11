@@ -12,12 +12,13 @@ import Certificates from "@/components/Certificates";
 import ContactMe from "@/components/ContactMe";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
+import SideNav from "@/components/SideNav";
 
 export default function Home() {
   return (
-    <div className="  scroll-smooth space-y-6 max-w-md mx-auto shadow-2xl">
+    <div className="scroll-smooth space-y-6 shadow-2xl z-10 relative bg-nude">
+      <HeaderNav className="z-10 relative block"></HeaderNav>
       <section id="hero" className="w-full font-clashDisplayBold  min-h-screen">
-        <HeaderNav></HeaderNav>
         <HeroSection></HeroSection>
         <MarqueeGroup1></MarqueeGroup1>
         <MarqueeGroup2></MarqueeGroup2>
@@ -45,7 +46,7 @@ export default function Home() {
       </footer>
       <div className="min-h-10"></div>
 
-      <MenuBar></MenuBar>
+      <MenuBar className="sm:hidden"></MenuBar>
     </div>
   );
 }

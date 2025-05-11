@@ -10,7 +10,7 @@ interface MenuBarProps {
   className?: string;
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
+const SideNav: React.FC<MenuBarProps> = ({ className }) => {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
@@ -54,12 +54,12 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
 
   return (
     <motion.div
-      initial={{ y: 100 }}
-      animate={{ y: 0 }}
-      transition={{ delay: 1.75, duration: 2, type: "spring" }}
-      className={` fixed w-full bg-accent/80 bottom-0 py-2 z-30 shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl backdrop-blur ${className}`}
+      initial={{ x: "100%" }}
+      animate={{ x: 0 }}
+      transition={{ delay: 1.5, duration: 1.5, ease: "easeInOut" }}
+      className={`${className} bg-gray-500 w-full -z-50 relative`}
     >
-      <ul className="flex justify-evenly text-accent-foreground">
+      <ul className="flex-col justify-evenly text-accent-foreground">
         <li>
           <button
             onClick={() => scrollToSection("hero")}
@@ -117,4 +117,4 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
   );
 };
 
-export default MenuBar;
+export default SideNav;
