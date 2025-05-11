@@ -21,12 +21,12 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
         ))}
       </div>
       <div className="flex-col space-y-4 flex-grow flex ">
-        <div className="relative h-80 w-full overflow-hidden">
+        <div className="relative  w-96 h-96 overflow-hidden">
           <Image
             src={item.image}
             alt={item.title}
             fill
-            className="object-cover rounded-lg transition-transform duration-300 hover:scale-110"
+            className="object-cover rounded-lg mx-auto transition-transform duration-300 hover:scale-110"
           />
         </div>
         <div className="flex-col flex ">

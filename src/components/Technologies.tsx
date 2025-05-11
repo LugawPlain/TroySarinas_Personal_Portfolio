@@ -93,7 +93,7 @@ const Technologies = () => {
   // Animation variants for the grid container
   const gridVariants = {
     hidden: {
-      height: "21rem", // Approx height for 5 rows (10 items / 2 columns)
+      height: "15rem ", // Approx height for 5 rows (10 items / 2 columns)
       opacity: 1, // Keep opacity 1, fade is handled by gradient
       transition: { duration: 0.75, ease: "easeInOut" },
     },
@@ -112,7 +112,7 @@ const Technologies = () => {
         {/* but good practice if items were animating in/out individually */}
         {/* Use motion.div and apply variants */}
         <motion.div
-          className={`grid grid-cols-2  gap-4 overflow-hidden `}
+          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 overflow-hidden `}
           variants={gridVariants}
           initial="hidden" // Start hidden (collapsed)
           animate={showAll ? "visible" : "hidden"} // Animate based on state

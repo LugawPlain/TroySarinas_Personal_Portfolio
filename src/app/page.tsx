@@ -16,11 +16,11 @@ import SideNav from "@/components/SideNav";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth space-y-6 z-10 bg-nude  mx-auto ">
+    <div className="scroll-smooth space-y-6 z-10 bg-nude mx-auto ">
       <HeaderNav className="z-10 relative block"></HeaderNav>
       <section
         id="hero"
-        className="w-full font-clashDisplayBold sm:py-16  flex-col flex"
+        className="w-full font-clashDisplayBold sm:py-16 flex-col flex"
       >
         <HeroSection></HeroSection>
         <div className="flex-col flex w-screen  sm:mt overflow-hidden">
@@ -39,13 +39,16 @@ export default function Home() {
           <ScrollRevealAccordion></ScrollRevealAccordion>
         </div>
       </section>
-      <section id="projects" className="">
+      <section
+        id="projects"
+        className="md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto"
+      >
         <Portfolio></Portfolio>
         <Technologies></Technologies>
         <Certificates></Certificates>
       </section>
 
-      <section id="contact" className="">
+      <section id="contact" className="max-w-7xl mx-auto">
         <ContactMe />
       </section>
       <footer id="footer" className="">

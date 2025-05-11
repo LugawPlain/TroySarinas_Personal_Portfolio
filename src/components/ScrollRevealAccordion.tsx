@@ -74,12 +74,12 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
         value={value}
       >
         <AccordionTrigger className="text-xl text-left hover:bg-muted/50 hover:no-underline px-4 py-4 group ">
-          <div className="sm:mx-auto sm:max-w-7xl sm:w-7xl px-4">
+          <div className="sm:mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl sm:w-7xl px-4">
             <div className="flex items-center sm:text-start space-x-3 ">
               {IconComponent && (
                 <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-12 lg:h-12 text-primary flex-shrink-0" />
               )}
-              <span className="text-md sm:text-base md:text-lg lg:text-7xl group-hover:translate-x-8 transition-all duration-300">
+              <span className="text-md sm:text-md md:text-xl lg:text-2xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl group-hover:translate-x-8 transition-all duration-300">
                 {title}
               </span>
             </div>
