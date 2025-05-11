@@ -18,11 +18,16 @@ export default function Home() {
   return (
     <div className="scroll-smooth space-y-6 shadow-2xl z-10 relative bg-nude">
       <HeaderNav className="z-10 relative block"></HeaderNav>
-      <section id="hero" className="w-full font-clashDisplayBold  min-h-screen">
+      <section
+        id="hero"
+        className="w-full font-clashDisplayBold sm:py-16 lg:flex-row flex-col flex"
+      >
         <HeroSection></HeroSection>
-        <MarqueeGroup1></MarqueeGroup1>
-        <MarqueeGroup2></MarqueeGroup2>
-        <MarqueeGroup1></MarqueeGroup1>
+        <div className="flex-col flex">
+          <MarqueeGroup1></MarqueeGroup1>
+          <MarqueeGroup2></MarqueeGroup2>
+          <MarqueeGroup1></MarqueeGroup1>
+        </div>
       </section>
       <section id="about" className="">
         <ScrollRevealText />
