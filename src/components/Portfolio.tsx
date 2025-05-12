@@ -44,16 +44,19 @@ const Portfolio = () => {
   }, [api]);
 
   return (
-    <div className="px-8 py-2 overflow-x-hidden  mx-auto  ">
-      <h2 className="py-2">Projects ✨</h2>
+    <div className="overflow-x-hidden  mx-auto  ">
+      <h2 className="mb-8 font-bold">
+        <span className="text-3xl sm:text-4xl">Projects ✨</span>
+      </h2>
       <motion.div
         className="w-full"
         ref={containerRef}
         initial={{ opacity: 0, transform: "translateX(75px)" }}
-        animate={{
-          opacity: isFullyInView ? 1 : 0,
-          transform: isFullyInView ? "translateX(0px)" : "translateX(75px)",
+        whileInView={{
+          opacity: 1,
+          transform: "translateX(0px)",
         }}
+        exit={{ opacity: 0, transform: "translateX(75px)" }}
         transition={{ duration: 0.5, delay: 0.25 }}
       >
         <Carousel
@@ -63,11 +66,11 @@ const Portfolio = () => {
             loop: true,
             slidesToScroll: 1,
           }}
-          className="mx-auto px-4 w-lg"
+          className="mx-auto w-full px-4 md:w-lg"
         >
-          <CarouselContent className="-ml-4 ">
+          <CarouselContent className="">
             {portfolioItems.map((item, index) => (
-              <CarouselItem key={index} className="basis-full pl-4">
+              <CarouselItem key={index} className="basis-full">
                 <PortfolioItemCard item={item} />
               </CarouselItem>
             ))}
@@ -76,7 +79,7 @@ const Portfolio = () => {
           <CarouselNext variant="outline" className="hidden md:block" />
         </Carousel>
 
-        <div className="flex justify-center gap-2 mt-4">
+        <div className="flex justify-center gap-2 sm:gap-3mt-2 sm:mt-4">
           {Array.from({ length: totalItemsCount }).map((_, index) => (
             <button
               key={index}
@@ -88,8 +91,8 @@ const Portfolio = () => {
             />
           ))}
         </div>
-        <div className="w-full flex mt-4 ">
-          <Button className="shadow-none text-foreground underline text-lg font-serif mx-auto hover:scale-110 active:scale-110 transition-all duration-300">
+        <div className="w-full flex  py-8">
+          <Button className="shadow-none text-foreground underline text-lg mx-auto hover:scale-110 active:scale-110 transition-all duration-300">
             See more ↗
           </Button>
         </div>

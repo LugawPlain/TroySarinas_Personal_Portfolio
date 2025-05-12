@@ -105,8 +105,10 @@ const Technologies = () => {
   };
 
   return (
-    <div>
-      <h2>Technologies I use ✨</h2>
+    <div className="mt-20">
+      <h2 className="text-center mb-8 font-bold">
+        <span className="text-3xl sm:text-4xl">Technologies I use ✨</span>
+      </h2>
       <div className="relative px-4">
         {/* AnimatePresence is not strictly needed here if only animating height/maxHeight */}
         {/* but good practice if items were animating in/out individually */}

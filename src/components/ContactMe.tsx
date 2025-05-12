@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import ContactForm from "./ContactForm";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
@@ -9,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
+import ContactModal from "./ContactModal";
 
 const ContactMe = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +28,14 @@ const ContactMe = () => {
   return (
     <>
       <motion.div
-        className="mt-16 px-4 "
+        className="px-4 "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 1 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <div className="space-y-5 py-4 px-2 text-foreground">
-          <h3 className="text-4xl tracking-tighter word-spacing font-serif font-extrabold text-center">
+          <h3 className="text-4xl tracking-tighter word-spacing font-bold text-center">
             Let&apos;s get that project Started!!
           </h3>
           {/* <p className="text-sm text-foreground/80">
@@ -55,47 +55,11 @@ const ContactMe = () => {
         </div>
       </motion.div>
 
-      {/* Modal moved outside the animated div */}
-      <AnimatePresence>
-        {isOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2, delay: 0.15 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
-            />
-            <div className="fixed inset-0 z-50 flex items-center justify-center">
-              <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0, opacity: 0 }}
-                transition={{
-                  type: "spring",
-                  duration: 0.5,
-                }}
-                className="bg-background rounded-lg p-6 max-w-3xl w-[90%] max-h-[90vh] overflow-y-auto relative"
-              >
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="absolute top-4 right-4 text-foreground/70 hover:text-foreground"
-                >
-                  ✕
-                </button>
-                <h2 className="text-2xl font-bold text-center mb-4">
-                  Contact Me
-                </h2>
-                <ContactForm />
-              </motion.div>
-            </div>
-          </>
-        )}
-      </AnimatePresence>
+      <ContactModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
 
-      <div className="px-4 py-4 mt-8">
-        <h3 className="text-4xl font-bold text-center mb-4">
-          Let&apos;s Get in Touch
+      <div className="mt-20">
+        <h3 className=" font-bold text-center mb-8">
+          <span className="text-3xl sm:text-4xl">Let&apos;s Get in Touch</span>
         </h3>
         <p className="text-center text-muted-foreground">
           Feel free to reach out through any of my social platforms or by email.

@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import {
   Carousel,
@@ -58,9 +58,15 @@ const Certificates = () => {
   }, [api]);
 
   return (
-    <div className="w-full max-w-lg mx-auto py-10">
-      <h2 className="text-2xl font-bold text-center mb-6">
-        My Certificates 🏆
+    <motion.div
+      className="w-full max-w-lg mx-auto mt-20"
+      initial={{ opacity: 0, transform: "translateY(20px)" }}
+      whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+      exit={{ opacity: 0, transform: "translateY(20px)" }}
+      transition={{ duration: 0.5 }}
+    >
+      <h2 className="font-bold text-center mb-8">
+        <span className="text-3xl sm:text-4xl">My Certificates 🏆</span>
       </h2>
       <Carousel setApi={setApi} className="w-full" opts={{ loop: true }}>
         <CarouselContent>
@@ -110,7 +116,7 @@ const Certificates = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
