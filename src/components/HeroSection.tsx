@@ -2,7 +2,6 @@
 import React from "react";
 import ShinyText from "@/../reactbits/textanimations/ShinyText/ShinyText";
 import ShinyText2 from "@/../reactbits/textanimations/ShinyText/ShinyText2";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {

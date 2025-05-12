@@ -12,7 +12,6 @@ import Certificates from "@/components/Certificates";
 import ContactMe from "@/components/ContactMe";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
-import SideNav from "@/components/SideNav";
 
 export default function Home() {
   return (
@@ -31,7 +30,7 @@ export default function Home() {
           <MarqueeGroup1></MarqueeGroup1>
         </div>
       </section>
-      <section id="about" className="pt-10 sm:pt-20">
+      <section id="about" className="pt-4 md:pt-20">
         <ScrollRevealText />
 
         <div id="services" className="w-full">
@@ -43,14 +42,14 @@ export default function Home() {
       </section>
       <section
         id="projects"
-        className="md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto pt-20"
+        className="md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto pt-4 md:pt-20"
       >
         <Portfolio></Portfolio>
         <Technologies></Technologies>
         <Certificates></Certificates>
       </section>
 
-      <section id="contact" className="max-w-7xl mx-auto pt-10 sm:pt-20">
+      <section id="contact" className="max-w-7xl mx-auto pt-4 md:pt-20">
         <ContactMe />
       </section>
       <footer id="footer" className="">

@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PortfolioItemCard from "@/components/PortfolioItemCard";
 import { portfolioItems } from "@/data/portfolioData";
@@ -20,7 +20,6 @@ const Portfolio = () => {
   const [api, setApi] = useState<CarouselApi>();
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const isFullyInView = useInView(containerRef, { amount: 0.5 });
 
   const handleDotClick = (index: number) => {
     api?.scrollTo(index);

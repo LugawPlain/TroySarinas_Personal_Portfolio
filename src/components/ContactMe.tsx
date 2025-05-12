@@ -31,12 +31,12 @@ const ContactMe = () => {
         className="px-4 "
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 1 }}
+        exit={{ opacity: 0, y: -40 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <div className="space-y-5 py-4 px-2 text-foreground">
           <h3 className="text-4xl tracking-tighter word-spacing font-bold text-center">
-            Let&apos;s get that project Started!!
+            Let&apos;s get that <br /> project Started!!
           </h3>
           {/* <p className="text-sm text-foreground/80">
           Conteact me now alsdaskdlakdlawkdlaksd
