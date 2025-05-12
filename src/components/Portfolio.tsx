@@ -8,6 +8,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 
@@ -42,7 +44,7 @@ const Portfolio = () => {
   }, [api]);
 
   return (
-    <div className="px-8 py-2 overflow-x-hidden">
+    <div className="px-8 py-2 overflow-x-hidden  mx-auto  ">
       <h2 className="py-2">Projects ✨</h2>
       <motion.div
         className="w-full"
@@ -61,15 +63,17 @@ const Portfolio = () => {
             loop: true,
             slidesToScroll: 1,
           }}
-          className="w-full"
+          className="mx-auto px-4 w-lg"
         >
-          <CarouselContent className="-ml-4">
+          <CarouselContent className="-ml-4 ">
             {portfolioItems.map((item, index) => (
               <CarouselItem key={index} className="basis-full pl-4">
                 <PortfolioItemCard item={item} />
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious variant="outline" className="hidden md:block  " />
+          <CarouselNext variant="outline" className="hidden md:block" />
         </Carousel>
 
         <div className="flex justify-center gap-2 mt-4">

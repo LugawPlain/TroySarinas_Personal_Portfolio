@@ -66,7 +66,7 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
+      exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
     >
       <AccordionItem
@@ -79,7 +79,7 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
               {IconComponent && (
                 <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-12 lg:h-12 text-primary flex-shrink-0" />
               )}
-              <span className="text-md sm:text-md md:text-xl lg:text-2xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl group-hover:translate-x-8 transition-all duration-300">
+              <span className="text-md font-extrabold sm:text-xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl group-hover:translate-x-8 transition-all duration-300">
                 {title}
               </span>
             </div>

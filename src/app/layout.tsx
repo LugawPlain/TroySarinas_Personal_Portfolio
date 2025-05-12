@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { clashDisplayBold } from "@/../public/fonts/Clash_Display";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,13 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
-        {/* <div className="h-full w-full">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {/* <div className="h-full w-full">
           <LetterGlitch
             glitchColors={["2b4539", "#61dca3", "#61b3dc"]}
             glitchSpeed={200}
@@ -43,8 +50,8 @@ export default function RootLayout({
             smooth={true}
           />
         </div> */}
-
-        {children}
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -4,11 +4,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
-import MenuBar from "./MenuBar";
+import { ThemeToggle } from "./ThemeToggle";
 
 const HeaderNav = (props: { className?: string }) => {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const [activeSection, setActiveSection] = useState("hero");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setShowAnnouncement(true);
@@ -35,9 +36,15 @@ const HeaderNav = (props: { className?: string }) => {
     const sections = document.querySelectorAll("section[id]");
     sections.forEach((section) => observer.observe(section));
 
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 150);
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
       clearTimeout(timer);
       observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -85,6 +92,7 @@ const HeaderNav = (props: { className?: string }) => {
             </>
           )}
         </AnimatePresence>
+        {/* For smaller screens */}
         <motion.div
           initial={{ y: -100 }}
           animate={{ y: 0 }}
@@ -106,7 +114,13 @@ const HeaderNav = (props: { className?: string }) => {
             <p className="text-xs text-text-primary">Available for work</p>
           </div>
         </motion.div>
-        <div className=" py-2 px-6 text-sm items-center bg-nude rounded-full shadow-md  border-b-2 border-border hidden sm:flex justify-between sm:fixed top-4 w-4/5 left-1/2 -translate-x-1/2">
+
+        {/* For larger screens */}
+        <div
+          className={`py-2 px-6 text-sm items-center bg-nude rounded-full shadow-md border-b-2 border-border hidden sm:flex justify-between sm:fixed top-4 left-1/2 -translate-x-1/2 transition-all duration-300 ${
+            isScrolled ? " sm:w-lg md:w-xl lg:w-3xl" : "w-4/5"
+          }`}
+        >
           <span className="p-0.5 rounded-lg bg-status  shadow-sm ">
             <Avatar className="w-[40px] h-[40px] rounded-md  ">
               <AvatarImage src="/Icons/Troy_Sarinas_Pfp3.jpg" />
@@ -165,14 +179,18 @@ const HeaderNav = (props: { className?: string }) => {
               </li>
             </ul>
           </div>
-          <div className="flex-center gap-2 rounded-full bg-green-500/10 px-4 py-2 shadow-sm">
-            <span className="relative flex h-[6px] w-[6px]">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/80 opacity-75"></span>
-              <span className="relative inline-flex h-full w-full rounded-full bg-green-500"></span>
-            </span>
-            <p className="text-xs text-text-primary text-nowrap">
-              Available for work
-            </p>
+          <div className="flex-center gap-2">
+            <ThemeToggle />
+
+            <div className="flex-center gap-2 rounded-full bg-green-500/10 px-4 py-2 shadow-sm">
+              <span className="relative flex h-[6px] w-[6px]">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/80 opacity-75"></span>
+                <span className="relative inline-flex h-full w-full rounded-full bg-green-500"></span>
+              </span>
+              <p className="text-xs text-text-primary text-nowrap">
+                Available for work
+              </p>
+            </div>
           </div>
         </div>
       </div>
