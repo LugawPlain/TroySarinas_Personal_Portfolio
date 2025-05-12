@@ -5,6 +5,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel"; // Adjust import path if needed
 import { Card, CardContent } from "@/components/ui/card"; // Adjust import path if needed
@@ -99,6 +101,8 @@ const Certificates = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious variant="outline" className="hidden md:block  " />
+        <CarouselNext variant="outline" className="hidden md:block" />
       </Carousel>
 
       {/* Bottom Center Index Indicator */}

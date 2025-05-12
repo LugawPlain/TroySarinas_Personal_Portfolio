@@ -66,7 +66,7 @@ const Portfolio = () => {
             loop: true,
             slidesToScroll: 1,
           }}
-          className="mx-auto w-full px-4 md:w-lg"
+          className="mx-auto w-full px-4 md:w-lg h-auto"
         >
           <CarouselContent className="">
             {portfolioItems.map((item, index) => (
