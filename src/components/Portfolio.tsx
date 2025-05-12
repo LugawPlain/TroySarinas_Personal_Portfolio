@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import PortfolioItemCard from "@/components/PortfolioItemCard";
 import { portfolioItems } from "@/data/portfolioData";
+import { MdArrowOutward } from "react-icons/md";
 import {
   Carousel,
   CarouselContent,
@@ -79,7 +80,7 @@ const Portfolio = () => {
           <CarouselNext variant="outline" className="hidden md:block" />
         </Carousel>
 
-        <div className="flex justify-center gap-2 sm:gap-3mt-2 sm:mt-4">
+        <div className="flex justify-center gap-2 sm:gap-3 mt-2 sm:mt-4">
           {Array.from({ length: totalItemsCount }).map((_, index) => (
             <button
               key={index}
@@ -92,8 +93,9 @@ const Portfolio = () => {
           ))}
         </div>
         <div className="w-full flex  py-8">
-          <Button className="shadow-none text-foreground underline text-lg mx-auto hover:scale-110 active:scale-110 transition-all duration-300">
-            See more ↗
+          <Button className="shadow-none text-foreground underline text-lg mx-auto space-x-0 gap-0 hover:scale-110 active:scale-110 transition-all duration-300">
+            See more
+            <MdArrowOutward size={24} />
           </Button>
         </div>
       </motion.div>

@@ -20,7 +20,7 @@ export default function Home() {
       <HeaderNav className="z-10 relative block"></HeaderNav>
       <section
         id="hero"
-        className="w-full font-clashDisplayBold sm:py-16 flex-col flex"
+        className="w-full font-clashDisplayBold py-0 sm:py-16 flex-col flex"
       >
         <HeroSection></HeroSection>
         <div className="flex-col flex w-screen  sm:mt overflow-hidden relative">

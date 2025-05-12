@@ -41,7 +41,7 @@ const HeroSection = () => {
 
       <h1 className="text-nowrap text-6xl sm:text-7xl my-4 ">
         <motion.div
-          initial={{ x: "80vw", scale: 1.1 }}
+          initial={{ x: "100vw", scale: 1.1 }}
           animate={{ x: 0, scale: 1 }}
           transition={{
             x: {
@@ -65,7 +65,7 @@ const HeroSection = () => {
               y: { delay: 2, duration: 0.75 },
               ease: "easeInOut",
             }}
-            className=" text-7xl absolute top-0 -z-10 opacity-10"
+            className="text-6xl sm:text-7xl absolute top-0 -z-10 opacity-10"
           >
             Software
           </motion.h1>
@@ -95,14 +95,14 @@ const HeroSection = () => {
               y: { delay: 2, duration: 0.75 },
               ease: "easeInOut",
             }}
-            className=" text-7xl absolute top-0 -z-10 opacity-10"
+            className="text-6xl sm:text-7xl absolute top-0 -z-10 opacity-10"
           >
             Engineer
           </motion.h1>
         </motion.div>
       </h1>
       <motion.p
-        className="my-12 text-lg tracking-wide relative z-10"
+        className="my-8 text-md sm:text-lg tracking-wide relative z-10"
         initial={{ x: "120%", scale: 1.1 }}
         animate={{ x: 0, scale: 1 }}
         transition={{
@@ -123,10 +123,10 @@ const HeroSection = () => {
         and engage users.&quot;
         <motion.p
           className="absolute top-0 -z-10 opacity-10"
-          initial={{ left: 20, y: 10 }}
+          initial={{ left: 10, y: 5 }}
           animate={{ left: 0, y: 0 }}
           transition={{
-            left: { delay: 2, duration: 1.5 },
+            left: { delay: 2, duration: 1 },
             y: { delay: 2, duration: 0.75 },
             ease: "easeInOut",
           }}
@@ -144,7 +144,7 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.2, ease: "backOut" }}
       ></motion.p>
-      <Button variant="outline">Contact Me</Button>
+      {/* <Button variant="outline">Contact Me</Button> */}
     </div>
   );
 };

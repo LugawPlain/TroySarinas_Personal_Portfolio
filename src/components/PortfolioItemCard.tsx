@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { PortfolioItem } from "@/data/portfolioData"; // Import the interface
 import Link from "next/link";
-
+import { CiLink } from "react-icons/ci";
+import { PiGithubLogoLight } from "react-icons/pi";
 interface PortfolioItemCardProps {
   item: PortfolioItem; // Use the imported interface
 }
@@ -20,7 +21,7 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
           </span>
         ))}
       </div>
-      <div className="flex-col space-y-4 flex-grow flex bg-nude2 max-h-4/5 overflow-y-auto p-4 rounded-lg ">
+      <div className="flex-col space-y-4 flex-grow flex bg-nude2 max-h-[100svh] overflow-y-auto p-4 rounded-lg ">
         <div className="relative  w-full h-96 overflow-hidden mx-auto rounded-lg">
           <Image
             src={item.image}
@@ -31,50 +32,26 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
         </div>
         <div className="flex-col flex ">
           <Link href={item.titleLink || ""}>
-            <h3 className="text-start text-2xl font-semibold">{item.title}</h3>
+            <h3 className="text-start text-xl sm:text-2xl font-semibold">
+              {item.title}
+            </h3>
           </Link>
-          <p className="text-justify mt-4 flex-grow">{item.description}</p>
-          <div className="flex-row  flex justify-between">
+          <p className="text-justify indent-4 text-muted-foreground mt-2 sm:mt-4 text-md sm:text-lg flex-grow">
+            {item.description}
+          </p>
+          <div className="flex-row flex justify-between mt-2 sm:mt-4">
             <Link
               href={item.titleLink || ""}
-              className="text-accent flex items-start gap-2 underline text-md font-serif mt-4 hover:scale-110  active:scale-110 transition-all duration-300"
+              className="text-accent flex-center  gap-1 underline text-sm md:text-md font-serif hover:scale-110  active:scale-110 transition-all duration-300"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-link-icon lucide-link"
-              >
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-              </svg>
+              <CiLink size={32} />
               View Project
             </Link>
             <Link
               href={item.githubLink || ""}
-              className="text-accent flex items-start gap-2 underline text-md font-serif mt-4 hover:scale-110  active:scale-110 transition-all duration-300"
+              className="text-accent flex-center gap-1 underline text-sm md:text-md font-serif hover:scale-110  active:scale-110 transition-all duration-300"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-link-icon lucide-link"
-              >
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-              </svg>
+              <PiGithubLogoLight size={28} />
               View on GitHub
             </Link>
           </div>

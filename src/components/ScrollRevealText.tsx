@@ -26,7 +26,7 @@ const ScrollRevealTextMotion = () => {
   );
 
   return (
-    <div className="text-center text-lg font-medium tracking-widest rounded-lg max-w-7xl mx-auto">
+    <div className="text-center text-lg  font-medium tracking-widest rounded-lg max-w-7xl mx-auto px-4">
       <h2 className="mb-8 font-bold">
         <motion.span
           ref={headingRef}
