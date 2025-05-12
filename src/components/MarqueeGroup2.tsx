@@ -11,10 +11,10 @@ const MarqueeGroup2 = () => {
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "100vw" }}
-        transition={{ delay: 1.75, duration: 2, type: "spring" }}
-        className="absolute top-[-1] w-screen h-20 bg-nude z-20"
+        transition={{ delay: 1.75, duration: 1, ease: "easeIn" }}
+        className="absolute top-[-1] w-screen h-20 bg-nude z-10"
       ></motion.div>
-      <Marquee className="bg-kkwindy/80 text-kkhair py-4 mt-4" reverse={true}>
+      <Marquee className="py-4" reverse={true}>
         <div className="flex-center gap-1">
           <Image
             className="transition-transform hover:scale-110"

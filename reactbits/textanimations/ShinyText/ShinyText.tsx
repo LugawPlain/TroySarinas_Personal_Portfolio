@@ -12,6 +12,7 @@ interface ShinyTextProps {
   disabled?: boolean;
   speed?: number;
   className?: string;
+  children?: React.ReactNode;
 }
 
 const ShinyText: React.FC<ShinyTextProps> = ({
@@ -19,6 +20,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
   disabled = false,
   speed = 5,
   className = "",
+  children,
 }) => {
   const animationDuration = `${speed}s`;
 
@@ -36,6 +38,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
       }}
     >
       {text}
+      {children}
     </div>
   );
 };

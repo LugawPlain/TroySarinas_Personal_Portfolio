@@ -23,7 +23,9 @@ export default function Home() {
         className="w-full font-clashDisplayBold sm:py-16 flex-col flex"
       >
         <HeroSection></HeroSection>
-        <div className="flex-col flex w-screen  sm:mt overflow-hidden">
+        <div className="flex-col flex w-screen  sm:mt overflow-hidden relative">
+          <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-nude to-transparent z-10"></div>
+          <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-nude to-transparent z-10"></div>
           <MarqueeGroup1></MarqueeGroup1>
           <MarqueeGroup2></MarqueeGroup2>
           <MarqueeGroup1></MarqueeGroup1>
