@@ -40,7 +40,7 @@ import { FaSquarespace } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { SiAframe } from "react-icons/si";
 import { SiThreedotjs } from "react-icons/si";
-
+import { FaWordpress } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Define the technology data array
@@ -85,6 +85,7 @@ const technologies = [
   { name: "Make", IconComponent: SiMake },
   { name: "Zapier", IconComponent: SiZapier },
   { name: "HubSpot", IconComponent: FaHubspot },
+  { name: "WordPress", IconComponent: FaWordpress },
 ];
 
 const Technologies = () => {

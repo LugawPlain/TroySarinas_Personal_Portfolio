@@ -12,6 +12,8 @@ import Certificates from "@/components/Certificates";
 import ContactMe from "@/components/ContactMe";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
+import MarqueeGroup3 from "@/components/MarqueeGroup3";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -27,7 +29,7 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-12 md:w-24 h-full bg-gradient-to-l from-nude to-transparent z-10"></div>
           <MarqueeGroup1></MarqueeGroup1>
           <MarqueeGroup2></MarqueeGroup2>
-          <MarqueeGroup1></MarqueeGroup1>
+          <MarqueeGroup3></MarqueeGroup3>
         </div>
       </section>
       <section id="about" className="pt-4 md:pt-20">
@@ -58,6 +60,28 @@ export default function Home() {
       <div className="min-h-4 md:hidden"></div>
 
       <MenuBar className="sm:hidden"></MenuBar>
+
+      <div className="flex-center gap-1">
+        <Image
+          className="transition-transform"
+          src="/Icons/figma-svgrepo-com.svg"
+          alt="s"
+          width={24}
+          height={24}
+        />
+        <h1>Figma</h1>
+      </div>
+
+      <div className="flex-center gap-1 group">
+        <Image
+          className="transition-transform group-hover:scale-110"
+          src="/Icons/three-js-icon.svg"
+          alt="s"
+          width={30}
+          height={30}
+        />
+        <h1>Three.js</h1>
+      </div>
     </div>
   );
 }
