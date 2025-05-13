@@ -16,7 +16,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="scroll-smooth min-w-screen space-y-6 z-10 bg-nude mx-auto ">
-      <HeaderNav className="z-10 relative block"></HeaderNav>
+      <HeaderNav className=" relative block"></HeaderNav>
       <section
         id="hero"
         className="w-full font-clashDisplayBold py-0 sm:py-16 flex-col flex"

@@ -64,7 +64,7 @@ const HeaderNav = (props: { className?: string }) => {
   return (
     <>
       <div className={props.className}>
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {showAnnouncement && (
             <>
               <motion.div
@@ -91,7 +91,7 @@ const HeaderNav = (props: { className?: string }) => {
               </motion.div>
             </>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
         {/* For smaller screens */}
         <motion.div
           initial={{ y: -100 }}
@@ -117,7 +117,7 @@ const HeaderNav = (props: { className?: string }) => {
 
         {/* For larger screens */}
         <div
-          className={`py-2 px-6 text-sm items-center bg-nude rounded-full shadow-md border-b-2 border-border hidden sm:flex justify-between sm:fixed top-4 left-1/2 -translate-x-1/2 transition-all duration-300 ${
+          className={`py-2 px-6 z-50 text-sm items-center bg-nude/50 backdrop-blur-sm rounded-full shadow-md border-b-2 border-border hidden sm:flex justify-between sm:fixed top-4 left-1/2 -translate-x-1/2 transition-all duration-300 ${
             isScrolled ? " sm:w-lg md:w-xl lg:w-3xl" : "w-4/5"
           }`}
         >
