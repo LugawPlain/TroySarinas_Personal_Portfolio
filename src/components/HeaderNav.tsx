@@ -2,22 +2,14 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
 
 const HeaderNav = (props: { className?: string }) => {
-  const [showAnnouncement, setShowAnnouncement] = useState(true);
   const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    setShowAnnouncement(true);
-
-    const timer = setTimeout(() => {
-      setShowAnnouncement(false);
-    }, 20000);
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,7 +34,6 @@ const HeaderNav = (props: { className?: string }) => {
 
     window.addEventListener("scroll", handleScroll);
     return () => {
-      clearTimeout(timer);
       observer.disconnect();
       window.removeEventListener("scroll", handleScroll);
     };

@@ -13,7 +13,6 @@ import ContactMe from "@/components/ContactMe";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
 import MarqueeGroup3 from "@/components/MarqueeGroup3";
-import Image from "next/image";
 
 export default function Home() {
   return (
