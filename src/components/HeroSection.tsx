@@ -24,7 +24,7 @@ const HeroSection = () => {
         className="text-base sm:text-xl relative z-10"
       >
         Hi, I&apos;m Troy Sarinas
-        <motion.h3
+        <motion.p
           initial={{ left: 20, y: 5 }}
           animate={{ left: 0, y: 0 }}
           transition={{
@@ -35,7 +35,7 @@ const HeroSection = () => {
           className="text-base sm:text-xl absolute top-0 -z-10 opacity-10"
         >
           Hi, I&apos;m Troy Sarinas
-        </motion.h3>
+        </motion.p>
       </motion.h3>
 
       <h1 className="text-nowrap text-6xl sm:text-7xl my-4 ">
@@ -120,7 +120,7 @@ const HeroSection = () => {
         <span className="text-accent"> innovative </span> design and
         <span className="text-accent"> creative </span> solutions that captivate
         and engage users.&quot;
-        <motion.p
+        <motion.span
           className="absolute top-0 -z-10 opacity-10"
           initial={{ left: 10, y: 5 }}
           animate={{ left: 0, y: 0 }}
@@ -135,7 +135,7 @@ const HeroSection = () => {
           <span className="text-accent"> innovative </span> design and
           <span className="text-accent"> creative </span> solutions that
           captivate and engage users.&quot;
-        </motion.p>
+        </motion.span>
       </motion.p>
       <motion.p
         className="font-semibold"

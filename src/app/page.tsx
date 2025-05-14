@@ -60,28 +60,6 @@ export default function Home() {
       <div className="min-h-4 md:hidden"></div>
 
       <MenuBar className="sm:hidden"></MenuBar>
-
-      <div className="flex-center gap-1">
-        <Image
-          className="transition-transform"
-          src="/Icons/figma-svgrepo-com.svg"
-          alt="s"
-          width={24}
-          height={24}
-        />
-        <h1>Figma</h1>
-      </div>
-
-      <div className="flex-center gap-1 group">
-        <Image
-          className="transition-transform group-hover:scale-110"
-          src="/Icons/three-js-icon.svg"
-          alt="s"
-          width={30}
-          height={30}
-        />
-        <h1>Three.js</h1>
-      </div>
     </div>
   );
 }
