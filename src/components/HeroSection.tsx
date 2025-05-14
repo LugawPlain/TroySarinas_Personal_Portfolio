@@ -18,7 +18,7 @@ const HeroSection = () => {
             damping: 4.5,
             mass: 0.5,
           },
-          scale: { delay: 2, duration: 1 },
+          scale: { delay: 2, duration: 0.75 },
           ease: "easeInOut",
         }}
         className="text-base sm:text-xl relative z-10"
