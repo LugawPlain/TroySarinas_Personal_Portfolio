@@ -243,6 +243,13 @@
       background-position: -100%;
     }
   }
+
+  --breakpoint-3xl: 1920px;
+  --breakpoint-4xl: 2560px;
+  --breakpoint-5xl: 3840px;
+  --container-8xl: 88rem;
+  --container-9xl: 96rem;
+  --container-10xl: 104rem;
 }
 
 @layer utilities {
