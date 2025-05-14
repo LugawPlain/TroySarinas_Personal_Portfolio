@@ -120,81 +120,93 @@ const HeaderNav = (props: { className?: string }) => {
           initial={{ maxWidth: "0px" }}
           animate={{ maxWidth: "100vw" }}
           transition={{ duration: 1, ease: "easeIn" }}
-          className={`relative z-20 shadow-md min-h-15 sm:fixed flex justify-center top-4 left-1/2 -translate-x-1/2 transition-all duration-300 rounded-full overflow-hidden`}
+          className={`relative z-20 shadow-md min-h-15 sm:fixed sm:flex justify-center top-4 left-1/2 hidden  -translate-x-1/2 transition-all duration-300 rounded-full overflow-hidden`}
         >
           <div className="absolute inset-0 z-30 bg-inherit pointer-events-none"></div>
           <div
-            className={`py-2 md:min-w-2xl min-h-15 lg:min-w-4xl xl:min-w-6xl 2xl:min-w-8xl 3xl:min-w-10xl top-0  flex justify-between rounded-full  px-6 z-20 text-sm items-center bg-nude/70  backdrop-blur-sm  border-b-2 border-border`}
+            className={`top-0  flex justify-between relative  rounded-full  px-6 z-20 text-sm items-center bg-nude/70  backdrop-blur-sm  border-b-2 border-border transition-all
+              ${
+                isScrolled
+                  ? "min-w-4xl "
+                  : "md:min-w-2xl min-h-15 lg:min-w-4xl xl:min-w-6xl 2xl:min-w-8xl 3xl:min-w-10xl"
+              }
+              `}
           >
-            <span className="p-0.5 rounded-lg bg-status  shadow-sm ">
-              <Avatar className="w-[40px] h-[40px] rounded-md  ">
-                <AvatarImage src="/Icons/Troy_Sarinas_Pfp3.jpg" />
-                <AvatarFallback>TS</AvatarFallback>
-              </Avatar>
-            </span>
-            <div>
-              <ul className="flex flex-row md:gap-4 *:hover:scale-110 *:transition-all *:duration-300 *:cursor-pointer *:text-nowrap mx-4 sm:*:text-sm sm:gap-2 md:*:text-lg">
-                <li>
-                  <button
-                    onClick={() => scrollToSection("hero")}
-                    className={`${
-                      activeSection === "hero"
-                        ? "text-primary font-medium"
-                        : "text-foreground/70 hover:text-foreground"
-                    } transition-colors duration-300`}
-                  >
-                    Home
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("about")}
-                    className={`${
-                      activeSection === "about"
-                        ? "text-primary font-medium"
-                        : "text-foreground/70 hover:text-foreground"
-                    } transition-colors duration-300`}
-                  >
-                    About Me
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("projects")}
-                    className={`${
-                      activeSection === "projects"
-                        ? "text-primary font-medium"
-                        : "text-foreground/70 hover:text-foreground"
-                    } transition-colors duration-300`}
-                  >
-                    Projects
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("contact")}
-                    className={`${
-                      activeSection === "contact"
-                        ? "text-primary font-medium"
-                        : "text-foreground/70 hover:text-foreground"
-                    } transition-colors duration-300`}
-                  >
-                    Contact
-                  </button>
-                </li>
-              </ul>
+            <div className=" flex items-center xl:w-1/3 ">
+              <span className="p-0.5 rounded-lg bg-status  shadow-sm mr-auto ">
+                <Avatar className="w-[40px] h-[40px] rounded-md  ">
+                  <AvatarImage src="/Icons/Troy_Sarinas_Pfp3.jpg" />
+                  <AvatarFallback>TS</AvatarFallback>
+                </Avatar>
+              </span>
             </div>
-            <div className="flex-center gap-2">
-              <ThemeToggle />
+            <div className=" flex items-center justify-center xl:w-1/3">
+              <div className="">
+                <ul className="flex flex-row md:gap-4 *:hover:scale-110 *:transition-all *:duration-300 *:cursor-pointer *:text-nowrap mx-4 sm:*:text-sm sm:gap-2 md:*:text-lg">
+                  <li>
+                    <button
+                      onClick={() => scrollToSection("hero")}
+                      className={`${
+                        activeSection === "hero"
+                          ? "text-primary font-medium"
+                          : "text-foreground/70 hover:text-foreground"
+                      } transition-colors duration-300`}
+                    >
+                      Home
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollToSection("about")}
+                      className={`${
+                        activeSection === "about"
+                          ? "text-primary font-medium"
+                          : "text-foreground/70 hover:text-foreground"
+                      } transition-colors duration-300`}
+                    >
+                      About Me
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollToSection("projects")}
+                      className={`${
+                        activeSection === "projects"
+                          ? "text-primary font-medium"
+                          : "text-foreground/70 hover:text-foreground"
+                      } transition-colors duration-300`}
+                    >
+                      Projects
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => scrollToSection("contact")}
+                      className={`${
+                        activeSection === "contact"
+                          ? "text-primary font-medium"
+                          : "text-foreground/70 hover:text-foreground"
+                      } transition-colors duration-300`}
+                    >
+                      Contact
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className=" flex items-center xl:w-1/3">
+              <div className="flex-center gap-2 ml-auto ">
+                <ThemeToggle />
 
-              <div className="flex-center gap-2 rounded-full bg-green-500/10 px-4 py-2 shadow-sm">
-                <span className="relative flex h-[6px] w-[6px]">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/80 opacity-75"></span>
-                  <span className="relative inline-flex h-full w-full rounded-full bg-green-500"></span>
-                </span>
-                <p className="text-xs text-text-primary text-nowrap">
-                  Available for work
-                </p>
+                <div className="flex-center gap-2 rounded-full bg-green-500/10 px-4 py-2 shadow-sm">
+                  <span className="relative flex h-[6px] w-[6px]">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/80 opacity-75"></span>
+                    <span className="relative inline-flex h-full w-full rounded-full bg-green-500"></span>
+                  </span>
+                  <p className="text-xs text-text-primary text-nowrap">
+                    Available for work
+                  </p>
+                </div>
               </div>
             </div>
           </div>
