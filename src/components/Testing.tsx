@@ -1,24 +1,23 @@
 "use client";
-import { useRef } from "react";
-import { useScroll, motion } from "framer-motion";
-
+import Particles from "../../reactbits/backgrounds/Particles/Particles";
 const Testing = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start 0.7", "end 0.5"],
-  });
-
   return (
-    <motion.div
-      ref={targetRef}
-      style={{
-        opacity: scrollYProgress,
-        height: "100px",
-        background: "red",
-        marginTop: "150vh",
-      }}
-    />
+    <div className="fixed -z-10 top-0 left-0 w-full h-full">
+      <Particles
+        particleCount={100}
+        particleSpread={10}
+        speed={0.2}
+        particleColors={["#447d6a", "#5a9c85", "#2e5747"]}
+        particleBaseSize={100}
+        moveParticlesOnHover={false}
+        particleHoverFactor={1}
+        alphaParticles={false}
+        disableRotation={true}
+        cameraDistance={20}
+        sizeRandomness={1}
+        className="w-full h-full"
+      ></Particles>
+    </div>
   );
 };
 export default Testing;

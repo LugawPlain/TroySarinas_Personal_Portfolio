@@ -111,7 +111,7 @@ const HeaderNav = (props: { className?: string }) => {
           initial={{ maxWidth: "0px" }}
           animate={{ maxWidth: "100vw" }}
           transition={{ duration: 1, ease: "easeIn" }}
-          className={`relative z-20 shadow-md min-h-15 sm:fixed sm:flex justify-center top-4 left-1/2 hidden  -translate-x-1/2 transition-all duration-300 rounded-full overflow-hidden`}
+          className={`relative z-20 shadow-md min-h-15  sm:fixed sm:flex justify-center top-4 left-1/2 hidden  -translate-x-1/2 transition-all duration-300 rounded-full overflow-hidden`}
         >
           <div className="absolute inset-0 z-30 bg-inherit pointer-events-none"></div>
           <div

@@ -13,11 +13,13 @@ import ContactMe from "@/components/ContactMe";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
 import MarqueeGroup3 from "@/components/MarqueeGroup3";
+import Testing from "@/components/Testing";
 
 export default function Home() {
   return (
     <div className="scroll-smooth min-w-screen space-y-6 z-10 bg-nude mx-auto ">
       <HeaderNav className=" relative block"></HeaderNav>
+      <Testing></Testing>
       <section
         id="hero"
         className="w-full font-clashDisplayBold py-0 sm:py-16 flex-col flex"
