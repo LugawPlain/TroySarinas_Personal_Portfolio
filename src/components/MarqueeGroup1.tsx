@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const MarqueeGroup1 = () => {
   return (
-    <div className="relative max-w-screen max-h-16 min-h-16 z-10 flex-center">
+    <div className="relative top-0 min-w-screen max-w-screen max-h-16 min-h-16 mx-auto flex-center">
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "-100vw" }}

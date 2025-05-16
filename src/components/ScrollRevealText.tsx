@@ -42,7 +42,7 @@ const ScrollRevealTextMotion = () => {
         </motion.span>
         <p className="inline">✨</p>
       </h2>
-      <p className="max-w-3xl mx-auto ">
+      <p className="max-w-3xl mx-auto text-foreground ">
         <motion.span
           ref={paragraphRef}
           style={{
@@ -51,7 +51,7 @@ const ScrollRevealTextMotion = () => {
             backgroundImage:
               "linear-gradient(var(--foreground), var(--foreground))",
           }}
-          className="text-foreground/10 bg-clip-text md:text-3xl"
+          className="text-foreground/20 bg-clip-text md:text-3xl"
         >
           I am a graduate of Computer Engineering with a passion for technology
           and design. Collaborating with companies worldwide to create visually

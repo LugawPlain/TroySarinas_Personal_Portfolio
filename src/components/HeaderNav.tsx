@@ -113,9 +113,8 @@ const HeaderNav = (props: { className?: string }) => {
           transition={{ duration: 1, ease: "easeIn" }}
           className={`relative z-20 shadow-md min-h-15  sm:fixed sm:flex justify-center top-4 left-1/2 hidden  -translate-x-1/2 transition-all duration-300 rounded-full overflow-hidden`}
         >
-          <div className="absolute inset-0 z-30 bg-inherit pointer-events-none"></div>
           <div
-            className={`top-0  flex justify-between relative  rounded-full  px-6 z-20 text-sm items-center bg-background/70  backdrop-blur-sm  border-b-2 border-border transition-all
+            className={`top-0  flex justify-between relative  rounded-full  px-6 z-20 text-sm items-center bg-popover/70  backdrop-blur-sm  border-b-2 border-border transition-all
               ${
                 isScrolled
                   ? "min-w-4xl "
@@ -139,8 +138,8 @@ const HeaderNav = (props: { className?: string }) => {
                       onClick={() => scrollToSection("hero")}
                       className={`${
                         activeSection === "hero"
-                          ? "text-primary font-medium"
-                          : "text-foreground/70 hover:text-foreground"
+                          ? "text-popover-foreground font-medium"
+                          : "text-popover-foreground/70 hover:text-popover-foreground"
                       } transition-colors duration-300`}
                     >
                       Home
@@ -151,8 +150,8 @@ const HeaderNav = (props: { className?: string }) => {
                       onClick={() => scrollToSection("about")}
                       className={`${
                         activeSection === "about"
-                          ? "text-primary font-medium"
-                          : "text-foreground/70 hover:text-foreground"
+                          ? "text-popover-foreground font-medium"
+                          : "text-popover-foreground/70 hover:text-popover-foreground"
                       } transition-colors duration-300`}
                     >
                       About Me
@@ -163,8 +162,8 @@ const HeaderNav = (props: { className?: string }) => {
                       onClick={() => scrollToSection("projects")}
                       className={`${
                         activeSection === "projects"
-                          ? "text-primary font-medium"
-                          : "text-foreground/70 hover:text-foreground"
+                          ? "text-popover-foreground font-medium"
+                          : "text-popover-foreground/70 hover:text-popover-foreground"
                       } transition-colors duration-300`}
                     >
                       Projects
@@ -175,8 +174,8 @@ const HeaderNav = (props: { className?: string }) => {
                       onClick={() => scrollToSection("contact")}
                       className={`${
                         activeSection === "contact"
-                          ? "text-primary font-medium"
-                          : "text-foreground/70 hover:text-foreground"
+                          ? "text-popover-foreground font-medium"
+                          : "text-popover-foreground/70 hover:text-popover-foreground"
                       } transition-colors duration-300`}
                     >
                       Contact

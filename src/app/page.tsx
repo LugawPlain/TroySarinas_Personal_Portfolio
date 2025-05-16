@@ -19,21 +19,23 @@ export default function Home() {
   return (
     <>
       <div className="scroll-smooth min-w-screen space-y-6 mx-auto relative ">
-        <HeaderNav className=" relative block"></HeaderNav>
+        <HeaderNav className=" relative"></HeaderNav>
         <Testing></Testing>
+
         <section
           id="hero"
           className="w-full font-clashDisplayBold relative py-0 sm:py-16 flex-col flex z-10 "
         >
           <HeroSection></HeroSection>
-          <div className="flex-col flex w-screen  sm:mt overflow-hidden relative bg-background">
-            <div className="absolute top-0 left-0 w-12 md:w-24 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
-            <div className="absolute top-0 right-0 w-12 md:w-24 h-full bg-gradient-to-l from-background to-transparent z-10"></div>
+          <div className="flex-col overflow-hidden left-0 bg-background mt-8">
+            {/* <div className="absolute top-0 left-0 w-12 md:w-24 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
+              <div className="absolute top-0 right-0 w-12 md:w-24 h-full bg-gradient-to-l from-background to-transparent z-10"></div> */}
             <MarqueeGroup1></MarqueeGroup1>
             <MarqueeGroup2></MarqueeGroup2>
             <MarqueeGroup3></MarqueeGroup3>
           </div>
         </section>
+
         <section id="about" className="pt-4 md:pt-20">
           <ScrollRevealText />
 
@@ -41,7 +43,9 @@ export default function Home() {
             <h2 className="text-center  my-4 font-bold pt-10 sm:pt-20 mb-8">
               <span className="text-3xl sm:text-4xl">My Services ✨</span>
             </h2>
-            <ScrollRevealAccordion></ScrollRevealAccordion>
+            <div className="">
+              <ScrollRevealAccordion></ScrollRevealAccordion>
+            </div>
           </div>
         </section>
         <section
@@ -53,7 +57,7 @@ export default function Home() {
           <Certificates></Certificates>
         </section>
 
-        <section id="contact" className="max-w-7xl mx-auto pt-4 md:pt-20">
+        <section id="contact" className="pt-4 md:pt-20">
           <ContactMe />
         </section>
         <footer id="footer" className="">

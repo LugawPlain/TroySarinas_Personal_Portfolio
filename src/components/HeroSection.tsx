@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="overflow-hidden px-8 py-8 max-w-7xl mx-auto sm:px-16 ">
+    <div className="overflow-hidden px-8 max-w-7xl py-8  mx-auto sm:px-16 ">
       <motion.h3
         initial={{ x: "-100vw", scale: 1.1 }}
         animate={{ x: 0, scale: 1 }}
