@@ -5,12 +5,12 @@ import React from "react";
 import { motion } from "framer-motion";
 const MarqueeGroup1 = () => {
   return (
-    <div className="relative max-w-screen max-h-16 min-h-16 flex-center">
+    <div className="relative max-w-screen max-h-16 min-h-16 z-10 flex-center">
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "-100vw" }}
         transition={{ delay: 1.75, duration: 1, ease: "easeIn" }}
-        className="absolute top-[-1] w-screen h-20 bg-background z-10 "
+        className="absolute top-[-1] w-screen h-20 bg-background z-20 "
       ></motion.div>
       <Marquee className="relative flex-center top-0 bg-secondary/80 h-16 text-secondary-foreground py-4 ">
         <div className="flex-center gap-1 md:gap-2 px-2 py-4 group/html5">

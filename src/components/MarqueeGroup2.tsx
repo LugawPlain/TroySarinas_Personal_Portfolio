@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 const MarqueeGroup2 = () => {
   return (
-    <div className="relative max-w-screen max-h-16 min-h-16 flex-center">
+    <div className="relative max-w-screen max-h-16 z-10 min-h-16 flex-center">
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "100vw" }}
         transition={{ delay: 1.75, duration: 1, ease: "easeIn" }}
-        className="absolute top-[-1] w-screen h-20 bg-primary/80 text-primary-foreground z-10"
+        className="absolute top-[-1] w-screen h-20 bg-primary/80 text-primary-foreground z-20"
       ></motion.div>
       <Marquee className="flex-center " reverse={true}>
         <div className="flex-center gap1 md:gap-2 group/figma px-2 py-4">
