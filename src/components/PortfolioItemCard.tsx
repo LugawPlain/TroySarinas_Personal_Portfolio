@@ -21,7 +21,7 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
           </span>
         ))}
       </div>
-      <div className="flex-col space-y-4 flex-grow flex bg-nude2 max-h-[100svh] overflow-y-auto p-4 rounded-lg ">
+      <div className="flex-col space-y-4 flex-grow flex bg-muted max-h-[100svh] overflow-y-auto p-4 rounded-lg ">
         <div className="relative  w-full h-96 overflow-hidden mx-auto rounded-lg">
           <Image
             src={item.image}

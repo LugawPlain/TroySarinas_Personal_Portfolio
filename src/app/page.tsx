@@ -17,7 +17,7 @@ import Testing from "@/components/Testing";
 
 export default function Home() {
   return (
-    <div className="scroll-smooth min-w-screen space-y-6 z-10 bg-nude mx-auto ">
+    <div className="scroll-smooth min-w-screen space-y-6 z-10 mx-auto ">
       <HeaderNav className=" relative block"></HeaderNav>
       <Testing></Testing>
       <section
@@ -26,8 +26,8 @@ export default function Home() {
       >
         <HeroSection></HeroSection>
         <div className="flex-col flex w-screen  sm:mt overflow-hidden relative">
-          <div className="absolute top-0 left-0 w-12 md:w-24 h-full bg-gradient-to-r from-nude to-transparent z-10"></div>
-          <div className="absolute top-0 right-0 w-12 md:w-24 h-full bg-gradient-to-l from-nude to-transparent z-10"></div>
+          <div className="absolute top-0 left-0 w-12 md:w-24 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
+          <div className="absolute top-0 right-0 w-12 md:w-24 h-full bg-gradient-to-l from-background to-transparent z-10"></div>
           <MarqueeGroup1></MarqueeGroup1>
           <MarqueeGroup2></MarqueeGroup2>
           <MarqueeGroup3></MarqueeGroup3>

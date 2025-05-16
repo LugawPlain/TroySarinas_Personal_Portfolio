@@ -115,7 +115,7 @@ const HeaderNav = (props: { className?: string }) => {
         >
           <div className="absolute inset-0 z-30 bg-inherit pointer-events-none"></div>
           <div
-            className={`top-0  flex justify-between relative  rounded-full  px-6 z-20 text-sm items-center bg-nude/70  backdrop-blur-sm  border-b-2 border-border transition-all
+            className={`top-0  flex justify-between relative  rounded-full  px-6 z-20 text-sm items-center bg-background/70  backdrop-blur-sm  border-b-2 border-border transition-all
               ${
                 isScrolled
                   ? "min-w-4xl "
