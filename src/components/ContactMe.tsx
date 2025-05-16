@@ -7,6 +7,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { SiHackerrank } from "react-icons/si";
 import Link from "next/link";
 import ContactModal from "./ContactModal";
 
@@ -104,6 +105,12 @@ const ContactMe = () => {
               <div className="flex flex-row justify-center items-center space-x-4">
                 <MdEmail size={40} />
                 <p>Email (Troysarinas22@gmail.com)</p>
+              </div>
+            </Link>
+            <Link href="https://www.hackerrank.com/profile/troysarinas22">
+              <div className="flex flex-row justify-center items-center space-x-4">
+                <SiHackerrank size={40} />
+                <p>HackerRank</p>
               </div>
             </Link>
           </div>
