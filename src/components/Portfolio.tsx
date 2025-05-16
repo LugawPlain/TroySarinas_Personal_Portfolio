@@ -44,21 +44,21 @@ const Portfolio = () => {
   }, [api]);
 
   return (
-    <div className="overflow-x-hidden  mx-auto  ">
+    <motion.div
+      initial={{ opacity: 0, transform: "translateX(75px)" }}
+      whileInView={{
+        opacity: 1,
+        transform: "translateX(0px)",
+      }}
+      exit={{ opacity: 0, transform: "translateX(75px)" }}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      viewport={{ amount: 0.7 }}
+      className="overflow-x-hidden  mx-auto  "
+    >
       <h2 className="mb-8 font-bold">
         <span className="text-3xl sm:text-4xl">Projects ✨</span>
       </h2>
-      <motion.div
-        className="w-full"
-        ref={containerRef}
-        initial={{ opacity: 0, transform: "translateX(75px)" }}
-        whileInView={{
-          opacity: 1,
-          transform: "translateX(0px)",
-        }}
-        exit={{ opacity: 0, transform: "translateX(75px)" }}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      >
+      <div className="w-full" ref={containerRef}>
         <Carousel
           setApi={setApi}
           opts={{
@@ -97,8 +97,8 @@ const Portfolio = () => {
             <MdArrowOutward size={24} />
           </Button>
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 

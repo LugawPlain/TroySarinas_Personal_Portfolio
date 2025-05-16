@@ -116,7 +116,7 @@ const Technologies = () => {
         {/* but good practice if items were animating in/out individually */}
         {/* Use motion.div and apply variants */}
         <motion.div
-          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 overflow-hidden `}
+          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 overflow-hidden py-4 `}
           variants={gridVariants}
           initial="hidden" // Start hidden (collapsed)
           animate={showAll ? "visible" : "hidden"} // Animate based on state
@@ -126,7 +126,7 @@ const Technologies = () => {
           {technologies.map(({ name, IconComponent }, index) => (
             <div
               key={index} // Use index as key
-              className="px-4 py-2 items-center justify-between rounded-md bg-secondary text-secondary-foreground inline-flex"
+              className="px-4 py-2 items-center justify-between rounded-md bg-secondary hover:-translate-y-3 transition-all duration-500 ease-in-out text-secondary-foreground inline-flex"
             >
               {/* Handle custom components vs react-icons */}
               {name === "HTML" || name === "CSS" ? (

@@ -27,7 +27,7 @@ export default function Home() {
           className="w-full font-clashDisplayBold relative py-0 sm:py-16 flex-col flex z-10 "
         >
           <HeroSection></HeroSection>
-          <div className="flex-col overflow-hidden left-0 bg-background mt-8">
+          <div className="flex-col overflow-hidden   bg-background mt-8">
             {/* <div className="absolute top-0 left-0 w-12 md:w-24 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
               <div className="absolute top-0 right-0 w-12 md:w-24 h-full bg-gradient-to-l from-background to-transparent z-10"></div> */}
             <MarqueeGroup1></MarqueeGroup1>
@@ -40,9 +40,6 @@ export default function Home() {
           <ScrollRevealText />
 
           <div id="services" className="w-full">
-            <h2 className="text-center  my-4 font-bold pt-10 sm:pt-20 mb-8">
-              <span className="text-3xl sm:text-4xl">My Services ✨</span>
-            </h2>
             <div className="">
               <ScrollRevealAccordion></ScrollRevealAccordion>
             </div>
@@ -50,7 +47,7 @@ export default function Home() {
         </section>
         <section
           id="projects"
-          className="md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto pt-4 md:pt-20"
+          className="md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto pt-4 md:pt-20 overflow-hidden"
         >
           <Portfolio></Portfolio>
           <Technologies></Technologies>

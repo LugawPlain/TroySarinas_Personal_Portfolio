@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="overflow-hidden px-8 max-w-7xl py-8  mx-auto sm:px-16 ">
+    <div className="overflow-hidden px-8 max-w-7xl py-8  mx-auto sm:px-16  ">
       <motion.h3
         initial={{ x: "-100vw", scale: 1.1 }}
         animate={{ x: 0, scale: 1 }}
@@ -38,7 +38,7 @@ const HeroSection = () => {
         </motion.p>
       </motion.h3>
 
-      <h1 className="text-nowrap text-6xl sm:text-7xl my-4 ">
+      <h1 className="text-nowrap text-4xl xs:text-5xl sm:text-6xl md:text-7xl my-4 ">
         <motion.div
           initial={{ x: "100vw", scale: 1.1 }}
           animate={{ x: 0, scale: 1 }}
@@ -64,7 +64,7 @@ const HeroSection = () => {
               y: { delay: 2, duration: 0.75 },
               ease: "easeInOut",
             }}
-            className="text-6xl sm:text-7xl absolute top-0 -z-10 opacity-10"
+            className="text-4xl xs:text-5xl sm:text-6xl  absolute top-0 -z-10 opacity-10"
           >
             Software
           </motion.h1>
@@ -94,7 +94,7 @@ const HeroSection = () => {
               y: { delay: 2, duration: 0.75 },
               ease: "easeInOut",
             }}
-            className="text-6xl sm:text-7xl absolute top-0 -z-10 opacity-10"
+            className="text-4xl xs:text-5xl sm:text-6xl sm:text-7xl absolute top-0 -z-10 opacity-10"
           >
             Engineer
           </motion.h1>

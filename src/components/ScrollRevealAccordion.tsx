@@ -168,23 +168,34 @@ const ScrollRevealAccordion = () => {
   }
 
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="w-full text-secondary-foreground mx-auto "
-    >
-      {servicesData.map((data: ServiceItemData) => {
-        const Icon = iconMap[data.iconName];
-        return (
-          <AccordionMotionItem
-            key={data.value}
-            {...data}
-            IconComponent={Icon}
-            CheckIcon={CheckCircle}
-          />
-        );
-      })}
-    </Accordion>
+    <>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.5 }}
+        className="text-center  my-4 font-bold pt-10 sm:pt-20 mb-8"
+      >
+        <span className="text-3xl sm:text-4xl">My Services ✨</span>
+      </motion.h2>
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full text-secondary-foreground mx-auto "
+      >
+        {servicesData.map((data: ServiceItemData) => {
+          const Icon = iconMap[data.iconName];
+          return (
+            <AccordionMotionItem
+              key={data.value}
+              {...data}
+              IconComponent={Icon}
+              CheckIcon={CheckCircle}
+            />
+          );
+        })}
+      </Accordion>
+    </>
   );
 };
 
