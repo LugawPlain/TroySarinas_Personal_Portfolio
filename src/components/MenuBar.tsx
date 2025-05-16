@@ -59,14 +59,14 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
       transition={{ delay: 1.75, duration: 2, type: "spring" }}
       className={` fixed w-full bg-accent/80 bottom-0 py-2 z-30 shadow-[0_-1px_10px_rgba(0,0,0,0.25)] rounded-t-3xl backdrop-blur ${className}`}
     >
-      <ul className="flex justify-evenly text-accent-foreground">
+      <ul className="flex justify-evenly text-secondary-foreground">
         <li>
           <button
             onClick={() => scrollToSection("hero")}
             className={`flex-center flex-col transition-all duration-300 ${
               activeSection === "hero"
-                ? "text-primary scale-110 font-medium"
-                : "text-foreground/70 hover:text-foreground hover:scale-110 active:scale-100 active:text-primary"
+                ? "text-secondary-foreground scale-110 font-medium"
+                : "text-secondary-foreground/50 hover:text-secondary-foreground hover:scale-110 active:scale-100 active:text-background"
             }`}
           >
             <RiHome3Line size={24} />
@@ -78,8 +78,8 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
             onClick={() => scrollToSection("about")}
             className={`flex-center flex-col transition-all duration-300 ${
               activeSection === "about"
-                ? "text-primary scale-110 font-medium"
-                : "text-foreground/70 hover:text-foreground hover:scale-110 active:scale-100 active:text-primary"
+                ? "text-secondary-foreground scale-110 font-medium"
+                : "text-secondary-foreground/50 hover:text-secondary-foreground hover:scale-110 active:scale-100 active:text-background"
             }`}
           >
             <GiMapleLeaf className="rotate-20" size={24} />
@@ -91,8 +91,8 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
             onClick={() => scrollToSection("projects")}
             className={`flex-center flex-col transition-all duration-300 ${
               activeSection === "projects"
-                ? "text-primary scale-110 font-medium"
-                : "text-foreground/70 hover:text-foreground hover:scale-110 active:scale-100 active:text-primary"
+                ? "text-secondary-foreground scale-110 font-medium"
+                : "text-secondary-foreground/70 hover:text-secondary-foreground hover:scale-110 active:scale-100 active:text-background"
             }`}
           >
             <GoProject size={24} />
@@ -104,8 +104,8 @@ const MenuBar: React.FC<MenuBarProps> = ({ className }) => {
             onClick={() => scrollToSection("contact")}
             className={`flex-center flex-col transition-all duration-300 ${
               activeSection === "contact"
-                ? "text-primary scale-110 font-medium"
-                : "text-foreground/50 hover:text-foreground hover:scale-110 active:scale-100 active:text-primary"
+                ? "text-secondary-foreground scale-110 font-medium"
+                : "text-secondary-foreground/50 hover:text-secondary-foreground hover:scale-110 active:scale-100 active:text-background"
             }`}
           >
             <PiPaperPlaneTilt size={24} />

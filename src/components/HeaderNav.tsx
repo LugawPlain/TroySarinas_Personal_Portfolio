@@ -90,11 +90,14 @@ const HeaderNav = (props: { className?: string }) => {
           transition={{ delay: 1.75, duration: 2, type: "spring" }}
           className="flex w-full py-2 px-6 text-sm items-center bg-transparent shadow-md justify-between border-b-2 border-border sm:hidden"
         >
-          <span className="p-0.5 rounded-lg bg-status  shadow-sm ">
-            <Avatar className="w-[40px] h-[40px] rounded-md  ">
+          <span className="p-0.5 rounded-xl bg-green-700 shadow-sm mr-auto ">
+            <Avatar className="w-[40px] h-[40px] rounded-lg  ">
               <AvatarImage src="/Icons/Troy_Sarinas_Pfp3.jpg" />
               <AvatarFallback>TS</AvatarFallback>
             </Avatar>
+          </span>
+          <span className="mx-auto">
+            <ThemeToggle />
           </span>
 
           <div className="flex-center gap-2 rounded-full bg-green-500/10 px-4 py-2 shadow-sm">
@@ -110,7 +113,7 @@ const HeaderNav = (props: { className?: string }) => {
         <motion.div
           initial={{ maxWidth: "0px" }}
           animate={{ maxWidth: "100vw" }}
-          transition={{ duration: 1, ease: "easeIn" }}
+          transition={{ duration: 2, ease: "easeIn" }}
           className={`relative z-20 shadow-md min-h-15  sm:fixed sm:flex justify-center top-4 left-1/2 hidden  -translate-x-1/2 transition-all duration-300 rounded-full overflow-hidden`}
         >
           <div
@@ -123,8 +126,8 @@ const HeaderNav = (props: { className?: string }) => {
               `}
           >
             <div className=" flex items-center xl:w-1/3 ">
-              <span className="p-0.5 rounded-lg bg-status  shadow-sm mr-auto ">
-                <Avatar className="w-[40px] h-[40px] rounded-md  ">
+              <span className="p-0.5 rounded-xl bg-green-700 shadow-sm mr-auto ">
+                <Avatar className="w-[40px] h-[40px] rounded-lg  ">
                   <AvatarImage src="/Icons/Troy_Sarinas_Pfp3.jpg" />
                   <AvatarFallback>TS</AvatarFallback>
                 </Avatar>

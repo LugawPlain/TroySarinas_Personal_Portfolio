@@ -52,7 +52,7 @@ const Portfolio = () => {
       }}
       exit={{ opacity: 0, transform: "translateX(75px)" }}
       transition={{ duration: 0.5, delay: 0.25 }}
-      viewport={{ amount: 0.7 }}
+      viewport={{ amount: 0.4 }}
       className="overflow-x-hidden  mx-auto  "
     >
       <h2 className="mb-8 font-bold">

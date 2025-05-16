@@ -64,7 +64,7 @@ const HeroSection = () => {
               y: { delay: 2, duration: 0.75 },
               ease: "easeInOut",
             }}
-            className="text-4xl xs:text-5xl sm:text-6xl  absolute top-0 -z-10 opacity-10"
+            className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl absolute top-0 -z-10 opacity-10"
           >
             Software
           </motion.h1>
@@ -94,7 +94,7 @@ const HeroSection = () => {
               y: { delay: 2, duration: 0.75 },
               ease: "easeInOut",
             }}
-            className="text-4xl xs:text-5xl sm:text-6xl sm:text-7xl absolute top-0 -z-10 opacity-10"
+            className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl absolute top-0 -z-10 opacity-10"
           >
             Engineer
           </motion.h1>

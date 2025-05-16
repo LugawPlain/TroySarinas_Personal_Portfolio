@@ -60,7 +60,7 @@ export default function Home() {
         <footer id="footer" className="">
           <Footer></Footer>
         </footer>
-        <div className="min-h-4 md:hidden"></div>
+        <div className="min-h- h-4 md:hidden"></div>
 
         <MenuBar className="sm:hidden"></MenuBar>
       </div>
