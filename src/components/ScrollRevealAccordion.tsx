@@ -70,14 +70,14 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
       transition={{ duration: 0.5 }}
     >
       <AccordionItem
-        className="bg-card border-none overflow-hidden shadow-sm "
+        className="bg-secondary border-none overflow-hidden shadow-sm "
         value={value}
       >
-        <AccordionTrigger className="text-xl text-left hover:bg-muted/50 hover:no-underline px-4 py-4 group ">
+        <AccordionTrigger className="text-xl text-left hover:bg-card/50 hover:no-underline px-4 py-4 group ">
           <div className="sm:mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl sm:w-7xl px-4">
             <div className="flex items-center sm:text-start space-x-3 ">
               {IconComponent && (
-                <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-10 lg:h-10 text-primary flex-shrink-0" />
+                <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-10 lg:h-10 text-secondary-foreground flex-shrink-0" />
               )}
               <span className="text-md font-extrabold sm:text-xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl group-hover:translate-x-12 transition-all duration-300">
                 {title}
@@ -119,7 +119,7 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
                     className="flex items-start"
                   >
                     {CheckIcon && (
-                      <CheckIcon className="w-4 h-4 mr-2 mt-0.5 text-primary flex-shrink-0" />
+                      <CheckIcon className="w-4 h-4 mr-2 mt-0.5 text-secondary-foreground flex-shrink-0" />
                     )}
 
                     <span>{item.text}</span>
@@ -171,7 +171,7 @@ const ScrollRevealAccordion = () => {
     <Accordion
       type="single"
       collapsible
-      className="w-full text-card-foreground mx-auto "
+      className="w-full text-secondary-foreground mx-auto "
     >
       {servicesData.map((data: ServiceItemData) => {
         const Icon = iconMap[data.iconName];

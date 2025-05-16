@@ -12,7 +12,7 @@ const MarqueeGroup2 = () => {
         initial={{ x: 0 }}
         animate={{ x: "100vw" }}
         transition={{ delay: 1.75, duration: 1, ease: "easeIn" }}
-        className="absolute top-[-1] w-screen h-20 bg-background z-10"
+        className="absolute top-[-1] w-screen h-20 bg-primary/80 text-primary-foreground z-10"
       ></motion.div>
       <Marquee className="flex-center " reverse={true}>
         <div className="flex-center gap1 md:gap-2 group/figma px-2 py-4">

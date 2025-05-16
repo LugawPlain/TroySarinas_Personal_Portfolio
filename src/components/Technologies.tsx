@@ -42,6 +42,7 @@ import { SiAframe } from "react-icons/si";
 import { SiThreedotjs } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "./ui/button";
 
 // Define the technology data array
 const technologies = [
@@ -125,7 +126,7 @@ const Technologies = () => {
           {technologies.map(({ name, IconComponent }, index) => (
             <div
               key={index} // Use index as key
-              className="px-4 py-2 items-center justify-between rounded-md bg-card text-card-foreground inline-flex"
+              className="px-4 py-2 items-center justify-between rounded-md bg-secondary text-secondary-foreground inline-flex"
             >
               {/* Handle custom components vs react-icons */}
               {name === "HTML" || name === "CSS" ? (
@@ -154,12 +155,12 @@ const Technologies = () => {
       </div>
 
       {/* Toggle button - visible only on mobile */}
-      <button
+      <Button
         onClick={() => setShowAll(!showAll)}
-        className="block  mx-auto mt-4 px-4 py-2 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground text-sm"
+        className="block  mx-auto mt-4 px-4 py-2 rounded-md border border-input bg-primary text-primary-foreground  hover:bg-primary/80 hover:text-primary-foreground text-sm"
       >
         {showAll ? "Show Less" : "Show More"}
-      </button>
+      </Button>
     </div>
   );
 };

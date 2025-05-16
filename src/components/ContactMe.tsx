@@ -45,7 +45,7 @@ const ContactMe = () => {
           <div className="flex-center">
             <motion.button
               onClick={() => setIsOpen(true)}
-              className="text-2xl text-nowrap text-card-foreground mx-auto bg-accent2 px-6 py-2 rounded-lg"
+              className="text-2xl text-nowrap text-primary-foreground mx-auto bg-primary px-6 py-2 rounded-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

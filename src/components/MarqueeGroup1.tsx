@@ -12,7 +12,7 @@ const MarqueeGroup1 = () => {
         transition={{ delay: 1.75, duration: 1, ease: "easeIn" }}
         className="absolute top-[-1] w-screen h-20 bg-background z-10 "
       ></motion.div>
-      <Marquee className="relative flex-center top-0 bg-card/80 h-16 text-card-foreground py-4 ">
+      <Marquee className="relative flex-center top-0 bg-secondary/80 h-16 text-secondary-foreground py-4 ">
         <div className="flex-center gap-1 md:gap-2 px-2 py-4 group/html5">
           <Image
             className="transition-transform group-hover/html5:scale-150"

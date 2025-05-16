@@ -92,7 +92,7 @@ const Portfolio = () => {
           ))}
         </div>
         <div className="w-full flex  py-8">
-          <Button className="shadow-none text-foreground underline text-lg mx-auto space-x-0 gap-0 hover:scale-110 active:scale-110 transition-all duration-300">
+          <Button className="bg-primary shadow-none text-primary-foreground underline text-lg mx-auto space-x-0 gap-0 hover:scale-110 active:scale-110 transition-all duration-300">
             See more
             <MdArrowOutward size={24} />
           </Button>

@@ -15,13 +15,13 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
         {item.techStack.map((tech, idx) => (
           <span
             key={idx}
-            className="bg-accent text-card-foreground px-2 py-1 rounded-md"
+            className="bg-primary text-primary-foreground px-2 py-1 rounded-md"
           >
             {tech}
           </span>
         ))}
       </div>
-      <div className="flex-col space-y-4 flex-grow flex bg-muted max-h-[100svh] overflow-y-auto p-4 rounded-lg ">
+      <div className="flex-col space-y-4 flex-grow flex bg-card text-card-foreground max-h-[100svh] overflow-y-auto p-4 rounded-lg ">
         <div className="relative  w-full h-96 overflow-hidden mx-auto rounded-lg">
           <Image
             src={item.image}
@@ -36,7 +36,7 @@ const PortfolioItemCard: React.FC<PortfolioItemCardProps> = ({ item }) => {
               {item.title}
             </h3>
           </Link>
-          <p className="text-justify indent-4 text-muted-foreground mt-2 sm:mt-4 text-md sm:text-lg flex-grow">
+          <p className="text-justify indent-4 text-card-foreground mt-2 sm:mt-4 text-md sm:text-lg flex-grow">
             {item.description}
           </p>
           <div className="flex-row flex justify-between mt-2 sm:mt-4">

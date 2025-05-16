@@ -74,14 +74,14 @@ const Certificates = () => {
         <CarouselContent>
           {certificateData.map((cert, index) => (
             <CarouselItem key={index}>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden bg-secondary text-secondary-foreground">
                 {" "}
                 {/* Ensure card clips the absolute icon if needed */}
-                <CardContent className="relative flex flex-col items-center justify-center p-6 aspect-video">
+                <CardContent className="relative flex flex-col text-secondary-foreground items-center justify-center p-6 aspect-video">
                   {" "}
                   {/* Added aspect-video for consistent height */}
                   {/* Top Right Icon */}
-                  <cert.icon className="absolute top-4 right-4 h-5 w-5 text-muted-foreground" />
+                  <cert.icon className="absolute top-4 right-4 h-5 w-5 text-secondary-foreground" />
                   {/* Link wrapping Title and Description */}
                   <Link
                     href={cert.link}
@@ -89,10 +89,10 @@ const Certificates = () => {
                     rel="noopener noreferrer"
                     className="text-center group"
                   >
-                    <h3 className="text-xl font-semibold group-hover:underline mb-2">
+                    <h3 className="text-xl text-secondary-foreground font-semibold group-hover:underline mb-2">
                       {cert.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-secondary-foreground/50">
                       {cert.description}
                     </p>
                   </Link>
