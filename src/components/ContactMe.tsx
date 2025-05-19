@@ -44,7 +44,7 @@ const ContactMe = () => {
           </p>
           <div className="flex flex-col md:flex-row">
             <div className="mt-4 flex flex-col justify-center items-start space-y-2 px-8 text-primary">
-              <Link href="https://www.facebook.com/lugawplain">
+              <Link href="https://www.facebook.com/TroyGwapoOmsim/">
                 <div className="flex flex-row justify-center items-center space-x-4">
                   <motion.span
                     initial={{ opacity: 0 }}
