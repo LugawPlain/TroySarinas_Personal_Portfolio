@@ -41,7 +41,7 @@ import { SiMysql } from "react-icons/si";
 import { SiAframe } from "react-icons/si";
 import { SiThreedotjs } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, spring } from "framer-motion";
 import { Button } from "./ui/button";
 
 // Define the technology data array
@@ -95,14 +95,16 @@ const Technologies = () => {
   // Animation variants for the grid container
   const gridVariants = {
     hidden: {
-      height: "15rem ", // Approx height for 5 rows (10 items / 2 columns)
+      height: "15rem", // Approx height for 5 rows (10 items / 2 columns)
       opacity: 1, // Keep opacity 1, fade is handled by gradient
       transition: { duration: 0.75, ease: "easeInOut" },
+      maskImage: "linear-gradient(to bottom, black 50%, transparent)",
     },
     visible: {
       height: "auto", // Animate to full height
       opacity: 1,
       transition: { duration: 0.5, ease: "easeInOut" },
+      maskImage: "linear-gradient(to bottom, black 100%, transparent)",
     },
   };
 
@@ -141,7 +143,7 @@ const Technologies = () => {
         </motion.div>
         {/* Gradient overlay - adjusted to work with height animation */}
         {/* Use AnimatePresence for fade in/out of the gradient */}
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {!showAll && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -151,7 +153,7 @@ const Technologies = () => {
               className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/90 to-transparent pointer-events-none "
             ></motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
 
       {/* Toggle button - visible only on mobile */}
