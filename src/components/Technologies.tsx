@@ -41,7 +41,7 @@ import { SiMysql } from "react-icons/si";
 import { SiAframe } from "react-icons/si";
 import { SiThreedotjs } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
-import { motion, AnimatePresence, spring } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
 // Define the technology data array
@@ -141,19 +141,6 @@ const Technologies = () => {
             </div>
           ))}
         </motion.div>
-        {/* Gradient overlay - adjusted to work with height animation */}
-        {/* Use AnimatePresence for fade in/out of the gradient */}
-        {/* <AnimatePresence>
-          {!showAll && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/90 to-transparent pointer-events-none "
-            ></motion.div>
-          )}
-        </AnimatePresence> */}
       </div>
 
       {/* Toggle button - visible only on mobile */}

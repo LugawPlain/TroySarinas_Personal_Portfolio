@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
+// import Link from "next/link";
 import {
   LucideIcon,
   Code,
@@ -14,31 +14,31 @@ import {
 } from "lucide-react";
 import {
   Accordion,
-  AccordionContent,
+  // AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import {
   servicesData,
   ServiceItemData,
-  ServiceListItem,
+  // ServiceListItem,
 } from "@/data/services";
 
-const listVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+// const listVariants = {
+//   hidden: { opacity: 0 },
+//   visible: {
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: 0.1,
+//     },
+//   },
+// };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0 },
-};
+// const itemVariants = {
+//   hidden: { opacity: 0, y: 10 },
+//   visible: { opacity: 1, y: 0 },
+// };
 
 interface AccordionMotionItemPassedProps
   extends Omit<ServiceItemData, "iconName"> {
@@ -53,11 +53,11 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
     value,
     title,
     IconComponent,
-    image,
-    listItems,
-    ctaText,
-    ctaUrl,
-    CheckIcon,
+    // image,
+    // listItems,
+    // ctaText,
+    // ctaUrl,
+    // CheckIcon,
   } = props;
   const ref = useRef(null);
 
