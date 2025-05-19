@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Troy Sarinas Portfolio",
     images: [
       {
-        url: "https://troysarinas.vercel.app/CoverPhoto.webp", // Replace with your image URL
+        url: "https://troysarinas.vercel.app/CoverPhoto(2).webp", // Replace with your image URL
         width: 1200,
         height: 630,
         alt: "Troy Sarinas Portfolio Preview",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Troy Sarinas | SoftWare Engineer",
     description: "Portfolio of Troy Sarinas.",
-    images: ["https://troysarinas.vercel.app/CoverPhoto.webp"], // Same as above
+    images: ["https://troysarinas.vercel.app/CoverPhoto(2).webp"], // Same as above
     creator: "@yourtwitterhandle",
   },
 };
