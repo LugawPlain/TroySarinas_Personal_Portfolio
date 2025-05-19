@@ -46,43 +46,98 @@ const ContactMe = () => {
             <div className="mt-4 flex flex-col justify-center items-start space-y-2 px-8 text-primary">
               <Link href="https://www.facebook.com/lugawplain">
                 <div className="flex flex-row justify-center items-center space-x-4">
-                  <FaFacebookSquare size={40} />
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ opacity: 1 }}
+                    whileTap={{ opacity: 0.9 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <FaFacebookSquare size={40} />
+                  </motion.span>
                   <p>Facebook</p>
                 </div>
               </Link>
               <Link href="#">
                 <div className="flex flex-row justify-center items-center space-x-4">
-                  <FaSquareXTwitter size={40} />
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ opacity: 1 }}
+                    whileTap={{ opacity: 0.9 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <FaSquareXTwitter size={40} />
+                  </motion.span>
                   <p>Twitter</p>
                 </div>
               </Link>
               <Link href="https://www.instagram.com/troysarinas/">
                 <div className="flex flex-row justify-center items-center space-x-4">
-                  <FaInstagramSquare size={40} />
-                  <p>Instagram</p>
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ opacity: 1 }}
+                    whileTap={{ opacity: 0.9 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <FaInstagramSquare size={40} />
+                  </motion.span>
                 </div>
               </Link>
               <Link href="https://www.linkedin.com/in/troy-sarinas-47062b1ba/">
                 <div className="flex flex-row justify-center items-center space-x-4">
-                  <FaLinkedin size={40} />
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ opacity: 1 }}
+                    whileTap={{ opacity: 0.9 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <FaLinkedin size={40} />
+                  </motion.span>
                   <p>Linkedin</p>
                 </div>
               </Link>
               <Link href="https://github.com/LugawPlain">
                 <div className="flex flex-row justify-center items-center space-x-4">
-                  <FaGithubSquare size={40} />
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ opacity: 1 }}
+                    whileTap={{ opacity: 0.9 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <FaGithubSquare size={40} />
+                  </motion.span>
                   <p>Github</p>
                 </div>
               </Link>
               <Link href="mailto:troysarinas22@gmail.com">
                 <div className="flex flex-row justify-center items-center space-x-4">
-                  <MdEmail size={40} />
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ opacity: 1 }}
+                    whileTap={{ opacity: 0.9 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <MdEmail size={40} />
+                  </motion.span>
                   <p>Email (Troysarinas22@gmail.com)</p>
                 </div>
               </Link>
               <Link href="https://www.hackerrank.com/profile/troysarinas22">
                 <div className="flex flex-row justify-center items-center space-x-4">
-                  <SiHackerrank size={40} />
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    whileHover={{ opacity: 1 }}
+                    whileTap={{ opacity: 0.9 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    <SiHackerrank size={40} />
+                  </motion.span>
                   <p>HackerRank</p>
                 </div>
               </Link>
