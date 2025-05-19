@@ -73,7 +73,7 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
         className="bg-secondary border-none overflow-hidden shadow-sm "
         value={value}
       >
-        <AccordionTrigger className="text-xl text-left hover:bg-card/50 hover:no-underline px-4 py-4 group ">
+        <AccordionTrigger className="text-xl text-left  hover:no-underline px-4 py-4 group ">
           <div className="sm:mx-auto md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl sm:w-7xl px-4">
             <div className="flex items-center sm:text-start space-x-3 ">
               {IconComponent && (
@@ -85,7 +85,7 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
             </div>
           </div>
         </AccordionTrigger>
-        <AccordionContent className="md:max-h-80">
+        {/* <AccordionContent className="md:max-h-80">
           <motion.div
             key="content"
             initial="hidden"
@@ -144,7 +144,7 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
               )}
             </div>
           </motion.div>
-        </AccordionContent>
+        </AccordionContent> */}
       </AccordionItem>
     </motion.div>
   );

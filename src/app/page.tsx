@@ -18,7 +18,7 @@ import Testing from "@/components/Testing";
 export default function Home() {
   return (
     <>
-      <div className="scroll-smooth min-w-screen space-y-6 mx-auto relative ">
+      <div className="scroll-smooth min-w-screen  mx-auto relative ">
         <HeaderNav className=" relative"></HeaderNav>
         <Testing></Testing>
 
@@ -54,13 +54,13 @@ export default function Home() {
           <Certificates></Certificates>
         </section>
 
-        <section id="contact" className="pt-4 md:pt-20">
+        <section id="contact" className="">
           <ContactMe />
         </section>
         <footer id="footer" className="">
           <Footer></Footer>
         </footer>
-        <div className="min-h- h-4 md:hidden"></div>
+        <div className="min-h-14 h-14 md:hidden"></div>
 
         <MenuBar className="sm:hidden"></MenuBar>
       </div>

@@ -11,7 +11,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative border-t-2 py-2 text-center text-sm text-muted-foreground ">
+    <footer className="relative border-t py-2 text-center text-sm text-muted-foreground bg-card">
       <div className="flex flex-col  justify-center items-center gap-2 max-w-7xl mx-auto">
         {/* GitHub Star Button */}
         <GitHubStarCount
@@ -30,7 +30,7 @@ const Footer = () => {
         <p>&copy; 2024 Troy Sarinas. All Rights Reserved.</p>
         <Button
           onClick={scrollToTop}
-          className="flex flex-row items-center py-2 gap-2 w-full justify-center bg-transparent"
+          className="flex flex-row items-center py-2 gap-2 w-full justify-center bg-transparent hover:bg-transparent"
           aria-label="Scroll back to top"
         >
           <span className="bg-accent text-secondary-foreground p-1 rounded-full shadow-lg hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 transition-opacity duration-300 ease-in-out ">

@@ -111,8 +111,8 @@ const HeaderNav = (props: { className?: string }) => {
 
         {/* For larger screens */}
         <motion.div
-          initial={{ maxWidth: "0px" }}
-          animate={{ maxWidth: "100vw" }}
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
           transition={{ duration: 2, ease: "easeIn" }}
           className={`relative z-20 shadow-md min-h-15  sm:fixed sm:flex justify-center top-4 left-1/2 hidden  -translate-x-1/2 transition-all duration-300 rounded-full overflow-hidden`}
         >

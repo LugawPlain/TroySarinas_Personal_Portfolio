@@ -30,7 +30,7 @@ const ContactMe = () => {
     <>
       <ContactModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
 
-      <div className="mt-20 relative top-0 min-w-screen mx-auto">
+      <div className="mt-20 relative top-0 min-w-screen mx-auto bg-card py-8 border-t-2">
         <div className="max-w-7xl mx-auto ">
           <h3 className=" font-bold text-center mb-8">
             <span className="text-3xl sm:text-4xl">
