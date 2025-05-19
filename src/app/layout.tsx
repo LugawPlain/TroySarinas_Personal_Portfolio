@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={cn(
           clashDisplayBold.variable,
-          "antialiased bg-background",
+          "antialiased bg-linear-to-r from-background-secondary via-background to-background-secondary",
           geistSans.variable,
           geistMono.variable
         )}
