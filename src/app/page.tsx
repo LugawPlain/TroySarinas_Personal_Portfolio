@@ -8,7 +8,7 @@ import HeroSection from "@/components/HeroSection";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import ScrollRevealAccordion from "@/components/ScrollRevealAccordion";
 import Portfolio from "@/components/Portfolio";
-import Certificates from "@/components/Certificates";
+// import Certificates from "@/components/Certificates";
 import ContactMe from "@/components/ContactMe";
 import Technologies from "@/components/Technologies";
 import Footer from "@/components/Footer";
