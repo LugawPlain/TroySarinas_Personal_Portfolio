@@ -51,7 +51,7 @@ export default function Home() {
         >
           <Portfolio></Portfolio>
           <Technologies></Technologies>
-          <Certificates></Certificates>
+          {/* <Certificates></Certificates> */}
         </section>
 
         <section id="contact" className="">
