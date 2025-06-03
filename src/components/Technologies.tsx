@@ -43,7 +43,13 @@ import { SiThreedotjs } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-
+import { PiOpenAiLogo } from "react-icons/pi";
+import { SiGooglegemini } from "react-icons/si";
+import { SiClaude } from "react-icons/si";
+import { RiPerplexityLine } from "react-icons/ri";
+import { SiOllama } from "react-icons/si";
+import { SiHuggingface } from "react-icons/si";
+import { RiSupabaseLine } from "react-icons/ri";
 // Define the technology data array
 const technologies = [
   { name: "HTML", IconComponent: HtmlIcon },
@@ -68,6 +74,7 @@ const technologies = [
   { name: "GitHub", IconComponent: FaGithub },
   { name: "Git", IconComponent: BiLogoGit },
   { name: "MongoDB", IconComponent: SiMongodb },
+  { name: "Supabase", IconComponent: RiSupabaseLine },
   { name: "MySQL", IconComponent: SiMysql },
   { name: "PostgreSQL", IconComponent: BiLogoPostgresql },
   { name: "Prisma", IconComponent: SiPrisma },
@@ -87,6 +94,12 @@ const technologies = [
   { name: "Zapier", IconComponent: SiZapier },
   { name: "HubSpot", IconComponent: FaHubspot },
   { name: "WordPress", IconComponent: FaWordpress },
+  { name: "OpenAI", IconComponent: PiOpenAiLogo },
+  { name: "Google Gemini", IconComponent: SiGooglegemini },
+  { name: "Claude", IconComponent: SiClaude },
+  { name: "Perplexity", IconComponent: RiPerplexityLine },
+  { name: "Ollama", IconComponent: SiOllama },
+  { name: "Huggingface", IconComponent: SiHuggingface },
 ];
 
 const Technologies = () => {

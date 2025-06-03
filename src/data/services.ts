@@ -85,7 +85,7 @@ export const servicesData: ServiceItemData[] = [
   },
   {
     value: "item-5",
-    title: "Automation & Integration",
+    title: "AI Agents & Automations",
     iconName: "Zap", // Example icon name
     image: "/services/automation.svg",
     listItems: [

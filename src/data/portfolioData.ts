@@ -32,18 +32,18 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Zipto POS/Inventory System",
     description:
       "Developed and implemented a custom Point-of-Sale (POS) and Inventory Management system for a small beverage business, significantly streamlining daily operations by automating sales tracking and stock control.",
-    image: "/Background.jpg",
-    titleLink: "https://example.com/project3", // Add link if available
-    githubLink: "https://github.com/your-username/yorticia-repo",
-    techStack: ["Flutter", "Dart", "Firebase", "MongoDB"],
+    image: "/Icons/broken-image.webp",
+    titleLink: "", // Add link if available
+    githubLink: "",
+    techStack: ["Kotlin", "Jetpack Compose", "SQL", "Firebase Auth"],
   },
   {
-    title: "Onboarding Automation System",
+    title: "Inquiry Reponse AI Agent",
     description:
-      " Engineered an automation solution that significantly reduced manual effort in employee onboarding. The system automatically generates new Microsoft Outlook accounts, utilizes Intune for standardized device configuration, and monitors OS versions, ensuring a consistent and efficient setup for new hires.",
-    image: "/Background.jpg",
-    titleLink: "https://example.com/project3", // Add link if available
-    githubLink: "https://github.com/your-username/yorticia-repo",
-    techStack: ["Vue", "Firebase", "Tailwind"],
+      "Engineered an AI Response Agent that answers from Airtable Forms. Using Gemini as the LLM, the agent can answer inquiries based on the data on the Google Docs as Context, and closing a deal and logging the data onto a Google Sheet.",
+    image: "/inquiry.png",
+    titleLink: "", // Add link if available
+    githubLink: "",
+    techStack: ["N8n", "Google Gemini", "AirTable", "Ollama"],
   },
 ];
