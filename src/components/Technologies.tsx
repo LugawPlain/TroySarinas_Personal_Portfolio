@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import HtmlIcon from "./Icons/HtmlIcon";
 import CssIcon from "./Icons/CssIcon";
@@ -122,7 +123,13 @@ const Technologies = () => {
   };
 
   return (
-    <div className="mt-20">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+      className="mt-20"
+    >
       <h2 className="text-center mb-8 font-bold">
         <span className="text-3xl sm:text-4xl">Technologies I use ✨</span>
       </h2>
@@ -163,7 +170,7 @@ const Technologies = () => {
       >
         {showAll ? "Show Less" : "Show More"}
       </Button>
-    </div>
+    </motion.div>
   );
 };
 

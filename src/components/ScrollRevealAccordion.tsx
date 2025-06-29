@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 // import Image from "next/image";
 // import Link from "next/link";
 import {
@@ -60,6 +61,11 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
     // CheckIcon,
   } = props;
   const ref = useRef(null);
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/services/ai_agents_automations`);
+  };
 
   return (
     <motion.div
@@ -68,6 +74,8 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
       whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
+      onClick={handleClick}
+      className="cursor-pointer"
     >
       <AccordionItem
         className="bg-secondary border-none overflow-hidden shadow-sm "
@@ -79,7 +87,7 @@ const AccordionMotionItem: React.FC<AccordionMotionItemPassedProps> = (
               {IconComponent && (
                 <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-10 lg:h-10 text-secondary-foreground flex-shrink-0" />
               )}
-              <span className="text-md font-extrabold sm:text-xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl group-hover:translate-x-12 transition-all duration-300">
+              <span className="text-md font-extrabold sm:text-xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl 4xl:text-7xl group-hover:translate-x-20 transition-all duration-400">
                 {title}
               </span>
             </div>
