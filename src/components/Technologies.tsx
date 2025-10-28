@@ -107,20 +107,6 @@ const Technologies = () => {
   const [showAll, setShowAll] = useState(false);
 
   // Animation variants for the grid container
-  const gridVariants = {
-    hidden: {
-      height: "15rem", // Approx height for 5 rows (10 items / 2 columns)
-      opacity: 1, // Keep opacity 1, fade is handled by gradient
-      transition: { duration: 0.75, ease: "easeInOut" },
-      maskImage: "linear-gradient(to bottom, black 50%, transparent)",
-    },
-    visible: {
-      height: "auto", // Animate to full height
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeInOut" },
-      maskImage: "linear-gradient(to bottom, black 100%, transparent)",
-    },
-  };
 
   return (
     <motion.div
@@ -139,7 +125,6 @@ const Technologies = () => {
         {/* Use motion.div and apply variants */}
         <motion.div
           className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 overflow-hidden py-4 `}
-          variants={gridVariants}
           initial="hidden" // Start hidden (collapsed)
           animate={showAll ? "visible" : "hidden"} // Animate based on state
           // No transition prop here, defined in variants
